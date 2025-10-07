@@ -1,0 +1,23 @@
+{
+  "metadata": {
+    "lastUpdated": "2025-09-24",
+    "description": "Stats on the use of the AI Safety Atlas on the Impact page."
+  },
+  "content": [
+    {
+        "number": "1000+",
+        "label": "Students Directly Reached",
+        "description": "Across universities and AI safety programs globally"
+    },
+    {
+        "number": "yearlyReaders",
+        "label": "Independent Readers",
+        "description": "Projected yearly independent learners and students based on current analytics"
+    },
+    {
+        "number": "650+",
+        "label": "Academic Sources Integrated",
+        "description": "Ideas from hudreds of research papers synthesized into a single curriculum across chapters"
+    }
+    ]
+}

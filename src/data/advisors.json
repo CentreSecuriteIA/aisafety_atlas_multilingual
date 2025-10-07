@@ -1,0 +1,16 @@
+{
+  "metadata": {
+    "lastUpdated": "2025-09-24",
+    "description": "List of adoptions of the AI Safety Atlas in landing page."
+  },
+  "content": [
+    {
+      "name": "Vincent Corruble",
+      "description": "Professor at Sorbonne University and research fellow at CHAI."
+    },
+    {
+      "name": "Fabien Roger",
+      "description": "Previously worked at Redwood Research, now at Anthropic."
+    }
+  ]
+}

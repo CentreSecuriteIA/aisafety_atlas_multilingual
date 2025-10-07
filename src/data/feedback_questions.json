@@ -1,0 +1,110 @@
+{
+    "core" : {
+        "conclusion": [
+            {
+                "key": "overall_rating",
+                "label": "How would you rate this entire chapter?",
+                "icon": "quality.svg",
+                "lowLabel": "Poor",
+                "highLabel": "Excellent",
+                "tooltip": "Consider overall quality, usefulness, and how well it achieved its goals"
+            },
+            {
+                "key": "understanding",
+                "label": "How well do you understand the material after reading this chapter?",
+                "icon": "understanding.svg",
+                "lowLabel": "Confused",
+                "highLabel": "Crystal clear",
+                "tooltip": "Rate your comprehension and confidence with the concepts covered"
+            }
+        ],
+        "not_conclusion": [
+            {
+                "key": "overall_rating",
+                "label": "How would you rate this section?",
+                "icon": "quality.svg",
+                "lowLabel": "Poor",
+                "highLabel": "Excellent",
+                "tooltip": "Consider overall quality, usefulness, and how well it achieved its goals"
+            },
+            {
+                "key": "understanding",
+                "label": "How well do you understand this section\"s content?",
+                "icon": "understanding.svg",
+                "lowLabel": "Confused",
+                "highLabel": "Crystal clear",
+                "tooltip": "Rate your comprehension and confidence with the concepts covered"
+            }
+        ]
+    },
+    "detail": {
+        "conclusion":[
+            {
+                "key": "writing_clarity",
+                "label": "How was the language? Engaging and well-written or boring and tedious?",
+                "icon": "clarity.svg",
+                "lowLabel": "Hard to follow",
+                "highLabel": "Very clear",
+                "tooltip": "Rate the quality of explanations, examples, and overall writing style"
+            },
+            {
+                "key": "conceptual_coherence",
+                "label": "How well did the ideas in this chapter connect to other concepts?",
+                "icon": "connections.svg",
+                "lowLabel": "Disconnected",
+                "highLabel": "Well integrated",
+                "tooltip": "Did this chapter clearly link to other parts of the textbook and related ideas?"
+            },
+            {
+                "key": "multimedia_desire",
+                "label": "Would diagrams, images, videos, or interactive elements significantly help?",
+                "icon": "multimedia.svg",
+                "lowLabel": "Desperately needed",
+                "highLabel": "Not needed",
+                "tooltip": "Would diagrams, images, videos, or interactive elements significantly help?"
+            },
+            {
+                "key": "reading_length",
+                "label": "How was the length and pacing of this chapter?",
+                "icon": "quality.svg",
+                "lowLabel": "Too long/tedious",
+                "highLabel": "Perfect length",
+                "tooltip": "Was the chapter the right length for the concepts covered?"
+            }
+        ],
+        "not_conclusion":[
+            {
+                "key": "writing_clarity",
+                "label": "How was the language? Engaging and well-written or boring and tedius?",
+                "icon": "clarity.svg",
+                "lowLabel": "Hard to follow",
+                "highLabel": "Very clear",
+                "tooltip": "Rate the quality of explanations, examples, and overall writing style"
+            },
+            {
+                "key": "conceptual_coherence",
+                "label": "Did the the ideas connect?, or, did the concepts feel isolated and disconnected from the bigger picture?",
+                "icon": "connections.svg",
+                "lowLabel": "Isolated",
+                "highLabel": "Well integrated",
+                "tooltip": "Did this section clearly link to other parts of the textbook and related ideas?"
+            },
+            {
+                "key": "multimedia_desire",
+                "label": "Were there enough diagrams, images, videos, or interactive elements?",
+                "icon": "multimedia.svg",
+                "lowLabel": "Desperately needed",
+                "highLabel": "Not needed",
+                "tooltip": "Would diagrams, images, videos, or interactive elements significantly help?"
+            },
+            {
+                "key": "reading_length",
+                "label": "How was the length and pacing of this section?",
+                "icon": "quality.svg",
+                "lowLabel": "Too long/tedious",
+                "highLabel": "Perfect length",
+                "tooltip": "Was the section the right length for the concepts covered?"
+            }
+        ]
+    }
+}

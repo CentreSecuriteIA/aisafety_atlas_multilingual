@@ -1,0 +1,23 @@
+{
+  "metadata": {
+    "lastUpdated": "2025-09-24",
+    "description": "List of publications linked to the AI Safety Atlas in Impact page."
+  },
+  "content": [
+    {
+      "title": "Published Video Lectures",
+      "description": "YouTube video series explaining key AI safety concepts with visual aids and examples",
+      "image": "/img/impact/video_risks.jpg"
+    },
+    {
+      "title": "Published Research Publication",
+      "description": "Academic publication documenting our systematic approach to AI safety education and literature review methodology",
+      "image": "/img/impact/paper_evals.png"
+    },
+    {
+      "title": "Published Interactive Online Chapters",
+      "description": "9 comprehensive chapters featuring custom-designed figures, embedded prediction markets, interactive charts from leading sources, and curated visualizations",
+      "image": "/img/impact/interactive.png"
+    }
+  ]
+}
