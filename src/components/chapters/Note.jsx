@@ -3,6 +3,8 @@ import React, { useState, useEffect, useRef } from 'react';
 import { ActionButtonTooltip } from '../UI/Tooltip';
 import styles from './Note.module.css';
 
+import { translate } from '@docusaurus/Translate';
+
 /**
  * Collapsible Info Note component with reading time estimation
  * @param {Object} props
@@ -44,15 +46,21 @@ export default function Note({
     setIsCollapsed(!isCollapsed);
   };
 
+  const i18n = [
+    translate({"id": "theme.docItem.content.note.expand", "message": "Click to expand"}),
+    translate({"id": "theme.docItem.content.note.collapse", "message": "Click to collapse"}),
+    translate({"id": "theme.docItem.content.note.optional", "message": "Optional"}),
+  ];
+
   // Tooltip text based on current state
-  const tooltipText = isCollapsed ? "Click to expand" : "Click to collapse";
+  const tooltipText = isCollapsed ? i18n[0] : i18n[1];
 
   return (
     <div className={`${styles.noteContainer} ${isCollapsed ? styles.collapsed : styles.expanded}`}>
       
       {/* Optional tag - positioned absolutely */}
       <div className={styles.optionalTag}>
-        Optional
+        {i18n[2]}
       </div>
       
       {/* Header - always visible, clickable */}

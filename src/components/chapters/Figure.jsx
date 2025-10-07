@@ -29,7 +29,10 @@ function Figure({ src, alt, caption, width, height, chapter, number, label }) {
       const relativePath = src.replace('./', '');
       
       if (currentPath.includes('/chapters/')) {
-        const chapterPath = currentPath.split('/').slice(0, 3).join('/');
+        //const chapterPath = currentPath.split('/').slice(0, 3).join('/');
+        const split = currentPath.split('/');
+        let end_slice = split[1] === 'chapters' ? 3 : 4; // locale detection
+        const chapterPath = currentPath.split('/').slice(0, end_slice).join('/');
         return `${chapterPath}/${relativePath}`;
       }
       

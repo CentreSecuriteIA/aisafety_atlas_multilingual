@@ -2,6 +2,8 @@
 import React, { useEffect, useState, useRef } from 'react';
 import styles from './ContentSectionHeader.module.css';
 
+import Translate from '@docusaurus/Translate';
+
 /**
 * Custom section header component for CONTENT within markdown (not page headers)
 * Automatically calculates reading time for content until next section
@@ -362,6 +364,11 @@ export default function ContentSectionHeader({
  // Generate the appropriate header tag
  const HeaderTag = `h${level}`;
 
+ const i18n = [
+    <Translate id="theme.docItem.contentSectionHeader.metadata.readingTime.time">min read</Translate>,
+    <Translate id="theme.docItem.contentSectionHeader.metadata.readingTime.optional">min optional</Translate>
+  ];
+
  return (
    <div className={`${styles.contentSectionContainer} ${className}`} ref={headerRef}>
      <div className={styles.contentSectionContent}>
@@ -383,13 +390,13 @@ export default function ContentSectionHeader({
            />
            <span className={styles.contentReadingTimeText}>
              {coreReadingTime && (
-               <span className={styles.coreTime}>{coreReadingTime} min read</span>
+               <span className={styles.coreTime}>{coreReadingTime} {i18n[0]}</span>
              )}
              {coreReadingTime && optionalReadingTime && (
                <span className={styles.timeSeparator}>, </span>
              )}
              {optionalReadingTime && (
-               <span className={styles.optionalTime}>{optionalReadingTime} min optional</span>
+               <span className={styles.optionalTime}>{optionalReadingTime} {i18n[1]}</span>
              )}
            </span>
          </div>

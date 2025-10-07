@@ -3,6 +3,9 @@ import React, { useState, useEffect, useRef } from 'react';
 import { ActionButtonTooltip } from '../UI/Tooltip';
 import styles from './ChapterFeedback.module.css';
 
+import { getDataContent } from '../../utils/i18nUtils';
+import Translate, { translate } from '@docusaurus/Translate';
+
 export default function ChapterFeedback({ 
   chapterNumber, 
   sectionNumber = null, 
@@ -42,111 +45,36 @@ export default function ChapterFeedback({
 
   const pageType = sectionNumber ? 'section' : 'chapter';
 
+  const questions = getDataContent('feedback_questions.json');
   // Core questions (always shown)
-  const coreQuestions = isConclusion ? [
-    {
-      key: 'overall_rating',
-      label: 'How would you rate this entire chapter?',
-      icon: 'quality.svg',
-      lowLabel: 'Poor',
-      highLabel: 'Excellent',
-      tooltip: 'Consider overall quality, usefulness, and how well it achieved its goals'
-    },
-    {
-      key: 'understanding',
-      label: 'How well do you understand the material after reading this chapter?',
-      icon: 'understanding.svg',
-      lowLabel: 'Confused',
-      highLabel: 'Crystal clear',
-      tooltip: 'Rate your comprehension and confidence with the concepts covered'
-    }
-  ] : [
-    {
-      key: 'overall_rating',
-      label: 'How would you rate this section overall?',
-      icon: 'quality.svg',
-      lowLabel: 'Poor',
-      highLabel: 'Excellent',
-      tooltip: 'Consider overall quality, usefulness, and how well it achieved its goals'
-    },
-    {
-      key: 'understanding',
-      label: 'How well do you understand this section\'s content?',
-      icon: 'understanding.svg',
-      lowLabel: 'Confused',
-      highLabel: 'Crystal clear',
-      tooltip: 'Rate your comprehension and confidence with the concepts covered'
-    }
-  ];
-
+  const coreQuestions = isConclusion ? questions.core.conclusion : questions.core.not_conclusion;
   // Detailed questions (shown when expanded)
-  const detailQuestions = isConclusion ? [
-    {
-      key: 'writing_clarity',
-      label: 'How was the language? Engaging and well-written or boring and tedious?',
-      icon: 'clarity.svg',
-      lowLabel: 'Hard to follow',
-      highLabel: 'Very clear',
-      tooltip: 'Rate the quality of explanations, examples, and overall writing style'
-    },
-    {
-      key: 'conceptual_coherence',
-      label: 'How well did the ideas in this chapter connect to other concepts?',
-      icon: 'connections.svg',
-      lowLabel: 'Disconnected',
-      highLabel: 'Well integrated',
-      tooltip: 'Did this chapter clearly link to other parts of the textbook and related ideas?'
-    },
-    {
-      key: 'multimedia_desire',
-      label: 'Would diagrams, images, videos, or interactive elements significantly help?',
-      icon: 'multimedia.svg',
-      lowLabel: 'Desperately needed',
-      highLabel: 'Not needed',
-      tooltip: 'Would diagrams, images, videos, or interactive elements significantly help?'
-    },
-    {
-      key: 'reading_length',
-      label: 'How was the length and pacing of this chapter?',
-      icon: 'quality.svg',
-      lowLabel: 'Too long/tedious',
-      highLabel: 'Perfect length',
-      tooltip: 'Was the chapter the right length for the concepts covered?'
-    }
-  ] : [
-    {
-      key: 'writing_clarity',
-      label: 'How was the language? Engaging and well-written or boring and tedius?',
-      icon: 'clarity.svg',
-      lowLabel: 'Hard to follow',
-      highLabel: 'Very clear',
-      tooltip: 'Rate the quality of explanations, examples, and overall writing style'
-    },
-    {
-      key: 'conceptual_coherence',
-      label: 'Did the the ideas connect?, or, did the concepts feel isolated and disconnected from the bigger picture?',
-      icon: 'connections.svg',
-      lowLabel: 'Isolated',
-      highLabel: 'Well integrated',
-      tooltip: 'Did this section clearly link to other parts of the textbook and related ideas?'
-    },
-    {
-      key: 'multimedia_desire',
-      label: 'Were there enough diagrams, images, videos, or interactive elements?',
-      icon: 'multimedia.svg',
-      lowLabel: 'Desperately needed',
-      highLabel: 'Not needed',
-      tooltip: 'Would diagrams, images, videos, or interactive elements significantly help?'
-    },
-    {
-      key: 'reading_length',
-      label: 'How was the length and pacing of this section?',
-      icon: 'quality.svg',
-      lowLabel: 'Too long/tedious',
-      highLabel: 'Perfect length',
-      tooltip: 'Was the section the right length for the concepts covered?'
-    }
-  ];
+  const detailQuestions = isConclusion ? questions.detail.conclusion : questions.detail.not_conclusion;
+
+  const i18n = [
+    //0
+    <Translate id="feedback.optional">(optional)</Translate>,
+    <Translate id="feedback.isSubmitted.thankYou">Thank you for your feedback!</Translate>,
+    <Translate id="feedback.isSubmitted.chapter.yourInputHelps">Your input helps improve</Translate>,
+    <Translate id="feedback.isSubmitted.chapter">this chapter</Translate>,
+    <Translate id="feedback.isSubmitted.section">this section</Translate>,
+    //5
+    <Translate id="feedback.chapterFeedback">Chapter Feedback</Translate>,
+    <Translate id="feedback.sectionFeedback">Section Feedback</Translate>,
+    <Translate id="feedback.liveProject">We consider this textbook a live project. Feedback helps us target our improvements.</Translate>,
+    <Translate id="feedback.additional">Additional feedback</Translate>,
+    translate({id: "feedback.comments", message: "Some questions to think about:\n\nWhat background knowledge was missing? Which concepts should connect better? Where did you get confused? Any technical corrections?\n\nShare any other thoughts or suggestions..."}),
+    //10
+    <Translate id="feedback.detailed">Detailed feedback</Translate>,
+    <Translate id="feedback.contactInfo">Contact information</Translate>,
+    <Translate id="feedback.anonymous">Feedback is 100% anonymous unless you want to help us follow up with you or understand the context better</Translate>,
+    translate({id: "feedback.form.name", message: "Your name"}),
+    translate({id: "feedback.form.organization", message: "University/Study Group"}),
+    //15
+    translate({id: "feedback.form.email", message: "Email address"}),
+    translate({id: "feedback.form.submitting", message: "Submitting..."}),
+    translate({id: "feedback.form.submit", message: "Submit feedback"})
+  ]
 
   const handleSubmit = async () => {
     const canSubmitCore = coreQuestions.every(q => responses[q.key] !== undefined);
@@ -360,8 +288,8 @@ export default function ChapterFeedback({
             </svg>
           </div>
           <div>
-            <h4>Thank you for your feedback!</h4>
-            <p>Your input helps improve this {isConclusion ? 'chapter' : 'section'}.</p>
+            <h4>{i18n[1]}</h4>
+            <p>{i18n[2]} {isConclusion ? i18n[3] : i18n[4]}.</p>
           </div>
         </div>
       </div>
@@ -383,12 +311,9 @@ export default function ChapterFeedback({
 
       <div className={styles.feedbackHeader}>
         <h3>
-          {isConclusion 
-            ? 'Chapter Feedback' 
-            : 'Section Feedback'
-          }
+          {isConclusion ? i18n[5] : i18n[6]}
         </h3>
-        <p>We consider this textbook a live project. Feedback helps us target our improvements.</p>
+        <p>{i18n[7]}</p>
       </div>
 
       {/* Core Questions */}
@@ -409,14 +334,14 @@ export default function ChapterFeedback({
         <div className={styles.commentsHeader}>
           <img src="/img/feedback/comment.svg" alt="" className={styles.commentIcon} />
           <label className={styles.commentsLabel}>
-            Additional feedback <span className={styles.optional}>(optional)</span>
+            {i18n[8]} <span className={styles.optional}>{i18n[0]}</span>
           </label>
         </div>
         
         <textarea
           value={comments}
           onChange={(e) => setComments(e.target.value)}
-          placeholder={`Some questions to think about:\n\nWhat background knowledge was missing? Which concepts should connect better? Where did you get confused? Any technical corrections?\n\nShare any other thoughts or suggestions...`}
+          placeholder={i18n[8]}
           className={styles.commentsTextarea}
           rows="6"
           disabled={isSubmitted}
@@ -427,7 +352,7 @@ export default function ChapterFeedback({
       {showDetails && (
         <div className={styles.detailsSection}>
           <div className={styles.detailsHeader}>
-            <h4>Detailed feedback</h4>
+            <h4>{i18n[10]}</h4>
             <button 
               className={styles.collapseButton}
               onClick={() => setShowDetails(false)}
@@ -452,14 +377,14 @@ export default function ChapterFeedback({
           {/* Optional Contact Information */}
           <div className={styles.contactSection}>
             <div className={styles.contactHeader}>
-              <h4>Contact information <span className={styles.optional}>(optional)</span></h4>
-              <p>Feedback is 100% anonymous unless you want to help us follow up with you or understand the context better</p>
+              <h4>{i18n[11]} <span className={styles.optional}>{i18n[0]}</span></h4>
+              <p>{i18n[12]}</p>
             </div>
             
             <div className={styles.contactFields}>
               <input
                 type="text"
-                placeholder="Your name"
+                placeholder={i18n[13]}
                 value={responses.contact_name || ''}
                 onChange={(e) => setResponses(prev => ({ ...prev, contact_name: e.target.value }))}
                 className={styles.contactInput}
@@ -468,7 +393,7 @@ export default function ChapterFeedback({
               
               <input
                 type="text"
-                placeholder="University/Study Group"
+                placeholder={i18n[14]}
                 value={responses.contact_organization || ''}
                 onChange={(e) => setResponses(prev => ({ ...prev, contact_organization: e.target.value }))}
                 className={styles.contactInput}
@@ -477,7 +402,7 @@ export default function ChapterFeedback({
               
               <input
                 type="email"
-                placeholder="Email address"
+                placeholder={i18n[15]}
                 value={responses.contact_email || ''}
                 onChange={(e) => setResponses(prev => ({ ...prev, contact_email: e.target.value }))}
                 className={styles.contactInput}
@@ -504,7 +429,7 @@ export default function ChapterFeedback({
             <svg className={styles.detailsIcon} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
               <path d="M6 9l6 6 6-6" />
             </svg>
-            Detailed feedback
+            {i18n[10]}
           </button>
         )}
         
@@ -513,7 +438,7 @@ export default function ChapterFeedback({
           onClick={handleSubmit}
           disabled={!canSubmitCore || isSubmitting}
         >
-          {isSubmitting ? 'Submitting...' : 'Submit feedback'}
+          {isSubmitting ? i18n[16] : i18n[17]}
         </button>
       </div>
     </div>

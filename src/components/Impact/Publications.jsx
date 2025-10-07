@@ -2,31 +2,18 @@
 import React from 'react';
 import styles from './Publications.module.css';
 
+import Translate from '@docusaurus/Translate';
+import { getDataContent } from '../../utils/i18nUtils';
+
 export default function Publications() {
   // Three main output categories - with images instead of icons
-  const outputCategories = [
-    {
-      title: "Published Video Lectures",
-      description: "YouTube video series explaining key AI safety concepts with visual aids and examples",
-      image: "/img/impact/video_risks.jpg"
-    },
-    {
-      title: "Published Research Publication",
-      description: "Academic publication documenting our systematic approach to AI safety education and literature review methodology",
-      image: "/img/impact/paper_evals.png"
-    },
-    {
-      title: "Published Interactive Online Chapters",
-      description: "9 comprehensive chapters featuring custom-designed figures, embedded prediction markets, interactive charts from leading sources, and curated visualizations",
-      image: "/img/impact/interactive.png"
-    }
-  ];
+  const outputCategories = getDataContent("page_impact/publications.json").content;
 
   return (
     <div className={styles.publicationsContainer}>
       {/* Publications Section - Three Horizontal Columns */}
       <div className={styles.publicationsSection}>
-        <h3 className={styles.publicationsTitle}>Our Publications</h3>
+        <h3 className={styles.publicationsTitle}><Translate id="impact.publications.title" description="">Our Publications</Translate></h3>
         
         <div className={styles.publicationsGrid}>
           {outputCategories.map((category, index) => (

@@ -2,38 +2,17 @@
 import React from 'react';
 import styles from './Testimonials.module.css';
 
+import Translate from '@docusaurus/Translate';
+import { getDataContent } from '../../utils/i18nUtils';
+
 export default function Testimonials() {
-  const testimonials = [
-    {
-      type: "Student",
-      quote: "This was my first time reading the AI Safety Atlas and wow!!! It has so many insightful information and citations that I am looking forward to diving deeper into.",
-      author: {
-        role: "Vancouver Program"
-      }
-    },
-    {
-      type: "Facilitator",
-      quote: "For a systematic, centralized, and concise introduction to the core topics in AI safety, this is the best and most up-to-date resource I know.",
-      author: {
-        name: "Josh Thorsteinson",
-        role: "UBC Vancouver Course Organizer"
-      }
-    },
-    {
-      type: "Researcher",
-      quote: "As an AI safety research engineer, I find it a pretty good in-depth introduction. It covers a lot in a very clear way.",
-      author: {
-        name: "Maxime Riche",
-        role: "AI Safety Researcher"
-      }
-    }
-  ];
+  const testimonials = getDataContent("page_impact/testimonials.json").content;
 
   return (
     <div className={styles.testimonialsContainer}>
       {/* Testimonials Section - Clean presentation */}
       <div className={styles.testimonialsSection}>
-        <h3 className={styles.testimonialsTitle}>What Students, Facilitators, and Researchers Are Saying</h3>
+        <h3 className={styles.testimonialsTitle}><Translate id="impact.testimonials.title" description="">What Students, Facilitators, and Researchers Are Saying</Translate></h3>
         <div className={styles.testimonialsGrid}>
           {testimonials.map((testimonial, index) => (
             <div key={index} className={styles.testimonialCard}>

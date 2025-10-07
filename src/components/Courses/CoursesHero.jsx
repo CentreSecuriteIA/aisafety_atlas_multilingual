@@ -2,16 +2,22 @@
 import React from 'react';
 import styles from './CoursesHero.module.css';
 
+import Translate from '@docusaurus/Translate';
+
 export default function CoursesHero() {
+  const i18n = [
+    <Translate id="courses.hero.title">AI Safety Courses</Translate>,
+    <Translate id="courses.hero.desc">Discover academic courses, reading groups, and organized programs using the AI Safety Atlas materials. Join an existing course or start your own with our resources.</Translate>,
+  ];
+
   return (
     <div className={styles.heroSection}>
       <div className={styles.heroContainer}>
         {/* Left side - Content */}
         <div className={styles.heroContent}>
-          <h1 className={styles.heroTitle}>AI Safety Courses</h1>
+          <h1 className={styles.heroTitle}>{i18n[0]}</h1>
           <p className={styles.heroDescription}>
-            Discover academic courses, reading groups, and organized programs using the 
-            AI Safety Atlas materials. Join an existing course or start your own with our resources.
+            {i18n[1]}
           </p>
         </div>
         

@@ -4,6 +4,8 @@ import { SmallTooltip } from '../UI/Tooltip';
 import { MapPin, Users, Calendar, Globe, Mail, FileText, Edit3 } from 'lucide-react';
 import styles from './SimpleCoursesListing.module.css';
 
+import Translate, {translate} from '@docusaurus/Translate';
+
 function getStatusFromDates(startDate, endDate) {
   const now = new Date();
   const start = startDate ? new Date(startDate) : null;
@@ -17,10 +19,16 @@ function getStatusFromDates(startDate, endDate) {
 }
 
 function StatusBadge({ status }) {
+  const i18n = [
+    translate({id: "courses.status.active", message: "Active", description: "Status label for active courses"}),
+    translate({id: "courses.status.upcoming", message: "Upcoming", description: "Status label for upcoming courses"}),
+    translate({id: "courses.status.completed", message: "Completed", description: "Status label for completed courses"})
+  ]
+
   const statusConfig = {
-    active: { label: 'Active', color: 'green' },
-    upcoming: { label: 'Upcoming', color: 'blue' },
-    completed: { label: 'Completed', color: 'gray' }
+    active: { label: i18n[0], color: 'green' },
+    upcoming: { label: i18n[1], color: 'blue' },
+    completed: { label: i18n[2], color: 'gray' }
   };
   
   const config = statusConfig[status] || statusConfig.completed;
@@ -152,9 +160,27 @@ function CorrectionForm({ course, organization, onClose, onSubmit }) {
     }));
   };
 
+  // i18n: Tableau de traductions pour les labels et placeholders du formulaire de correction
+  const i18n = [
+    translate({ id: "correctionForm.title", message: "Suggest Correction", description: "Title for the correction form" }),
+    translate({ id: "correctionForm.organizationName.placeholder", message: "Organization name", description: "Placeholder for organization name input" }),
+    translate({ id: "correctionForm.location.placeholder", message: "Location", description: "Placeholder for location input" }),
+    translate({ id: "correctionForm.startDate.placeholder", message: "Start date", description: "Placeholder for start date input" }),
+    translate({ id: "correctionForm.endDate.placeholder", message: "End date", description: "Placeholder for end date input" }),
+    translate({ id: "correctionForm.participants.placeholder", message: "Participants", description: "Placeholder for participants input" }),
+    translate({ id: "correctionForm.applicationLink.placeholder", message: "Application link", description: "Placeholder for application link input" }),
+    translate({ id: "correctionForm.websiteLink.placeholder", message: "Website link", description: "Placeholder for website link input" }),
+    translate({ id: "correctionForm.contactEmail.placeholder", message: "Contact email", description: "Placeholder for contact email input" }),
+    translate({ id: "correctionForm.description.placeholder", message: "Description", description: "Placeholder for description textarea" }),
+    translate({ id: "correctionForm.additionalInfo.placeholder", message: "Additional information or corrections", description: "Placeholder for additional info textarea" }),
+    translate({ id: "correctionForm.requestRemoval.label", message: "Request to remove this listing entirely", description: "Label for request removal checkbox" }),
+    translate({ id: "correctionForm.cancel", message: "Cancel", description: "Label for cancel button" }),
+    translate({ id: "correctionForm.send", message: "Send Correction", description: "Label for send correction button" })
+  ];
+
   return (
     <div className={styles.correctionForm}>
-      <h4>Suggest Correction</h4>
+      <h4>{i18n[0]}</h4>
       <form onSubmit={handleSubmit}>
         <div className={styles.correctionFormRow}>
           <div className={styles.correctionFormGroup}>
@@ -164,7 +190,7 @@ function CorrectionForm({ course, organization, onClose, onSubmit }) {
               value={formData.organizationName}
               onChange={handleChange}
               className={styles.correctionFormControl}
-              placeholder="Organization name"
+              placeholder={i18n[1]}
             />
           </div>
           <div className={styles.correctionFormGroup}>
@@ -174,7 +200,7 @@ function CorrectionForm({ course, organization, onClose, onSubmit }) {
               value={formData.location}
               onChange={handleChange}
               className={styles.correctionFormControl}
-              placeholder="Location"
+              placeholder={i18n[2]}
             />
           </div>
         </div>
@@ -187,7 +213,7 @@ function CorrectionForm({ course, organization, onClose, onSubmit }) {
               value={formData.startDate}
               onChange={handleChange}
               className={styles.correctionFormControl}
-              placeholder="Start date"
+              placeholder={i18n[3]}
             />
           </div>
           <div className={styles.correctionFormGroup}>
@@ -197,7 +223,7 @@ function CorrectionForm({ course, organization, onClose, onSubmit }) {
               value={formData.endDate}
               onChange={handleChange}
               className={styles.correctionFormControl}
-              placeholder="End date"
+              placeholder={i18n[4]}
             />
           </div>
         </div>
@@ -210,7 +236,7 @@ function CorrectionForm({ course, organization, onClose, onSubmit }) {
               value={formData.participants}
               onChange={handleChange}
               className={styles.correctionFormControl}
-              placeholder="Participants"
+              placeholder={i18n[5]}
             />
           </div>
           <div className={styles.correctionFormGroup}>
@@ -220,7 +246,7 @@ function CorrectionForm({ course, organization, onClose, onSubmit }) {
               value={formData.applicationLink}
               onChange={handleChange}
               className={styles.correctionFormControl}
-              placeholder="Application link"
+              placeholder={i18n[6]}
             />
           </div>
         </div>
@@ -233,7 +259,7 @@ function CorrectionForm({ course, organization, onClose, onSubmit }) {
               value={formData.websiteLink}
               onChange={handleChange}
               className={styles.correctionFormControl}
-              placeholder="Website link"
+              placeholder={i18n[7]}
             />
           </div>
           <div className={styles.correctionFormGroup}>
@@ -243,7 +269,7 @@ function CorrectionForm({ course, organization, onClose, onSubmit }) {
               value={formData.contactEmail}
               onChange={handleChange}
               className={styles.correctionFormControl}
-              placeholder="Contact email"
+              placeholder={i18n[8]}
             />
           </div>
         </div>
@@ -255,7 +281,7 @@ function CorrectionForm({ course, organization, onClose, onSubmit }) {
               value={formData.description}
               onChange={handleChange}
               className={styles.correctionFormControl}
-              placeholder="Description"
+              placeholder={i18n[9]}
               rows="2"
             />
           </div>
@@ -265,7 +291,7 @@ function CorrectionForm({ course, organization, onClose, onSubmit }) {
               value={formData.additionalInfo}
               onChange={handleChange}
               className={styles.correctionFormControl}
-              placeholder="Additional information or corrections"
+              placeholder={i18n[10]}
               rows="2"
             />
           </div>
@@ -280,7 +306,7 @@ function CorrectionForm({ course, organization, onClose, onSubmit }) {
                 checked={formData.requestRemoval}
                 onChange={handleChange}
               />
-              Request to remove this listing entirely
+              {i18n[11]}
             </label>
           </div>
         </div>
@@ -291,13 +317,13 @@ function CorrectionForm({ course, organization, onClose, onSubmit }) {
             onClick={onClose}
             className={styles.correctionCancelButton}
           >
-            Cancel
+            {i18n[12]}
           </button>
           <button
             type="submit"
             className={styles.correctionSubmitButton}
           >
-            Send Correction
+            {i18n[13]}
           </button>
         </div>
       </form>
@@ -348,6 +374,14 @@ function CourseCard({ course, organization }) {
       </div>
     );
   }
+
+  const i18n = [
+    translate({id: "courses.contact.student", message: "Apply as Student", description: "Button label to apply as a student"}),
+    translate({id: "courses.contact.facilitator", message: "Apply as Facilitator", description: "Button label to apply as a facilitator"}),
+    translate({id: "courses.contact.website", message: "Apply as Facilitator", description: "Button label for website"}),
+    translate({id: "courses.contact.contact", message: "Contact", description: "Button label for contact"}),
+    translate({id: "courses.contact.suggest", message: "Suggest Correction", description: "Button label to suggest correction"}),
+  ]
 
   return (
     <div className={styles.courseCard}>
@@ -412,7 +446,7 @@ function CourseCard({ course, organization }) {
             className={styles.actionButton}
           >
             <FileText size={16} />
-            <span>Apply as Student</span>
+            <span>{i18n[0]}</span>
           </button>
         )}
         
@@ -423,7 +457,7 @@ function CourseCard({ course, organization }) {
             className={styles.actionButton}
           >
             <Users size={16} />
-            <span>Apply as Facilitator</span>
+            <span>{i18n[1]}</span>
           </button>
         )}
         
@@ -433,7 +467,7 @@ function CourseCard({ course, organization }) {
             className={styles.actionButton}
           >
             <Globe size={16} />
-            <span>Website</span>
+            <span>{i18n[2]}</span>
           </button>
         )}
         
@@ -443,7 +477,7 @@ function CourseCard({ course, organization }) {
             className={styles.actionButton}
           >
             <Mail size={16} />
-            <span>Contact</span>
+            <span>{i18n[3]}</span>
           </button>
         )}
 
@@ -452,7 +486,7 @@ function CourseCard({ course, organization }) {
           className={styles.suggestButton}
         >
           <Edit3 size={14} />
-          <span>Suggest Correction</span>
+          <span>{i18n[4]}</span>
         </button>
       </div>
 
@@ -495,13 +529,25 @@ function CoursesSection({ title, courses, description, sectionType }) {
 }
 
 export default function SimpleCoursesListing({ coursesData }) {
+  // i18n: Tableau de traductions pour les titres et descriptions de section
+  const i18n = [
+    <Translate id="courses.listing.title">No Courses Available</Translate>,
+    <Translate id="courses.listing.text">No courses are currently listed. Check back later or consider starting your own course.</Translate>,
+    <Translate id="courses.current.title" description="Section title for current courses">Current Courses</Translate>,
+    <Translate id="courses.current.description" description="Section description for current courses">Courses currently accepting students or in progress</Translate>,
+    <Translate id="courses.upcoming.title" description="Section title for upcoming courses">Upcoming Courses</Translate>,
+    <Translate id="courses.upcoming.description" description="Section description for upcoming courses">Future courses with applications opening soon</Translate>,
+    <Translate id="courses.past.title" description="Section title for past courses">Past Courses</Translate>,
+    <Translate id="courses.past.description" description="Section description for past courses">Successfully completed courses using Atlas materials</Translate>
+  ];
+
   if (!coursesData || !coursesData.organizations) {
     return (
       <div className={styles.emptyState}>
         <Calendar size={48} className={styles.emptyIcon} />
-        <h3 className={styles.emptyTitle}>No Courses Available</h3>
+        <h3 className={styles.emptyTitle}>{i18n[0]}</h3>
         <p className={styles.emptyText}>
-          No courses are currently listed. Check back later or consider starting your own course.
+          {i18n[1]}
         </p>
       </div>
     );
@@ -548,23 +594,23 @@ export default function SimpleCoursesListing({ coursesData }) {
   return (
     <div className={styles.coursesContainer}>
       <CoursesSection 
-        title="Current Courses" 
+        title={i18n[2]} 
         courses={activeCourses}
-        description="Courses currently accepting students or in progress"
+        description={i18n[3]}
         sectionType="active"
       />
       
       <CoursesSection 
-        title="Upcoming Courses" 
+        title={i18n[4]} 
         courses={upcomingCourses}
-        description="Future courses with applications opening soon"
+        description={i18n[5]}
         sectionType="upcoming"
       />
       
       <CoursesSection 
-        title="Past Courses" 
+        title={i18n[6]} 
         courses={completedCourses}
-        description="Successfully completed courses using Atlas materials"
+        description={i18n[7]}
         sectionType="completed"
       />
     </div>

@@ -5,33 +5,30 @@ import { CoursesHero } from '../components/Courses';
 import SimpleCoursesListing from '../components/Courses/SimpleCoursesListing';
 import CertificateSection from '../components/Courses/CertificateSection';
 import StartCourseSection from '../components/Courses/StartCourseSection';
-import coursesData from '../data/courses.json';
 import styles from './courses.module.css';
 
+import Translate, {translate} from '@docusaurus/Translate';
+import { getDataContent } from '../utils/i18nUtils';
+
 export default function CoursesPage() {
-  // Create certificate info from your data structure
-  const certificateInfo = {
-    available: true,
-    sampleImage: "/img/courses/certificate.png",
-    description: "Official LinkedIn certificates available for participants who complete course requirements.",
-    requirements: [
-      "Attend at least 6 out of 8 weekly sessions", 
-      "Complete weekly readings and exercises", 
-      "Participate actively in group discussions", 
-      "Submit final project or equivalent contribution"
-    ]
-  };
+  const coursesData = getDataContent('courses.json');
+
+  const i18n = [
+    translate({id:"courses.title", message:"AI Safety Courses - AI Safety Atlas", description: "Title for the courses page"}),
+    translate({id: "course.desc", message: "Discover academic courses, reading groups, and organized programs using AI Safety Atlas materials worldwide", description: "Description for the courses page"})
+  ];
 
   return (
     <Layout
-      title="AI Safety Courses - AI Safety Atlas"
-      description="Discover academic courses, reading groups, and organized programs using AI Safety Atlas materials worldwide.">
+      title={i18n[0]}
+      description={i18n[1]}
+    >
       
       {/* Hero Section */}
       <CoursesHero />
       
       {/* Certificate Section - Lead with this */}
-      <CertificateSection certificateInfo={certificateInfo} />
+      <CertificateSection />
 
       {/* Start Your Own Course Section */}
       <StartCourseSection />
@@ -40,8 +37,7 @@ export default function CoursesPage() {
       <div className="container" style={{ padding: '3rem 0' }}>
         <SimpleCoursesListing coursesData={coursesData} />
       </div>
-      
-      
+        
     </Layout>
   );
 }

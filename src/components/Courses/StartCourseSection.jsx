@@ -2,6 +2,8 @@
 import React, { useState } from 'react';
 import styles from './StartCourseSection.module.css';
 
+import Translate, {translate} from '@docusaurus/Translate';
+
 export default function StartCourseSection() {
   const [formData, setFormData] = useState({
     name: '',
@@ -14,6 +16,38 @@ export default function StartCourseSection() {
     message: ''
   });
   const [status, setStatus] = useState('');
+
+  const i18n = [
+    /* Left side - Information */
+    //0
+    <Translate id="courses.form.start" description="">Start Your Own Course</Translate>,
+    <Translate id="courses.form.ready" description="">Ready to bring AI safety education to your community? We're here to support you every step of the way.</Translate>,
+    <Translate id="courses.form.materials" description="">Open source textbook & materials</Translate>,
+    <Translate id="courses.form.resources" description="">Public facilitation guides & instructor resources</Translate>,
+    <Translate id="courses.form.cesia" description="">French Center for AI Safety (CeSIA) + Atlas co-branded certificates for your participants</Translate>,
+    //5
+    <Translate id="courses.form.support" description="">Support for custom curriculum design for your needs</Translate>,
+    <Translate id="courses.form.any_help" description="">Any other help we can provide</Translate>,
+    /* Right Form - labels and placeholders*/
+    <Translate id="courses.form.about_course" description="">Tell Us About Your Course</Translate>,
+    <Translate id="courses.form.share" description="">Share your plans and we'll help you get started</Translate>,
+    translate({id:"courses.form.name", description:"", message: "Your name"}),
+    //10
+    translate({id:"courses.form.email", description:"", message: "Your email"}),
+    translate({id:"courses.form.univ", description:"", message: "University/Organization (optional)"}),
+    translate({id:"courses.form.location", description:"", message: "Location (city, country)"}),
+    translate({id:"courses.form.participants", description:"", message: "Expected participants (optional)"}),
+    translate({id:"courses.form.start_date", description:"", message: "Start date (optional)"}),
+    //15
+    translate({id:"courses.form.end_date", description:"", message: "End date (optional)"}),
+    translate({id:"courses.form.about_audience", description:"", message: "Tell us about your audience, format preferences, or any specific support you'd like (optional)"}),
+    translate({id:"courses.form.error", description:"", message: "Something went wrong. Please try again or email us directly."}),
+    translate({id:"courses.form.send", description:"", message: "Send"}),
+    translate({id:"courses.form.sending", description:"", message: "Sending"}),
+    //20
+    <Translate id="courses.form.thanks" description="">Thank You!</Translate>,
+    <Translate id="courses.form.thanks_msg" description="">We're excited to support your course and will be in touch soon with resources and next steps.</Translate>
+  ];
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -77,8 +111,8 @@ export default function StartCourseSection() {
                 <circle cx="12" cy="12" r="10" />
               </svg>
             </div>
-            <h3>Thank You!</h3>
-            <p>We're excited to support your course and will be in touch soon with resources and next steps.</p>
+            <h3>{i18n[19]}</h3>
+            <p>{i18n[20]}</p>
           </div>
         </div>
       </div>
@@ -92,9 +126,9 @@ export default function StartCourseSection() {
           
           {/* Left Side - Information */}
           <div className={styles.leftSide}>
-            <h2 className={styles.startCourseTitle}>Start Your Own Course</h2>
+            <h2 className={styles.startCourseTitle}>{i18n[0]}</h2>
             <p className={styles.startCourseDescription}>
-              Ready to bring AI safety education to your community? We're here to support you every step of the way.
+              {i18n[1]}
             </p>
             
             <div className={styles.resourcesList}>
@@ -104,7 +138,7 @@ export default function StartCourseSection() {
                   alt="" 
                   className={styles.resourceIcon} 
                 />
-                <span>Open source textbook & materials</span>
+                <span>{i18n[2]}</span>
               </div>
               <div className={styles.resource}>
                 <img 
@@ -112,7 +146,7 @@ export default function StartCourseSection() {
                   alt="" 
                   className={styles.resourceIcon} 
                 />
-                <span>Public facilitation guides & instructor resources</span>
+                <span>{i18n[3]}</span>
               </div>
               <div className={styles.resource}>
                 <img 
@@ -120,7 +154,7 @@ export default function StartCourseSection() {
                   alt="" 
                   className={styles.resourceIcon} 
                 />
-                <span>French Center for AI Safety (CeSIA) + Atlas co-branded certificates for your participants</span>
+                <span>{i18n[4]}</span>
               </div>
               <div className={styles.resource}>
                 <img 
@@ -128,7 +162,7 @@ export default function StartCourseSection() {
                   alt="" 
                   className={styles.resourceIcon} 
                 />
-                <span>Support for custom curriculum design for your needs</span>
+                <span>{i18n[5]}</span>
               </div>
               <div className={styles.resource}>
                 <img 
@@ -136,15 +170,15 @@ export default function StartCourseSection() {
                   alt="" 
                   className={styles.resourceIcon} 
                 />
-                <span>Any other help we can provide :)</span>
+                <span>{i18n[6]}</span>
               </div>
             </div>
           </div>
 
           {/* Right Side - Form */}
           <div className={styles.rightSide}>
-            <h3 className={styles.formTitle}>Tell Us About Your Course</h3>
-            <p className={styles.formSubtitle}>Share your plans and we'll help you get started</p>
+            <h3 className={styles.formTitle}>{i18n[7]}</h3>
+            <p className={styles.formSubtitle}>{i18n[8]}</p>
 
             <form onSubmit={handleSubmit} className={styles.courseForm}>
               <div className={styles.formRow}>
@@ -155,7 +189,7 @@ export default function StartCourseSection() {
                     value={formData.name}
                     onChange={handleChange}
                     className={styles.formControl}
-                    placeholder="Your name"
+                    placeholder={i18n[9]}
                   />
                 </div>
 
@@ -166,7 +200,7 @@ export default function StartCourseSection() {
                     value={formData.email}
                     onChange={handleChange}
                     className={styles.formControl}
-                    placeholder="Your email"
+                    placeholder={i18n[10]}
                   />
                 </div>
               </div>
@@ -179,7 +213,7 @@ export default function StartCourseSection() {
                     value={formData.organization}
                     onChange={handleChange}
                     className={styles.formControl}
-                    placeholder="University/Organization (optional)"
+                    placeholder={i18n[11]}
                   />
                 </div>
 
@@ -190,7 +224,7 @@ export default function StartCourseSection() {
                     value={formData.location}
                     onChange={handleChange}
                     className={styles.formControl}
-                    placeholder="Location (city, country)"
+                    placeholder={i18n[12]}
                   />
                 </div>
               </div>
@@ -203,7 +237,7 @@ export default function StartCourseSection() {
                     value={formData.expectedParticipants}
                     onChange={handleChange}
                     className={styles.formControl}
-                    placeholder="Expected participants (optional)"
+                    placeholder={i18n[13]}
                     min="1"
                     max="1000"
                   />
@@ -222,9 +256,9 @@ export default function StartCourseSection() {
                     value={formData.startDate}
                     onChange={handleChange}
                     className={styles.formControl}
-                    title="Planned start date (optional)"
+                    title={i18n[14]}
                   />
-                  <label className={styles.dateLabel}>Start date (optional)</label>
+                  <label className={styles.dateLabel}>{i18n[14]}</label>
                 </div>
 
                 <div className={styles.formGroup}>
@@ -234,9 +268,9 @@ export default function StartCourseSection() {
                     value={formData.endDate}
                     onChange={handleChange}
                     className={styles.formControl}
-                    title="Planned end date (optional)"
+                    title={i18n[15]}
                   />
-                  <label className={styles.dateLabel}>End date (optional)</label>
+                  <label className={styles.dateLabel}>{i18n[15]}</label>
                 </div>
               </div>
 
@@ -247,13 +281,13 @@ export default function StartCourseSection() {
                   onChange={handleChange}
                   rows="3"
                   className={styles.formControl}
-                  placeholder="Tell us about your audience, format preferences, or any specific support you'd like (optional)"
+                  placeholder={i18n[16]}
                 />
               </div>
 
               {status === 'error' && (
                 <div className={styles.errorMessage}>
-                  Something went wrong. Please try again or email us directly.
+                  {i18n[17]}
                 </div>
               )}
 
@@ -262,7 +296,7 @@ export default function StartCourseSection() {
                 className={`${styles.submitButton} ${status === 'sending' ? styles.sending : ''}`}
                 disabled={status === 'sending'}
               >
-                {status === 'sending' ? 'Sending...' : 'Send'}
+                {status === 'sending' ? i18n[19] + '...' : i18n[18]}
               </button>
             </form>
           </div>
