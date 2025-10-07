@@ -8,7 +8,7 @@ import { toString } from 'mdast-util-to-string';
  */
 export default function remarkGlossary(options = {}) {
   const {
-    glossaryDir = './src/data/glossary',
+    glossaryDir = {'default': './src/data/glossary'},
     caseSensitive = false,
     excludeNodes = ['code', 'inlineCode', 'link', 'heading']
   } = options;
@@ -19,8 +19,13 @@ export default function remarkGlossary(options = {}) {
     try {
       const fs = await import('fs/promises');
       const path = await import('path');
-      
-      const fullDir = path.resolve(glossaryDir);
+
+      // Identify locale from file path
+      const localeMatch = file.path.match(/\/i18n\/([^\/]+)\//);
+      const locale = localeMatch ? localeMatch[1] : 'default';
+      console.log(`Loading glossary for locale: ${locale}`);
+
+      const fullDir = path.resolve(glossaryDir[locale] || glossaryDir['default']);
       
       // Read directory contents
       const files = await fs.readdir(fullDir);
