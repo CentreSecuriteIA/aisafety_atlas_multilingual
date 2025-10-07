@@ -2,6 +2,8 @@
 
 Currently hosted for checking at https://centresecuriteia.github.io/
 
+See first the code in the `to_multilingual` branch.
+
 ## TODO
 
 **Mandatory:**
