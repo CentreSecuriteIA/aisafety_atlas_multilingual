@@ -1,5 +1,6 @@
 // src/theme/DocItem/Landing/Story.jsx
 import React from 'react';
+//import Description from './Story/Description';
 import Description from './Story/Description';
 import Quotes from './Story/Quotes';
 import Motivation from './Story/Motivation';

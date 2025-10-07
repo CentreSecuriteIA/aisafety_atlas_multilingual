@@ -1,7 +1,7 @@
 // src/theme/DocItem/Landing/ChapterList/hooks.js
 import { useState, useEffect } from 'react';
-import { buildAudioFiles, getAudioUrl } from '../../../../utils/audioUtils';
-import { buildPdfFile } from '../../../../utils/pdfUtils';
+import { buildAudioFiles, getAudioUrl } from '@site/src/utils/audioUtils';
+import { buildPdfFile } from '@site/src/utils/pdfUtils';
 
 export function useFileVerification(chapters) {
   const [verifiedAudioFiles, setVerifiedAudioFiles] = useState(new Map());

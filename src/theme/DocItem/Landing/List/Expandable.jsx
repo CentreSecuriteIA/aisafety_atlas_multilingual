@@ -1,7 +1,7 @@
 // src/theme/DocItem/Landing/ChapterList/Expandable.jsx
 import React from 'react';
 import AudioPlayer from './AudioPlayer';
-import { getAudioUrl } from '../../../../utils/audioUtils';
+import { getAudioUrl } from '@site/src/utils/audioUtils';
 import styles from './Expandable.module.css';
 
 // Helper function to extract YouTube video ID

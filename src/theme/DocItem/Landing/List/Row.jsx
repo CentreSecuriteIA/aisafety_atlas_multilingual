@@ -3,7 +3,7 @@ import React from 'react';
 import { ChevronDown, ChevronRight } from 'lucide-react';
 import Buttons from './Buttons';
 import Expandable from './Expandable';
-import { hasPdfFile } from '../../../../utils/pdfUtils';
+import { hasPdfFile } from '@site/src/utils/pdfUtils';
 import styles from './Row.module.css';
 import containerStyles from './ChapterList.module.css';
 
