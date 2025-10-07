@@ -2,17 +2,15 @@
 import React from 'react';
 import styles from './Advisors.module.css';
 
+import Translate from '@docusaurus/Translate';
+import { getDataContent } from '../../../../utils/i18nUtils';
+
 export default function Advisors() {
-  const advisors = [
-    {
-      name: "Vincent Corruble",
-      description: "Professor at Sorbonne University and research fellow at CHAI."
-    },
-    {
-      name: "Fabien Roger",
-      description: "Previously worked at Redwood Research, now at Anthropic."
-    }
-  ];
+  const advisors = getDataContent('advisors.json').content;
+
+  const i18n = [
+    <Translate id="landing.info.advisors.title"  description="Title for the Advisors section on the landing page">Advisors</Translate>  
+  ]
 
   return (
     <div className={styles.advisorsContainer}>
@@ -20,7 +18,7 @@ export default function Advisors() {
         <div className={styles.iconContainer}>
           <img src="/img/icons/advisor.svg" alt="" className={styles.icon} />
         </div>
-        <h2 className={styles.sectionTitle}>Advisors</h2>
+        <h2 className={styles.sectionTitle}>{i18n[0]}</h2>
       </div>
       
       <div className={styles.advisorsList}>

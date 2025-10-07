@@ -2,36 +2,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import styles from './Quotes.module.css';
 
-// Single rotating expert quote data
-const EXPERT_QUOTES = [
-  {
-    quote: "We have agency. It's not too late to steer the evolution of societies and humanity in a positive direction. But for that, we need enough people who understand both the advantages and the risks.",
-    name: "Yoshua Bengio",
-    title: "Most cited computer scientist globally, Turing Award Winner",
-    image: "/img/quotes/yoshua_bengio.jpg",
-    source: "CNBC Interview",
-    year: "2024",
-    url: "https://www.cnbc.com/2024/11/21/will-ai-replace-humans-yoshua-bengio-warns-of-artificial-intelligence-risks.html"
-  },
-  {
-    quote: "We're dealing with things we've never dealt with before. And normally, the first time you deal with something totally novel, you get it wrong. And we can't afford to get it wrong.",
-    name: "Geoffrey Hinton",
-    title: "Turing Award Winner, \"Godfather of AI\"",
-    image: "/img/quotes/geoffrey_hinton.jpg",
-    source: "CBS 60 Minutes Interview",
-    year: "2023",
-    url: "https://www.cbsnews.com/news/geoffrey-hinton-ai-dangers-60-minutes-transcript/"
-  },
-  {
-    quote: "It's obviously important that any superintelligence anyone builds does not go rogue... It's an unsolved problem.",
-    name: "Ilya Sutskever",
-    title: "Co-Founder Safe Superintelligence Inc., former Chief Scientist at OpenAI",
-    image: "/img/quotes/ilya_sutskever.jpg",
-    source: "MIT Technology Review",
-    year: "2023",
-    url: "https://www.technologyreview.com/2023/10/26/1082398/exclusive-ilya-sutskever-openais-chief-scientist-on-his-hopes-and-fears-for-the-future-of-ai/"
-  }
-];
+import {getDataContent} from '@site/src/utils/i18nUtils.js';
 
 export default function Quotes() {
   const [currentQuoteIndex, setCurrentQuoteIndex] = useState(0);
@@ -39,6 +10,10 @@ export default function Quotes() {
   const [isTransitioning, setIsTransitioning] = useState(false);
   const containerRef = useRef(null);
   const quoteRefs = useRef([]);
+
+  // Load localized data
+  const data = getDataContent('quotes.json');
+  const EXPERT_QUOTES = data.landing_quotes;
 
   // Measure the height of all quotes and set container to the tallest
   useEffect(() => {

@@ -6,6 +6,9 @@ import {useThemeConfig} from '@docusaurus/theme-common';
 import styles from './styles.module.css';
 import SocialBar from './SocialBar';
 import {ContactForm} from './ContactForm';
+import { getDataContent } from '../../utils/i18nUtils';
+
+import Translate from '@docusaurus/Translate';
 
 function FooterLogo({src, alt, href}) {
   const logoSrc = useBaseUrl(src);
@@ -31,7 +34,8 @@ function FooterLogo({src, alt, href}) {
 
 function CitationBox() {
   const [copied, setCopied] = useState(false);
-  const citationText = "Markov Grey and Charbel-Raphaël Segerie et al. 2025. AI Safety Atlas. French Center for AI Safety (CeSIA). URL: ai-safety-atlas.com";
+  const citationData = getDataContent("citation.json");
+  const citationText = citationData.message;
 
   const handleCopy = async () => {
     try {
@@ -39,7 +43,7 @@ function CitationBox() {
       setCopied(true);
       setTimeout(() => setCopied(false), 2000);
     } catch (err) {
-      console.error('Failed to copy text: ', err);
+      console.error(citationData.failed, err);
     }
   };
 
@@ -48,11 +52,11 @@ function CitationBox() {
       <div className={styles.citationText}>
         {citationText}
       </div>
-      <button onClick={handleCopy} className={styles.copyButton} title="Copy citation">
+      <button onClick={handleCopy} className={styles.copyButton} title={citationData.copy_citation}>
         {copied ? (
-          <img src="/img/icons/copy.svg" alt="Copied" className={styles.copyIcon} />
+          <img src="/img/icons/copy.svg" alt={citationData.copied} className={styles.copyIcon} />
         ) : (
-          <img src="/img/icons/copy.svg" alt="Copy" className={styles.copyIcon} />
+          <img src="/img/icons/copy.svg" alt={citationData.copied} className={styles.copyIcon} />
         )}
       </button>
     </div>
@@ -62,6 +66,14 @@ function CitationBox() {
 function Footer() {
   const {footer} = useThemeConfig();
   
+  const i18n = [
+    <Translate id="footer.footerLogoText" description="Footer Logo Text">AI SAFETY ATLAS</Translate>,
+    <Translate id="footer.footerLogoDescription" description="Footer Logo Description">A comprehensive guide to AI safety and alignment research.</Translate>,
+    <Translate id="footer.cesiaDescription" description="Footer CeSIA Description">Leading research institute advancing AI safety and alignment in Europe.</Translate>,
+    <Translate id="footer.citation.citeAs" description="Footer Citation title">Cite this work as</Translate>,
+    <Translate id="footer.funders.title" description="Footer Funders title">Funders</Translate>,
+  ];
+
   if (!footer) {
     return null;
   }
@@ -86,12 +98,12 @@ function Footer() {
                   href={logo.href}
                 />
                 <div className={styles.footerLogoText}>
-                  AI SAFETY ATLAS
+                  {i18n[0]}
                 </div>
               </div>
             </div>
             <p className={styles.footerDescription}>
-              A comprehensive guide to AI safety and alignment research.
+              {i18n[1]}
             </p>
           </div>
 
@@ -111,14 +123,14 @@ function Footer() {
                 />
               </a>
               <p className={styles.cesiaDescription}>
-                Leading research institute advancing AI safety and alignment in Europe.
+                {i18n[2]}
               </p>
             </div>
           </div>
 
           {/* Funders Column */}
           <div className={styles.fundersCol}>
-            <h3 className={styles.footerLinkHeading}>Funders</h3>
+            <h3 className={styles.footerLinkHeading}>{i18n[4]}</h3>
             <div className={styles.fundersList}>
               <a href="https://manifund.org/" target="_blank" rel="noopener noreferrer" className={styles.funderItem}>
                 <img src="/img/supporters/manifund.svg" alt="Manifund" className={styles.funderLogo} />
@@ -136,7 +148,7 @@ function Footer() {
         <div className={styles.footerBottomRow}>
           {/* Citation Column */}
           <div className={styles.citationCol}>
-            <h3 className={styles.footerLinkHeading}>Cite this work as</h3>
+            <h3 className={styles.footerLinkHeading}>{i18n[3]}</h3>
             <CitationBox />
           </div>
           
@@ -154,10 +166,27 @@ function Footer() {
         {/* Copyright and Analytics - Below the line */}
         <div className={styles.footerBottom}>
           <div className={styles.footerBottomItem}>
-            <strong>Copyright:</strong> 2025 AI Safety Atlas • Text Content: <Link href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" className={styles.licenseLink}>CC BY-SA 4.0</Link> • Code: <Link href="https://opensource.org/licenses/MIT" target="_blank" className={styles.licenseLink}>MIT</Link>
+            <Translate
+              id="footer.license" 
+              description="Footer copyright and license information"
+              values={{
+                copyright_year : "2025",
+                licenseLinkClass: styles.licenseLink,
+              }}
+              >
+                {`<strong>Copyright:</strong> {copyright_year} AI Safety Atlas • Text Content: <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener noreferrer" class="{licenseLinkClass}">CC BY-SA 4.0</a> • Code: <a href="https://opensource.org/licenses/MIT" target="_blank" class="{licenseLinkClass}">MIT</a>`}
+              </Translate>
           </div>
           <div className={styles.footerBottomItem}>
-            <strong>Analytics:</strong> We use privacy-focused <Link href="https://plausible.io/" target="_blank" className={styles.licenseLink}>Plausible</Link> instead of Google Analytics. No cookies, fully GDPR/CCPA compliant. :)
+            <Translate
+              id="footer.analytics"
+              description="Footer analytics information"
+              values={{
+                licenseLinkClass: styles.licenseLink,
+              }}
+            >
+              {`<strong>Analytics:</strong> We use privacy-focused <a href="https://plausible.io/" target="_blank" class="{licenseLinkClass}">Plausible</a> instead of Google Analytics. No cookies, fully GDPR/CCPA compliant. :)`}
+            </Translate>
           </div>
         </div>
       </div>

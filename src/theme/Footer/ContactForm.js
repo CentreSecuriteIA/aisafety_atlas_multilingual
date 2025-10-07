@@ -3,6 +3,8 @@ import React, { useState } from 'react';
 import clsx from 'clsx';
 import styles from './ContactForm.module.css';
 
+import Translate, { translate } from '@docusaurus/Translate';
+
 function ContactForm() {
   const [formData, setFormData] = useState({
     name: '',
@@ -10,6 +12,17 @@ function ContactForm() {
     message: ''
   });
   const [status, setStatus] = useState('');
+
+  const i18n = [
+    <Translate id="footer.contactForm.heading">Get in Touch</Translate>,
+    <Translate id="footer.contactForm.description">Have questions about AI safety or want to contribute? Send us a message. This is an open source project. We are always looking for contributors or course collaborations.</Translate>,
+    translate({ id: "footer.contactForm.namePlaceholder", message: "Your name" }),
+    translate({ id: "footer.contactForm.emailPlaceholder", message: "Your email" }),
+    translate({ id: "footer.contactForm.messagePlaceholder", message: "Your message" }),
+    translate({ id: "footer.contactForm.sendButton", message: "Send Message" }),
+    translate({ id: "footer.contactForm.sendingButton", message: "Sending..." }),
+    translate({ id: "footer.contactForm.sentButton", message: "Message Sent!" })
+  ];
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -76,9 +89,9 @@ function ContactForm() {
 
   return (
     <div className={styles.contactForm}>
-      <h3 className={styles.contactHeading}>Get in Touch</h3>
+      <h3 className={styles.contactHeading}>{i18n[0]}</h3>
       <p className={styles.contactDescription}>
-        Have questions about AI safety or want to contribute? Send us a message. This is an open source project. We are always looking for contributors or course collaborations.
+        {i18n[1]}
       </p>
       
       <form onSubmit={handleSubmit} className={styles.form}>
@@ -92,7 +105,7 @@ function ContactForm() {
               onChange={handleChange}
               required
               className={styles.formControl}
-              placeholder="Your name"
+              placeholder={i18n[2]}
             />
           </div>
 
@@ -105,7 +118,7 @@ function ContactForm() {
               onChange={handleChange}
               required
               className={styles.formControl}
-              placeholder="Your email"
+              placeholder={i18n[3]}
             />
           </div>
         </div>
@@ -119,7 +132,7 @@ function ContactForm() {
             required
             rows="3"
             className={styles.formControl}
-            placeholder="Your message"
+            placeholder={i18n[4]}
           />
         </div>
 
@@ -134,9 +147,9 @@ function ContactForm() {
           )}
           disabled={status === 'sending'}
         >
-          {status === 'sending' ? 'Sending...' : 
-           status === 'sent' ? 'Message Sent!' : 
-           'Send Message'}
+          {status === 'sending' ? i18n[6] : 
+           status === 'sent' ? i18n[7] : 
+           i18n[5]}
         </button>
       </form>
     </div>

@@ -5,8 +5,8 @@ import Story from './Story';
 import ChapterList from './List';
 import Info from './Info';
 import Testimonials from './Testimonials';
-import chaptersData from '../../../data/chapters.json';
 import styles from './index.module.css';
+import { getDataContent } from '../../../utils/i18nUtils';
 
 // Add a simple loading skeleton component
 function LoadingSkeleton() {
@@ -59,6 +59,8 @@ export default function ChapterLanding() {
   const [mainWidth, setMainWidth] = useState(0);
   const [isReady, setIsReady] = useState(false);
 
+  const chaptersData = getDataContent("chapters.json");
+
   // Measure bounds - same technique as your headers
   useEffect(() => {
     const updateMainWidth = () => {
@@ -101,7 +103,7 @@ export default function ChapterLanding() {
   return (
     <div style={landingStyle}>
       <div className={styles.landingContainer}>
-        
+
         {/* Hero Section */}
         <Hero />
         

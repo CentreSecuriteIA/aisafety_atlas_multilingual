@@ -1,13 +1,14 @@
 // src/theme/DocItem/Landing/Testimonials.jsx
 import React, { useState, useEffect } from 'react';
 import styles from './Testimonials.module.css';
-import testimonials from '../../../data/testimonials.json';
+
 import { Quote } from 'lucide-react';
+import { getDataContent } from '../../../utils/i18nUtils';
 
 function TestimonialCard({ quote, name, position, image, featured = false }) {
   // Use placeholder image if none is provided
   const imageSrc = image || '/img/testimonials/placeholder.jpg';
-  
+
   return (
     <div className={`${styles.testimonialCard} ${featured ? styles.featuredCard : ''}`}>
       <div className={styles.quoteIconWrapper}>
@@ -35,6 +36,8 @@ function TestimonialCard({ quote, name, position, image, featured = false }) {
 export default function Testimonials() {
   const [currentTestimonialIndex, setCurrentTestimonialIndex] = useState(0);
   const [itemsToShow, setItemsToShow] = useState(3);
+  
+  const testimonials = getDataContent("testimonials.json");
   
   // Responsive items calculation
   useEffect(() => {

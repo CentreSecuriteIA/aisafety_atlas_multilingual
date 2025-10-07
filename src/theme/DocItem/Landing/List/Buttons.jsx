@@ -1,15 +1,54 @@
 // src/theme/DocItem/Landing/ChapterList/Buttons.jsx
 import React from 'react';
-import { SmallTooltip } from '../../../../components/UI/Tooltip';
-import { getPdfUrl } from '../../../../utils/pdfUtils';
+import { SmallTooltip } from '@site/src/components/UI/Tooltip';
+import { getPdfUrl } from '@site/src/utils/pdfUtils';
 import styles from './Buttons.module.css';
 
+import {translate} from '@docusaurus/Translate';
+
+const i18n = [
+  //0
+  translate({
+    "message": "Read Online",
+    "id": "landing.chapterList.buttons.read"
+  }),
+  translate({
+    "message": "Watch Video",
+    "id": "landing.chapterList.buttons.video"
+  }),
+  translate({
+    "message": "Download PDF",
+    "id": "landing.chapterList.buttons.pdf"
+  }),
+  translate({
+    "message": "Listen to Audio",
+    "id": "landing.chapterList.buttons.audio"
+  }),
+  translate({
+    "message": "Teaching Guide",
+    "id": "landing.chapterList.buttons.teach"
+  }),
+  //5
+  translate({
+    "message": "Show",
+    "id": "landing.chapterList.buttons.show"
+  }),
+  translate({
+    "message": "Hide",
+    "id": "landing.chapterList.buttons.hide"
+  }),
+  translate({
+    "message": "Coming soon",
+    "id": "landing.chapterList.buttons.comingSoon"
+  })
+]
+
 const resources = [
-  { key: 'chapter', icon: '/img/icons/book.svg', label: 'Read', tooltip: 'Read Online' },
-  { key: 'video', icon: '/img/icons/video.svg', label: 'Video', tooltip: 'Watch Video' },
-  { key: 'pdf', icon: '/img/icons/pdf.svg', label: 'PDF', tooltip: 'Download PDF' },
-  { key: 'audio', icon: '/img/icons/audio.svg', label: 'Audio', tooltip: 'Listen to Audio' },
-  { key: 'facilitation', icon: '/img/icons/teach.svg', label: 'Teach', tooltip: 'Teaching Guide' }
+  { key: 'chapter', icon: '/img/icons/book.svg', label: 'Read', tooltip: i18n[0] },
+  { key: 'video', icon: '/img/icons/video.svg', label: 'Video', tooltip: i18n[1] },
+  { key: 'pdf', icon: '/img/icons/pdf.svg', label: 'PDF', tooltip: i18n[2] },
+  { key: 'audio', icon: '/img/icons/audio.svg', label: 'Audio', tooltip: i18n[3] },
+  { key: 'facilitation', icon: '/img/icons/teach.svg', label: 'Teach', tooltip: i18n[4] }
 ];
 
 export default function Buttons({
@@ -87,9 +126,9 @@ export default function Buttons({
             content={
               isAvailable 
                 ? isExpandable 
-                  ? `${isCurrentlyExpanded ? 'Hide' : 'Show'} ${resource.tooltip}` 
+                  ? `${isCurrentlyExpanded ? i18n[6] : i18n[5]} ${resource.tooltip}` 
                   : resource.tooltip
-                : `${resource.label} - Coming soon`
+                : `${resource.label} - ${i18n[7]}`
             }
           >
             <button
