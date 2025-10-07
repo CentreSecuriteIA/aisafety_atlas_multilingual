@@ -6,6 +6,8 @@ import ChapterLanding from './Landing';
 import ChapterHeaderRenderer from './Headers/ChapterHeaderRenderer';
 import ChapterFeedback from '../../components/Feedback/ChapterFeedback';
 
+import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
+
 export default function DocItemWrapper(props) {
   const location = useLocation();
   const [isClient, setIsClient] = useState(false);
@@ -15,21 +17,54 @@ export default function DocItemWrapper(props) {
     setIsClient(true);
   }, []);
 
+  // Detect locale selected
+  const {i18n: {currentLocale}} = useDocusaurusContext();
+
   const pageType = useMemo(() => {
     const pathname = location.pathname;
-    
+
+    /* 
     if (pathname === '/' || pathname === '/chapters' || pathname === '/chapters/') {
       return 'landing';
     }
-    
+
+    // Test for locale-prefixed paths
+    if (pathname === `/${currentLocale}/` || pathname ===  `/${currentLocale}/chapters` || pathname === `/${currentLocale}/chapters/`) {
+      return 'landing';
+    }
+    */
+    // Match langind pages with or without locale prefix :
+    // /, /chapters, /chapters/, /fr, /fr/, /fr/chapters, /fr/chapters/
+    if (
+      pathname.match(new RegExp(`^/(${currentLocale}/?)?(chapters/?)?$`))
+    ) {
+      return 'landing';
+    }
+ 
+    /*     
     if (pathname.match(/^\/chapters\/\d+\/?$/)) {
       return 'chapter';
     }
-    
+    */
+    // Match chapter pages with or without locale prefix
+    if (
+      pathname.match(new RegExp(`^/(${currentLocale}/)?chapters/\\d+/?$`))
+    ) {
+      return 'chapter';
+    }
+
+    /*     
     if (pathname.match(/^\/chapters\/\d+\/\d+/)) {
       return 'section';
     }
-    
+    */   
+    // Match section pages with or without locale prefix
+    if (
+      pathname.match(new RegExp(`^/(${currentLocale}/)?chapters/\\d+/\\d+`))
+    ) {
+      return 'section';
+    }
+
     return 'other';
   }, [location.pathname]);
 
