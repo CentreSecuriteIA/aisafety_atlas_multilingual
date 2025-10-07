@@ -5,13 +5,25 @@ export const metadata = {
   favicon: 'img/favicon.ico',
   
   // Change to your custom domain
+  /*
   url: 'https://ai-safety-atlas.com',  // ← Changed from markov-root.github.io
+  baseUrl: '/',
+  */
+
+  // For GitHub Pages deployment context (CentreSecuriteIA GitHub organization)
+  url: 'https://centresecuriteia.github.io/',
   baseUrl: '/',
   
   // GitHub deployment settings - keep the same
+  /*
   organizationName: 'markov-root',
   projectName: 'markov-root.github.io',
   deploymentBranch: 'gh-pages',
+  */
+  organizationName: 'centresecuriteia',
+  projectName: 'aisafety_atlas_multilingual_website',
+  deploymentBranch: 'main',
+
   trailingSlash: false,
   
   // Build configuration
@@ -21,7 +33,20 @@ export const metadata = {
   // Internationalization
   i18n: {
     defaultLocale: 'en',
-    locales: ['en'],
+    locales: ['en', 'fr'],
+    path: 'i18n',
+    localeConfigs: {
+      en: {
+        label: 'English',
+        htmlLang: 'en-GB',
+        direction: 'ltr',
+      },
+      fr: {
+        label: 'Français',
+        htmlLang: 'fr-FR',
+        direction: 'ltr',
+      },
+    },
   },
   
   // Static directories

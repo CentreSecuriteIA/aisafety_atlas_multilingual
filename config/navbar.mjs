@@ -26,6 +26,11 @@ export const navbarConfig = {
       position: 'right',
       label: 'FAQ',
     },
+    // Locale dropdown for language selection
+    {
+      type: 'localeDropdown',
+      position: 'right'
+    },
     // No custom items - just clean navbar with search
   ],
 };
