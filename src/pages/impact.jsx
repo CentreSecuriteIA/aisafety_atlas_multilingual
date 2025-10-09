@@ -8,11 +8,18 @@ import Publications from '../components/Impact/Publications';
 import Adoption from '../components/Impact/Adoption';
 import styles from './impact.module.css';
 
+import {translate} from '@docusaurus/Translate';
+
 export default function ImpactPage() {
+  const i18n = [
+    translate({id:"impact.title", description:"", message:"Impact - AI Safety Atlas"}),
+    translate({id:"impact.desc", description:"", message:"Impact and outcomes from AI Safety Atlas"}),
+  ];
+
   return (
     <Layout
-      title="Impact - AI Safety Atlas"
-      description="Impact and outcomes from AI Safety Atlas">
+      title={i18n[0]}
+      description={i18n[1]}>
       
       <div className={styles.impactPageContainer}>
         {/* Hero Section */}

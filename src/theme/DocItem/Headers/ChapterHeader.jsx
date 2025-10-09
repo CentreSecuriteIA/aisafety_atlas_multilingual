@@ -15,6 +15,8 @@ import {
   debugPdfFiles 
 } from '@site/src/utils/pdfUtils';
 
+import {translate} from '@docusaurus/Translate';
+
 // Action Button Component - Updated with centralized Tippy
 function ActionButton({ href, iconPath, label, description, active, onClick }) {
   const [isHovered, setIsHovered] = useState(false);
@@ -47,7 +49,12 @@ function ActionButton({ href, iconPath, label, description, active, onClick }) {
       </ActionButtonTooltip>
     );
   }
+  
   // Regular link buttons
+  const i18n = [
+    translate({id: 'theme.docItem.chapterHeader.ActionButton.notAvailable', message: '(Not available)'}),
+  ];
+
   return (
     <ActionButtonTooltip content={active ? tooltipContent : `${label} (Not available)`}>
       <a
@@ -211,6 +218,59 @@ export default function ChapterHeader({ frontMatter, title, chapterNumber, bound
   };
   
   const particles = generateParticles();
+
+  const i18n = [
+    //0
+    translate({id: 'theme.docItem.chapterHeader.breadcrumb.home', message: 'AI Safety Atlas Home'}),
+    translate({id: 'theme.docItem.chapterHeader.breadcrumb.allChapters', message: 'All Chapters'}),
+    translate({id: 'theme.docItem.chapterHeader.breadcrumb.chapter', message: 'Chapter'}),
+    translate({id: 'theme.docItem.chapterHeader.metadata.authors', message: 'Authors'}),
+    translate({id: 'theme.docItem.chapterHeader.metadata.affiliation', message: 'Affiliation'}),
+    //5
+    translate(
+      {id: 'theme.docItem.chapterHeader.metadata.contribution', message: 'We thank {nameList} for their valuable feedback and contributions.'},
+      {nameList: ((frontMatter) => {
+                          const names = frontMatter?.acknowledgements;
+                          if (!names || names.length === 0) return '';
+                          if (names.length === 1) {
+                            return names[0];
+                          } else if (names.length === 2) {
+                            return `${names[0]} and ${names[1]}`;
+                          } else {
+                            const allButLast = names.slice(0, -1).join(', ');
+                            const last = names[names.length - 1];
+                            return `${allButLast}, and ${last}`;
+                          }
+                        })(frontMatter)}
+    ),
+    translate({id: 'theme.docItem.chapterHeader.metadata.readingTime', message: 'Reading Time'}),
+    translate({id: 'theme.docItem.chapterHeader.metadata.readingTime.core', message: 'core'}),
+    translate({id: 'theme.docItem.chapterHeader.metadata.readingTime.optional', message: 'optional'}),
+    translate({id: 'theme.docItem.chapterHeader.metadata.readingTime.appendix', message: 'appendix'}),
+    //10
+    translate({id: 'theme.docItem.chapterHeader.buttons.paper', message: 'Paper'}),
+    translate({id: 'theme.docItem.chapterHeader.buttons.paperDesc', message: 'View on arXiv'}),
+    translate({id: 'theme.docItem.chapterHeader.buttons.docs', message: 'Docs'}),
+    translate({id: 'theme.docItem.chapterHeader.buttons.docsDesc', message: 'Comment directly on Google Docs'}),
+    translate({id: 'theme.docItem.chapterHeader.buttons.discuss', message: 'Discuss'}),
+    //15
+    translate({id: 'theme.docItem.chapterHeader.buttons.discussDesc', message: 'Discuss on Lesswrong and Alignment Forum'}),
+    translate({id: 'theme.docItem.chapterHeader.buttons.lecture', message: 'Lecture'}),
+    translate({id: 'theme.docItem.chapterHeader.buttons.lectureDesc', message: 'Watch the video lecture'}),
+    translate({id: 'theme.docItem.chapterHeader.buttons.lectureDescNot', message: 'Video not available'}),
+    translate({id: 'theme.docItem.chapterHeader.buttons.audio', message: 'Audio'}),
+    //20
+    translate({id: 'theme.docItem.chapterHeader.buttons.audioDesc', message: 'Open audio player'}),
+    translate({id: 'theme.docItem.chapterHeader.buttons.audioDescNot', message: 'Audio not available'}),
+    translate({id: 'theme.docItem.chapterHeader.buttons.pdf', message: 'PDF'}),
+    translate({id: 'theme.docItem.chapterHeader.buttons.pdfDesc', message: 'Download PDF version'}),
+    translate({id: 'theme.docItem.chapterHeader.buttons.pdfDescNot', message: 'PDF not available'}),
+    //25
+    translate({id: 'theme.docItem.chapterHeader.buttons.diagrams', message: 'Diagrams'}),
+    translate({id: 'theme.docItem.chapterHeader.buttons.diagramsDesc', message: 'View and edit source SVGs'}),
+    translate({id: 'theme.docItem.chapterHeader.buttons.teach', message: 'Teach'}),
+    translate({id: 'theme.docItem.chapterHeader.buttons.teachDesc', message: 'Access Facilitation Resources'})  
+  ];
   
   return (
     <header className={`${styles.chapterContainer} ${isVisible ? styles.visible : ''}`}>
@@ -267,7 +327,7 @@ export default function ChapterHeader({ frontMatter, title, chapterNumber, bound
             <div className={styles.rightSection}>
               {/* Breadcrumbs at top of right side */}
               <nav className={styles.chapterNavigation}>
-                <ActionButtonTooltip content="AI Safety Atlas Home">
+                <ActionButtonTooltip content={i18n[0]}>
                   <a href="/" className={styles.breadcrumbLink}>
                     <svg className={styles.breadcrumbIcon} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                       <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
@@ -276,7 +336,7 @@ export default function ChapterHeader({ frontMatter, title, chapterNumber, bound
                   </a>
                 </ActionButtonTooltip>
                 <span className={styles.breadcrumbSeparator}>›</span>
-                <ActionButtonTooltip content="All Chapters">
+                <ActionButtonTooltip content={i18n[1]}>
                   <a href="/chapters/" className={styles.breadcrumbLink}>
                     <svg className={styles.breadcrumbIcon} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                       <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
@@ -286,7 +346,7 @@ export default function ChapterHeader({ frontMatter, title, chapterNumber, bound
                 </ActionButtonTooltip>
                 <span className={styles.breadcrumbSeparator}>›</span>
                 <a href={`/chapters/${String(frontMatter.chapter_number || chapterNumber).padStart(2, '0')}/`} className={styles.breadcrumbLink}>
-                  Chapter {frontMatter.chapter_number || chapterNumber}
+                  {i18n[2]} {frontMatter.chapter_number || chapterNumber}
                 </a>
                 <span className={styles.breadcrumbSeparator}>›</span>
                 <span className={styles.breadcrumbCurrent}>{title}</span>
@@ -301,7 +361,7 @@ export default function ChapterHeader({ frontMatter, title, chapterNumber, bound
                       <img src="/img/icons/author.svg" alt="" className={styles.iconImage} />
                     </div>
                     <div className={styles.metaContent}>
-                      <span className={styles.metaLabel}>Authors</span>
+                      <span className={styles.metaLabel}>{i18n[3]}</span>
                       <span className={styles.metaValue}>
                         {frontMatter.authors.join(', ')}
                       </span>
@@ -316,7 +376,7 @@ export default function ChapterHeader({ frontMatter, title, chapterNumber, bound
                       <img src="/img/icons/affiliation.svg" alt="" className={styles.iconImage} />
                     </div>
                     <div className={styles.metaContent}>
-                      <span className={styles.metaLabel}>Affiliation</span>
+                      <span className={styles.metaLabel}>{i18n[4]}</span>
                       <span className={styles.metaValue}>
                         {frontMatter.affiliations.join(', ')}
                       </span>
@@ -333,18 +393,7 @@ export default function ChapterHeader({ frontMatter, title, chapterNumber, bound
                     <div className={styles.metaContent}>
                       <span className={styles.metaLabel}>Acknowledgements</span>
                       <span className={styles.metaValue}>
-                        We thank {(() => {
-                          const names = frontMatter.acknowledgements;
-                          if (names.length === 1) {
-                            return names[0];
-                          } else if (names.length === 2) {
-                            return `${names[0]} and ${names[1]}`;
-                          } else {
-                            const allButLast = names.slice(0, -1).join(', ');
-                            const last = names[names.length - 1];
-                            return `${allButLast}, and ${last}`;
-                          }
-                        })()} for their valuable feedback and contributions.
+                        {i18n[5]}
                       </span>
                     </div>
                   </div>
@@ -357,24 +406,24 @@ export default function ChapterHeader({ frontMatter, title, chapterNumber, bound
                       <img src="/img/icons/reading-time.svg" alt="" className={styles.iconImage} />
                     </div>
                     <div className={styles.metaContent}>
-                      <span className={styles.metaLabel}>Reading Time</span>
+                      <span className={styles.metaLabel}>{i18n[6]}</span>
                       <div className={styles.readingBreakdown}>
                         {frontMatter.reading_time_core && (
                           <span className={styles.timeSegment}>
                             <span className={styles.timeValue}>{frontMatter.reading_time_core}</span>
-                            <span className={styles.timeLabel}>core</span>
+                            <span className={styles.timeLabel}>{i18n[7]}</span>
                           </span>
                         )}
                         {frontMatter.reading_time_optional && (
                           <span className={styles.timeSegment}>
                             <span className={styles.timeValue}>{frontMatter.reading_time_optional}</span>
-                            <span className={styles.timeLabel}>optional</span>
+                            <span className={styles.timeLabel}>{i18n[8]}</span>
                           </span>
                         )}
                         {frontMatter.reading_time_appendix && (
                           <span className={styles.timeSegment}>
                             <span className={styles.timeValue}>{frontMatter.reading_time_appendix}</span>
-                            <span className={styles.timeLabel}>appendix</span>
+                            <span className={styles.timeLabel}>{i18n[9]}</span>
                           </span>
                         )}
                       </div>
@@ -391,24 +440,24 @@ export default function ChapterHeader({ frontMatter, title, chapterNumber, bound
             <ActionButton
               href={frontMatter.arxiv_link}
               iconPath="/img/icons/arxiv.svg"
-              label="Paper"
-              description="View on arXiv"
+              label={i18n[10]}
+              description={i18n[11]}
               active={!!frontMatter.arxiv_link}
             />
             
             <ActionButton
               href={frontMatter.google_docs_link}
               iconPath="/img/icons/google.svg"
-              label="Docs"
-              description="Comment directly on Google Docs"
+              label={i18n[12]}
+              description={i18n[13]}
               active={!!frontMatter.google_docs_link}
             />
             
             <ActionButton
               href={frontMatter.alignment_forum_link}
               iconPath="/img/icons/lesswrong.svg"
-              label="Discuss"
-              description="Discuss on Lesswrong and Alignment Forum"
+              label={i18n[14]}
+              description={i18n[15]}
               active={!!frontMatter.alignment_forum_link}
             />
             
@@ -416,8 +465,8 @@ export default function ChapterHeader({ frontMatter, title, chapterNumber, bound
             <ActionButton
               onClick={handleVideoToggle}
               iconPath="/img/icons/video.svg"
-              label="Lecture"
-              description={frontMatter.video_link ? "Watch the video lecture" : "Video not available"}
+              label={i18n[16]}
+              description={frontMatter.video_link ? i18n[17] : i18n[18]}
               active={!!frontMatter.video_link}
             />
             
@@ -425,8 +474,8 @@ export default function ChapterHeader({ frontMatter, title, chapterNumber, bound
             <ActionButton
               onClick={handleAudioToggle}
               iconPath="/img/icons/audio.svg"
-              label="Audio"
-              description={hasAudio ? "Open audio player" : "Audio not available"}
+              label={i18n[19]}
+              description={hasAudio ? i18n[20] : i18n[21]}
               active={hasAudio}
             />
             
@@ -434,8 +483,8 @@ export default function ChapterHeader({ frontMatter, title, chapterNumber, bound
             <ActionButton
               href={hasPdf ? pdfUrl : null}
               iconPath="/img/icons/pdf.svg"
-              label="PDF"
-              description={hasPdf ? "Download PDF version" : "PDF not available"}
+              label={i18n[22]}
+              description={hasPdf ? i18n[23] : i18n[24]}
               active={hasPdf}
             />
             
@@ -443,16 +492,16 @@ export default function ChapterHeader({ frontMatter, title, chapterNumber, bound
             <ActionButton
               href={frontMatter.excalidraw_link}
               iconPath="/img/icons/excalidraw.svg"
-              label="Diagrams"
-              description="View and edit source SVGs"
+              label={i18n[25]}
+              description={i18n[26]}
               active={!!frontMatter.excalidraw_link}
             />
             
             <ActionButton
               href={frontMatter.teach_link}
               iconPath="/img/icons/teach.svg"
-              label="Teach"
-              description="Access Facilitation Resources"
+              label={i18n[27]}
+              description={i18n[28]}
               active={!!frontMatter.teach_link}
             />
           </div>

@@ -2,6 +2,8 @@
 import React, { useState, useEffect } from 'react';
 import styles from './SectionHeader.module.css';
 
+import { translate } from '@docusaurus/Translate';
+
 /**
  * Section Header Component - Simplified version of ChapterHeader
  * Features: Texture background, section numbering, minimal metadata
@@ -37,6 +39,15 @@ export default function SectionHeader({ frontMatter, title, chapterNumber, secti
   };
 
   const particles = generateParticles();
+
+  const i18n = [
+    translate({id: 'theme.docItem.chapterHeader.breadcrumb.home', message: 'AI Safety Atlas Home'}),
+    translate({id: 'theme.docItem.chapterHeader.breadcrumb.allChapters', message: 'All Chapters'}),
+    translate({id: 'theme.docItem.chapterHeader.breadcrumb.chapter', message: 'Chapter'}),
+    translate({id: 'theme.docItem.chapterHeader.metadata.readingTime', message: 'Reading Time'}),
+    translate({id: 'theme.docItem.chapterHeader.metadata.readingTime.core', message: 'core'}),
+    translate({id: 'theme.docItem.chapterHeader.metadata.readingTime.optional', message: 'optional'}),
+  ];
 
   return (
     <header className={`${styles.sectionContainer} ${isVisible ? styles.visible : ''}`}>
@@ -90,14 +101,14 @@ export default function SectionHeader({ frontMatter, title, chapterNumber, secti
           <div className={styles.rightSection}>
             {/* Breadcrumbs at top of right side - same as chapter header */}
             <nav className={styles.sectionNavigation}>
-              <a href="/" className={styles.breadcrumbLink} title="AI Safety Atlas Home">
+              <a href="/" className={styles.breadcrumbLink} title={i18n[0]}>
                 <svg className={styles.breadcrumbIcon} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                   <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
                   <polyline points="9,22 9,12 15,12 15,22"></polyline>
                 </svg>
               </a>
               <span className={styles.breadcrumbSeparator}>›</span>
-              <a href="/chapters/" className={styles.breadcrumbLink} title="All Chapters">
+              <a href="/chapters/" className={styles.breadcrumbLink} title={i18n[1]}>
                 <svg className={styles.breadcrumbIcon} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                   <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
                   <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
@@ -105,7 +116,7 @@ export default function SectionHeader({ frontMatter, title, chapterNumber, secti
               </a>
               <span className={styles.breadcrumbSeparator}>›</span>
               <a href={`/chapters/${String(chapterNumber).padStart(2, '0')}/`} className={styles.breadcrumbLink}>
-                Chapter {chapterNumber}
+                {i18n[2]} {chapterNumber}
               </a>
               <span className={styles.breadcrumbSeparator}>›</span>
               <span className={styles.breadcrumbCurrent}>{title}</span>
@@ -120,18 +131,18 @@ export default function SectionHeader({ frontMatter, title, chapterNumber, secti
                     <img src="/img/icons/reading-time.svg" alt="" className={styles.iconImage} />
                   </div>
                   <div className={styles.metaContent}>
-                    <span className={styles.metaLabel}>Reading Time</span>
+                    <span className={styles.metaLabel}>{i18n[3]}</span>
                     <div className={styles.readingBreakdown}>
                       {frontMatter.reading_time_core && (
                         <span className={styles.timeSegment}>
                           <span className={styles.timeValue}>{frontMatter.reading_time_core}</span>
-                          <span className={styles.timeLabel}>core</span>
+                          <span className={styles.timeLabel}>{i18n[4]}</span>
                         </span>
                       )}
                       {frontMatter.reading_time_optional && (
                         <span className={styles.timeSegment}>
                           <span className={styles.timeValue}>{frontMatter.reading_time_optional}</span>
-                          <span className={styles.timeLabel}>optional</span>
+                          <span className={styles.timeLabel}>{i18n[5]}</span>
                         </span>
                       )}
                     </div>
