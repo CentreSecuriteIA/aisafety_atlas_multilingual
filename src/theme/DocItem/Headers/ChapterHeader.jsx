@@ -56,7 +56,7 @@ function ActionButton({ href, iconPath, label, description, active, onClick }) {
   ];
 
   return (
-    <ActionButtonTooltip content={active ? tooltipContent : `${label} (Not available)`}>
+    <ActionButtonTooltip content={active ? tooltipContent : `${label} ${i18n[0]}`}>
       <a
         href={active && href ? href : '#'}
         target={active && href ? "_blank" : undefined}
