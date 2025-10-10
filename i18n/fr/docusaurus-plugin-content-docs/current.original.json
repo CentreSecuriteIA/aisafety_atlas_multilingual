@@ -1,0 +1,1198 @@
+{
+  "version.label": {
+    "message": "Next",
+    "description": "The label for version current"
+  },
+  "sidebar.docs.category.1. Capabilities": {
+    "message": "1. Capabilities",
+    "description": "The label for category 1. Capabilities in sidebar docs"
+  },
+  "sidebar.docs.category.1.1 State-of-the-Art AI": {
+    "message": "1.1 State-of-the-Art AI",
+    "description": "The label for category 1.1 State-of-the-Art AI in sidebar docs"
+  },
+  "sidebar.docs.category.1.2 Foundation Models": {
+    "message": "1.2 Foundation Models",
+    "description": "The label for category 1.2 Foundation Models in sidebar docs"
+  },
+  "sidebar.docs.category.1.3 Intelligence": {
+    "message": "1.3 Intelligence",
+    "description": "The label for category 1.3 Intelligence in sidebar docs"
+  },
+  "sidebar.docs.category.1.4 Scaling": {
+    "message": "1.4 Scaling",
+    "description": "The label for category 1.4 Scaling in sidebar docs"
+  },
+  "sidebar.docs.category.1.5 Forecasting": {
+    "message": "1.5 Forecasting",
+    "description": "The label for category 1.5 Forecasting in sidebar docs"
+  },
+  "sidebar.docs.category.1.5.2 Trend Based Forecasting": {
+    "message": "1.5.2 Trend Based Forecasting",
+    "description": "The label for category 1.5.2 Trend Based Forecasting in sidebar docs"
+  },
+  "sidebar.docs.category.1.5.2 Trend Based Forecasting.link.generated-index.title": {
+    "message": "1.5.2 Trend Based Forecasting",
+    "description": "The generated-index page title for category 1.5.2 Trend Based Forecasting in sidebar docs"
+  },
+  "sidebar.docs.category.1.6 Takeoff": {
+    "message": "1.6 Takeoff",
+    "description": "The label for category 1.6 Takeoff in sidebar docs"
+  },
+  "sidebar.docs.category.1.7 Appendix: Takeoff": {
+    "message": "1.7 Appendix: Takeoff",
+    "description": "The label for category 1.7 Appendix: Takeoff in sidebar docs"
+  },
+  "sidebar.docs.category.1.8 Appendix: Expert Opinions": {
+    "message": "1.8 Appendix: Expert Opinions",
+    "description": "The label for category 1.8 Appendix: Expert Opinions in sidebar docs"
+  },
+  "sidebar.docs.category.1.8.2 Quotes": {
+    "message": "1.8.2 Quotes",
+    "description": "The label for category 1.8.2 Quotes in sidebar docs"
+  },
+  "sidebar.docs.category.1.8.2 Quotes.link.generated-index.title": {
+    "message": "1.8.2 Quotes",
+    "description": "The generated-index page title for category 1.8.2 Quotes in sidebar docs"
+  },
+  "sidebar.docs.category.1.9 Appendix: Discussion on LLMs": {
+    "message": "1.9 Appendix: Discussion on LLMs",
+    "description": "The label for category 1.9 Appendix: Discussion on LLMs in sidebar docs"
+  },
+  "sidebar.docs.category.2. Risks": {
+    "message": "2. Risks",
+    "description": "The label for category 2. Risks in sidebar docs"
+  },
+  "sidebar.docs.category.2.1 Risk Decomposition": {
+    "message": "2.1 Risk Decomposition",
+    "description": "The label for category 2.1 Risk Decomposition in sidebar docs"
+  },
+  "sidebar.docs.category.2.2 Dangerous Capabilities": {
+    "message": "2.2 Dangerous Capabilities",
+    "description": "The label for category 2.2 Dangerous Capabilities in sidebar docs"
+  },
+  "sidebar.docs.category.2.3 Misuse Risks": {
+    "message": "2.3 Misuse Risks",
+    "description": "The label for category 2.3 Misuse Risks in sidebar docs"
+  },
+  "sidebar.docs.category.2.4 Misalignment Risks": {
+    "message": "2.4 Misalignment Risks",
+    "description": "The label for category 2.4 Misalignment Risks in sidebar docs"
+  },
+  "sidebar.docs.category.2.5 Systemic Risks": {
+    "message": "2.5 Systemic Risks",
+    "description": "The label for category 2.5 Systemic Risks in sidebar docs"
+  },
+  "sidebar.docs.category.2.5.2 Accumulative Systemic Risks": {
+    "message": "2.5.2 Accumulative Systemic Risks",
+    "description": "The label for category 2.5.2 Accumulative Systemic Risks in sidebar docs"
+  },
+  "sidebar.docs.category.2.5.2 Accumulative Systemic Risks.link.generated-index.title": {
+    "message": "2.5.2 Accumulative Systemic Risks",
+    "description": "The generated-index page title for category 2.5.2 Accumulative Systemic Risks in sidebar docs"
+  },
+  "sidebar.docs.category.2.6 Risk Amplifiers": {
+    "message": "2.6 Risk Amplifiers",
+    "description": "The label for category 2.6 Risk Amplifiers in sidebar docs"
+  },
+  "sidebar.docs.category.2.9 Appendix: Forecasting Scenarios": {
+    "message": "2.9 Appendix: Forecasting Scenarios",
+    "description": "The label for category 2.9 Appendix: Forecasting Scenarios in sidebar docs"
+  },
+  "sidebar.docs.category.3. Strategies": {
+    "message": "3. Strategies",
+    "description": "The label for category 3. Strategies in sidebar docs"
+  },
+  "sidebar.docs.category.3.1 Definitions": {
+    "message": "3.1 Definitions",
+    "description": "The label for category 3.1 Definitions in sidebar docs"
+  },
+  "sidebar.docs.category.3.2 Misuse Prevention Strategies": {
+    "message": "3.2 Misuse Prevention Strategies",
+    "description": "The label for category 3.2 Misuse Prevention Strategies in sidebar docs"
+  },
+  "sidebar.docs.category.3.2.1 Access Controls": {
+    "message": "3.2.1 Access Controls",
+    "description": "The label for category 3.2.1 Access Controls in sidebar docs"
+  },
+  "sidebar.docs.category.3.2.1 Access Controls.link.generated-index.title": {
+    "message": "3.2.1 Access Controls",
+    "description": "The generated-index page title for category 3.2.1 Access Controls in sidebar docs"
+  },
+  "sidebar.docs.category.3.3 AGI Safety Strategies": {
+    "message": "3.3 AGI Safety Strategies",
+    "description": "The label for category 3.3 AGI Safety Strategies in sidebar docs"
+  },
+  "sidebar.docs.category.3.3.2 Solve AGI Alignment": {
+    "message": "3.3.2 Solve AGI Alignment",
+    "description": "The label for category 3.3.2 Solve AGI Alignment in sidebar docs"
+  },
+  "sidebar.docs.category.3.3.2 Solve AGI Alignment.link.generated-index.title": {
+    "message": "3.3.2 Solve AGI Alignment",
+    "description": "The generated-index page title for category 3.3.2 Solve AGI Alignment in sidebar docs"
+  },
+  "sidebar.docs.category.3.4 ASI Safety Strategies": {
+    "message": "3.4 ASI Safety Strategies",
+    "description": "The label for category 3.4 ASI Safety Strategies in sidebar docs"
+  },
+  "sidebar.docs.category.3.5 Socio-Technical Strategies": {
+    "message": "3.5 Socio-Technical Strategies",
+    "description": "The label for category 3.5 Socio-Technical Strategies in sidebar docs"
+  },
+  "sidebar.docs.category.3.7 Challenges": {
+    "message": "3.7 Challenges",
+    "description": "The label for category 3.7 Challenges in sidebar docs"
+  },
+  "sidebar.docs.category.3.9 Appendix: Long-term questions": {
+    "message": "3.9 Appendix: Long-term questions",
+    "description": "The label for category 3.9 Appendix: Long-term questions in sidebar docs"
+  },
+  "sidebar.docs.category.4. Governance": {
+    "message": "4. Governance",
+    "description": "The label for category 4. Governance in sidebar docs"
+  },
+  "sidebar.docs.category.4.1 Compute Governance": {
+    "message": "4.1 Compute Governance",
+    "description": "The label for category 4.1 Compute Governance in sidebar docs"
+  },
+  "sidebar.docs.category.4.2 Systemic Challenges": {
+    "message": "4.2 Systemic Challenges",
+    "description": "The label for category 4.2 Systemic Challenges in sidebar docs"
+  },
+  "sidebar.docs.category.4.3 Governance Architectures": {
+    "message": "4.3 Governance Architectures",
+    "description": "The label for category 4.3 Governance Architectures in sidebar docs"
+  },
+  "sidebar.docs.category.4.3.1 Corporate Governance": {
+    "message": "4.3.1 Corporate Governance",
+    "description": "The label for category 4.3.1 Corporate Governance in sidebar docs"
+  },
+  "sidebar.docs.category.4.3.1 Corporate Governance.link.generated-index.title": {
+    "message": "4.3.1 Corporate Governance",
+    "description": "The generated-index page title for category 4.3.1 Corporate Governance in sidebar docs"
+  },
+  "sidebar.docs.category.4.4 Implementation": {
+    "message": "4.4 Implementation",
+    "description": "The label for category 4.4 Implementation in sidebar docs"
+  },
+  "sidebar.docs.category.4.7 Appendix: National Governance": {
+    "message": "4.7 Appendix: National Governance",
+    "description": "The label for category 4.7 Appendix: National Governance in sidebar docs"
+  },
+  "sidebar.docs.category.5. Evaluations": {
+    "message": "5. Evaluations",
+    "description": "The label for category 5. Evaluations in sidebar docs"
+  },
+  "sidebar.docs.category.5.1 Benchmarks": {
+    "message": "5.1 Benchmarks",
+    "description": "The label for category 5.1 Benchmarks in sidebar docs"
+  },
+  "sidebar.docs.category.5.2 Evaluated Properties": {
+    "message": "5.2 Evaluated Properties",
+    "description": "The label for category 5.2 Evaluated Properties in sidebar docs"
+  },
+  "sidebar.docs.category.5.3 Evaluation Techniques": {
+    "message": "5.3 Evaluation Techniques",
+    "description": "The label for category 5.3 Evaluation Techniques in sidebar docs"
+  },
+  "sidebar.docs.category.5.4 Evaluation Frameworks": {
+    "message": "5.4 Evaluation Frameworks",
+    "description": "The label for category 5.4 Evaluation Frameworks in sidebar docs"
+  },
+  "sidebar.docs.category.5.4.2 Governance Frameworks": {
+    "message": "5.4.2 Governance Frameworks",
+    "description": "The label for category 5.4.2 Governance Frameworks in sidebar docs"
+  },
+  "sidebar.docs.category.5.4.2 Governance Frameworks.link.generated-index.title": {
+    "message": "5.4.2 Governance Frameworks",
+    "description": "The generated-index page title for category 5.4.2 Governance Frameworks in sidebar docs"
+  },
+  "sidebar.docs.category.5.5 Dangerous Capability Evaluations": {
+    "message": "5.5 Dangerous Capability Evaluations",
+    "description": "The label for category 5.5 Dangerous Capability Evaluations in sidebar docs"
+  },
+  "sidebar.docs.category.5.6 Dangerous Propensity Evaluations": {
+    "message": "5.6 Dangerous Propensity Evaluations",
+    "description": "The label for category 5.6 Dangerous Propensity Evaluations in sidebar docs"
+  },
+  "sidebar.docs.category.5.8 Evaluation Design": {
+    "message": "5.8 Evaluation Design",
+    "description": "The label for category 5.8 Evaluation Design in sidebar docs"
+  },
+  "sidebar.docs.category.5.9 Limitations": {
+    "message": "5.9 Limitations",
+    "description": "The label for category 5.9 Limitations in sidebar docs"
+  },
+  "sidebar.docs.category.6. Misspecification": {
+    "message": "6. Misspecification",
+    "description": "The label for category 6. Misspecification in sidebar docs"
+  },
+  "sidebar.docs.category.6.1 Reinforcement Learning": {
+    "message": "6.1 Reinforcement Learning",
+    "description": "The label for category 6.1 Reinforcement Learning in sidebar docs"
+  },
+  "sidebar.docs.category.6.2 Optimization": {
+    "message": "6.2 Optimization",
+    "description": "The label for category 6.2 Optimization in sidebar docs"
+  },
+  "sidebar.docs.category.6.3 Specification Gaming": {
+    "message": "6.3 Specification Gaming",
+    "description": "The label for category 6.3 Specification Gaming in sidebar docs"
+  },
+  "sidebar.docs.category.6.4 Learning from imitation": {
+    "message": "6.4 Learning from imitation",
+    "description": "The label for category 6.4 Learning from imitation in sidebar docs"
+  },
+  "sidebar.docs.category.6.5 Learning from feedback": {
+    "message": "6.5 Learning from feedback",
+    "description": "The label for category 6.5 Learning from feedback in sidebar docs"
+  },
+  "sidebar.docs.category.7. Goal Misgeneralization": {
+    "message": "7. Goal Misgeneralization",
+    "description": "The label for category 7. Goal Misgeneralization in sidebar docs"
+  },
+  "sidebar.docs.category.7.1 Multi Objective Generalization": {
+    "message": "7.1 Multi Objective Generalization",
+    "description": "The label for category 7.1 Multi Objective Generalization in sidebar docs"
+  },
+  "sidebar.docs.category.7.2 Learning Dynamics": {
+    "message": "7.2 Learning Dynamics",
+    "description": "The label for category 7.2 Learning Dynamics in sidebar docs"
+  },
+  "sidebar.docs.category.7.3 Goal-Directedness": {
+    "message": "7.3 Goal-Directedness",
+    "description": "The label for category 7.3 Goal-Directedness in sidebar docs"
+  },
+  "sidebar.docs.category.7.4 Scheming": {
+    "message": "7.4 Scheming",
+    "description": "The label for category 7.4 Scheming in sidebar docs"
+  },
+  "sidebar.docs.category.7.4.2 Dimensions": {
+    "message": "7.4.2 Dimensions",
+    "description": "The label for category 7.4.2 Dimensions in sidebar docs"
+  },
+  "sidebar.docs.category.7.4.2 Dimensions.link.generated-index.title": {
+    "message": "7.4.2 Dimensions",
+    "description": "The generated-index page title for category 7.4.2 Dimensions in sidebar docs"
+  },
+  "sidebar.docs.category.7.4.3 Likelihood": {
+    "message": "7.4.3 Likelihood",
+    "description": "The label for category 7.4.3 Likelihood in sidebar docs"
+  },
+  "sidebar.docs.category.7.4.3 Likelihood.link.generated-index.title": {
+    "message": "7.4.3 Likelihood",
+    "description": "The generated-index page title for category 7.4.3 Likelihood in sidebar docs"
+  },
+  "sidebar.docs.category.7.5 Detection": {
+    "message": "7.5 Detection",
+    "description": "The label for category 7.5 Detection in sidebar docs"
+  },
+  "sidebar.docs.category.7.5.1 Behavioral Techniques (Black-Box)": {
+    "message": "7.5.1 Behavioral Techniques (Black-Box)",
+    "description": "The label for category 7.5.1 Behavioral Techniques (Black-Box) in sidebar docs"
+  },
+  "sidebar.docs.category.7.5.1 Behavioral Techniques (Black-Box).link.generated-index.title": {
+    "message": "7.5.1 Behavioral Techniques (Black-Box)",
+    "description": "The generated-index page title for category 7.5.1 Behavioral Techniques (Black-Box) in sidebar docs"
+  },
+  "sidebar.docs.category.7.5.2 Internal Techniques (White-Box)": {
+    "message": "7.5.2 Internal Techniques (White-Box)",
+    "description": "The label for category 7.5.2 Internal Techniques (White-Box) in sidebar docs"
+  },
+  "sidebar.docs.category.7.5.2 Internal Techniques (White-Box).link.generated-index.title": {
+    "message": "7.5.2 Internal Techniques (White-Box)",
+    "description": "The generated-index page title for category 7.5.2 Internal Techniques (White-Box) in sidebar docs"
+  },
+  "sidebar.docs.category.8. Scalable Oversight": {
+    "message": "8. Scalable Oversight",
+    "description": "The label for category 8. Scalable Oversight in sidebar docs"
+  },
+  "sidebar.docs.category.8.1 Oversight": {
+    "message": "8.1 Oversight",
+    "description": "The label for category 8.1 Oversight in sidebar docs"
+  },
+  "sidebar.docs.category.8.2 Task Decomposition": {
+    "message": "8.2 Task Decomposition",
+    "description": "The label for category 8.2 Task Decomposition in sidebar docs"
+  },
+  "sidebar.docs.category.8.3 Process Oversight": {
+    "message": "8.3 Process Oversight",
+    "description": "The label for category 8.3 Process Oversight in sidebar docs"
+  },
+  "sidebar.docs.category.8.4 Iterated Amplification": {
+    "message": "8.4 Iterated Amplification",
+    "description": "The label for category 8.4 Iterated Amplification in sidebar docs"
+  },
+  "sidebar.docs.category.8.5 Debate": {
+    "message": "8.5 Debate",
+    "description": "The label for category 8.5 Debate in sidebar docs"
+  },
+  "sidebar.docs.category.8.6 Weak-to-Strong Generalization (W2SG)": {
+    "message": "8.6 Weak-to-Strong Generalization (W2SG)",
+    "description": "The label for category 8.6 Weak-to-Strong Generalization (W2SG) in sidebar docs"
+  },
+  "sidebar.docs.category.9. Interpretability": {
+    "message": "9. Interpretability",
+    "description": "The label for category 9. Interpretability in sidebar docs"
+  },
+  "sidebar.docs.category.9.1 What is Interpretability ?": {
+    "message": "9.1 What is Interpretability ?",
+    "description": "The label for category 9.1 What is Interpretability ? in sidebar docs"
+  },
+  "sidebar.docs.category.9.2 Observational Methods": {
+    "message": "9.2 Observational Methods",
+    "description": "The label for category 9.2 Observational Methods in sidebar docs"
+  },
+  "sidebar.docs.category.9.2.1 Feature Visualization": {
+    "message": "9.2.1 Feature Visualization",
+    "description": "The label for category 9.2.1 Feature Visualization in sidebar docs"
+  },
+  "sidebar.docs.category.9.2.1 Feature Visualization.link.generated-index.title": {
+    "message": "9.2.1 Feature Visualization",
+    "description": "The generated-index page title for category 9.2.1 Feature Visualization in sidebar docs"
+  },
+  "sidebar.docs.category.9.3 Interventional Methods": {
+    "message": "9.3 Interventional Methods",
+    "description": "The label for category 9.3 Interventional Methods in sidebar docs"
+  },
+  "sidebar.docs.category.9.4 Automating and Scaling Interpretability": {
+    "message": "9.4 Automating and Scaling Interpretability",
+    "description": "The label for category 9.4 Automating and Scaling Interpretability in sidebar docs"
+  },
+  "sidebar.docs.link.1.1.1 Language": {
+    "message": "1.1.1 Language",
+    "description": "The label for link 1.1.1 Language in sidebar docs, linking to /chapters/01/01#01"
+  },
+  "sidebar.docs.link.1.1.2 Image Generation": {
+    "message": "1.1.2 Image Generation",
+    "description": "The label for link 1.1.2 Image Generation in sidebar docs, linking to /chapters/01/01#02"
+  },
+  "sidebar.docs.link.1.1.3 Multi & Cross modality": {
+    "message": "1.1.3 Multi & Cross modality",
+    "description": "The label for link 1.1.3 Multi & Cross modality in sidebar docs, linking to /chapters/01/01#03"
+  },
+  "sidebar.docs.link.1.1.4 Robotics": {
+    "message": "1.1.4 Robotics",
+    "description": "The label for link 1.1.4 Robotics in sidebar docs, linking to /chapters/01/01#04"
+  },
+  "sidebar.docs.link.1.1.5 Playing Games": {
+    "message": "1.1.5 Playing Games",
+    "description": "The label for link 1.1.5 Playing Games in sidebar docs, linking to /chapters/01/01#05"
+  },
+  "sidebar.docs.link.1.2.1 Training": {
+    "message": "1.2.1 Training",
+    "description": "The label for link 1.2.1 Training in sidebar docs, linking to /chapters/01/02#01"
+  },
+  "sidebar.docs.link.1.2.2 Properties": {
+    "message": "1.2.2 Properties",
+    "description": "The label for link 1.2.2 Properties in sidebar docs, linking to /chapters/01/02#02"
+  },
+  "sidebar.docs.link.1.3.1 Case Studies": {
+    "message": "1.3.1 Case Studies",
+    "description": "The label for link 1.3.1 Case Studies in sidebar docs, linking to /chapters/01/03#01"
+  },
+  "sidebar.docs.link.1.3.2 Measurement": {
+    "message": "1.3.2 Measurement",
+    "description": "The label for link 1.3.2 Measurement in sidebar docs, linking to /chapters/01/03#02"
+  },
+  "sidebar.docs.link.1.4.1 The Bitter Lesson": {
+    "message": "1.4.1 The Bitter Lesson",
+    "description": "The label for link 1.4.1 The Bitter Lesson in sidebar docs, linking to /chapters/01/04#01"
+  },
+  "sidebar.docs.link.1.4.2 Scaling Laws": {
+    "message": "1.4.2 Scaling Laws",
+    "description": "The label for link 1.4.2 Scaling Laws in sidebar docs, linking to /chapters/01/04#02"
+  },
+  "sidebar.docs.link.1.4.3 Scaling Hypothesis": {
+    "message": "1.4.3 Scaling Hypothesis",
+    "description": "The label for link 1.4.3 Scaling Hypothesis in sidebar docs, linking to /chapters/01/04#03"
+  },
+  "sidebar.docs.link.1.5.1 Methodology": {
+    "message": "1.5.1 Methodology",
+    "description": "The label for link 1.5.1 Methodology in sidebar docs, linking to /chapters/01/05#01"
+  },
+  "sidebar.docs.link.1.5.2.1 Compute": {
+    "message": "1.5.2.1 Compute",
+    "description": "The label for link 1.5.2.1 Compute in sidebar docs, linking to /chapters/01/05#02-01"
+  },
+  "sidebar.docs.link.1.5.2.2 Parameters": {
+    "message": "1.5.2.2 Parameters",
+    "description": "The label for link 1.5.2.2 Parameters in sidebar docs, linking to /chapters/01/05#02-02"
+  },
+  "sidebar.docs.link.1.5.2.3 Data": {
+    "message": "1.5.2.3 Data",
+    "description": "The label for link 1.5.2.3 Data in sidebar docs, linking to /chapters/01/05#02-03"
+  },
+  "sidebar.docs.link.1.5.2.4 Algorithms": {
+    "message": "1.5.2.4 Algorithms",
+    "description": "The label for link 1.5.2.4 Algorithms in sidebar docs, linking to /chapters/01/05#02-04"
+  },
+  "sidebar.docs.link.1.5.2.5 Costs": {
+    "message": "1.5.2.5 Costs",
+    "description": "The label for link 1.5.2.5 Costs in sidebar docs, linking to /chapters/01/05#02-05"
+  },
+  "sidebar.docs.link.1.6.1 Speed": {
+    "message": "1.6.1 Speed",
+    "description": "The label for link 1.6.1 Speed in sidebar docs, linking to /chapters/01/06#01"
+  },
+  "sidebar.docs.link.1.6.2 Takeoff Arguments": {
+    "message": "1.6.2 Takeoff Arguments",
+    "description": "The label for link 1.6.2 Takeoff Arguments in sidebar docs, linking to /chapters/01/06#02"
+  },
+  "sidebar.docs.link.1.7.1 Continuity": {
+    "message": "1.7.1 Continuity",
+    "description": "The label for link 1.7.1 Continuity in sidebar docs, linking to /chapters/01/07#01"
+  },
+  "sidebar.docs.link.1.7.2 Similarity": {
+    "message": "1.7.2 Similarity",
+    "description": "The label for link 1.7.2 Similarity in sidebar docs, linking to /chapters/01/07#02"
+  },
+  "sidebar.docs.link.1.7.3 Polarity": {
+    "message": "1.7.3 Polarity",
+    "description": "The label for link 1.7.3 Polarity in sidebar docs, linking to /chapters/01/07#03"
+  },
+  "sidebar.docs.link.1.8.1 Surveys": {
+    "message": "1.8.1 Surveys",
+    "description": "The label for link 1.8.1 Surveys in sidebar docs, linking to /chapters/01/08#01"
+  },
+  "sidebar.docs.link.1.8.2.1 AI Experts": {
+    "message": "1.8.2.1 AI Experts",
+    "description": "The label for link 1.8.2.1 AI Experts in sidebar docs, linking to /chapters/01/08#02-01"
+  },
+  "sidebar.docs.link.1.8.2.2 Academics": {
+    "message": "1.8.2.2 Academics",
+    "description": "The label for link 1.8.2.2 Academics in sidebar docs, linking to /chapters/01/08#02-02"
+  },
+  "sidebar.docs.link.1.8.2.3 Tech Entrepreneurs": {
+    "message": "1.8.2.3 Tech Entrepreneurs",
+    "description": "The label for link 1.8.2.3 Tech Entrepreneurs in sidebar docs, linking to /chapters/01/08#02-03"
+  },
+  "sidebar.docs.link.1.8.2.4 Join Declarations": {
+    "message": "1.8.2.4 Join Declarations",
+    "description": "The label for link 1.8.2.4 Join Declarations in sidebar docs, linking to /chapters/01/08#02-04"
+  },
+  "sidebar.docs.link.1.9.1 Empirically insufficiency?": {
+    "message": "1.9.1 Empirically insufficiency?",
+    "description": "The label for link 1.9.1 Empirically insufficiency? in sidebar docs, linking to /chapters/01/09#01"
+  },
+  "sidebar.docs.link.1.9.2 Shallow Understanding?": {
+    "message": "1.9.2 Shallow Understanding?",
+    "description": "The label for link 1.9.2 Shallow Understanding? in sidebar docs, linking to /chapters/01/09#02"
+  },
+  "sidebar.docs.link.1.9.3 Structural inadequacy?": {
+    "message": "1.9.3 Structural inadequacy?",
+    "description": "The label for link 1.9.3 Structural inadequacy? in sidebar docs, linking to /chapters/01/09#03"
+  },
+  "sidebar.docs.link.1.9.4 Differences with the brain": {
+    "message": "1.9.4 Differences with the brain",
+    "description": "The label for link 1.9.4 Differences with the brain in sidebar docs, linking to /chapters/01/09#04"
+  },
+  "sidebar.docs.link.1.9.5 Further reasons to continue scaling LLMs": {
+    "message": "1.9.5 Further reasons to continue scaling LLMs",
+    "description": "The label for link 1.9.5 Further reasons to continue scaling LLMs in sidebar docs, linking to /chapters/01/09#05"
+  },
+  "sidebar.docs.link.2.1.1 Causes of Risk": {
+    "message": "2.1.1 Causes of Risk",
+    "description": "The label for link 2.1.1 Causes of Risk in sidebar docs, linking to /chapters/02/01#01"
+  },
+  "sidebar.docs.link.2.1.2 Severity of Risk": {
+    "message": "2.1.2 Severity of Risk",
+    "description": "The label for link 2.1.2 Severity of Risk in sidebar docs, linking to /chapters/02/01#02"
+  },
+  "sidebar.docs.link.2.2.1 Deception": {
+    "message": "2.2.1 Deception",
+    "description": "The label for link 2.2.1 Deception in sidebar docs, linking to /chapters/02/02#01"
+  },
+  "sidebar.docs.link.2.2.2 Situational Awareness": {
+    "message": "2.2.2 Situational Awareness",
+    "description": "The label for link 2.2.2 Situational Awareness in sidebar docs, linking to /chapters/02/02#02"
+  },
+  "sidebar.docs.link.2.2.3 Power Seeking": {
+    "message": "2.2.3 Power Seeking",
+    "description": "The label for link 2.2.3 Power Seeking in sidebar docs, linking to /chapters/02/02#03"
+  },
+  "sidebar.docs.link.2.2.4 Autonomous Replication": {
+    "message": "2.2.4 Autonomous Replication",
+    "description": "The label for link 2.2.4 Autonomous Replication in sidebar docs, linking to /chapters/02/02#04"
+  },
+  "sidebar.docs.link.2.2.5 Agency": {
+    "message": "2.2.5 Agency",
+    "description": "The label for link 2.2.5 Agency in sidebar docs, linking to /chapters/02/02#05"
+  },
+  "sidebar.docs.link.2.3.1 Bio Risk": {
+    "message": "2.3.1 Bio Risk",
+    "description": "The label for link 2.3.1 Bio Risk in sidebar docs, linking to /chapters/02/03#01"
+  },
+  "sidebar.docs.link.2.3.2 Cyber Risk": {
+    "message": "2.3.2 Cyber Risk",
+    "description": "The label for link 2.3.2 Cyber Risk in sidebar docs, linking to /chapters/02/03#02"
+  },
+  "sidebar.docs.link.2.3.3 Autonomous Weapons Risk": {
+    "message": "2.3.3 Autonomous Weapons Risk",
+    "description": "The label for link 2.3.3 Autonomous Weapons Risk in sidebar docs, linking to /chapters/02/03#03"
+  },
+  "sidebar.docs.link.2.3.4 Adversarial AI Risk": {
+    "message": "2.3.4 Adversarial AI Risk",
+    "description": "The label for link 2.3.4 Adversarial AI Risk in sidebar docs, linking to /chapters/02/03#04"
+  },
+  "sidebar.docs.link.2.4.1 Specification Gaming": {
+    "message": "2.4.1 Specification Gaming",
+    "description": "The label for link 2.4.1 Specification Gaming in sidebar docs, linking to /chapters/02/04#01"
+  },
+  "sidebar.docs.link.2.4.2 Treacherous Turn": {
+    "message": "2.4.2 Treacherous Turn",
+    "description": "The label for link 2.4.2 Treacherous Turn in sidebar docs, linking to /chapters/02/04#02"
+  },
+  "sidebar.docs.link.2.4.3 Self-Improvement": {
+    "message": "2.4.3 Self-Improvement",
+    "description": "The label for link 2.4.3 Self-Improvement in sidebar docs, linking to /chapters/02/04#03"
+  },
+  "sidebar.docs.link.2.5.1 Decisive Systemic Risks": {
+    "message": "2.5.1 Decisive Systemic Risks",
+    "description": "The label for link 2.5.1 Decisive Systemic Risks in sidebar docs, linking to /chapters/02/05#01"
+  },
+  "sidebar.docs.link.2.5.2.1 Epistemic Erosion": {
+    "message": "2.5.2.1 Epistemic Erosion",
+    "description": "The label for link 2.5.2.1 Epistemic Erosion in sidebar docs, linking to /chapters/02/05#02-01"
+  },
+  "sidebar.docs.link.2.5.2.2 Power Concentration": {
+    "message": "2.5.2.2 Power Concentration",
+    "description": "The label for link 2.5.2.2 Power Concentration in sidebar docs, linking to /chapters/02/05#02-02"
+  },
+  "sidebar.docs.link.2.5.2.3 Mass Unemployment": {
+    "message": "2.5.2.3 Mass Unemployment",
+    "description": "The label for link 2.5.2.3 Mass Unemployment in sidebar docs, linking to /chapters/02/05#02-03"
+  },
+  "sidebar.docs.link.2.5.2.4 Value lock-in": {
+    "message": "2.5.2.4 Value lock-in",
+    "description": "The label for link 2.5.2.4 Value lock-in in sidebar docs, linking to /chapters/02/05#02-04"
+  },
+  "sidebar.docs.link.2.5.2.5 Enfeeblement": {
+    "message": "2.5.2.5 Enfeeblement",
+    "description": "The label for link 2.5.2.5 Enfeeblement in sidebar docs, linking to /chapters/02/05#02-05"
+  },
+  "sidebar.docs.link.2.6.1 Race Dynamics": {
+    "message": "2.6.1 Race Dynamics",
+    "description": "The label for link 2.6.1 Race Dynamics in sidebar docs, linking to /chapters/02/06#01"
+  },
+  "sidebar.docs.link.2.6.2 Accidents": {
+    "message": "2.6.2 Accidents",
+    "description": "The label for link 2.6.2 Accidents in sidebar docs, linking to /chapters/02/06#02"
+  },
+  "sidebar.docs.link.2.6.3 Indifference": {
+    "message": "2.6.3 Indifference",
+    "description": "The label for link 2.6.3 Indifference in sidebar docs, linking to /chapters/02/06#03"
+  },
+  "sidebar.docs.link.2.6.4 Collective Action Problems": {
+    "message": "2.6.4 Collective Action Problems",
+    "description": "The label for link 2.6.4 Collective Action Problems in sidebar docs, linking to /chapters/02/06#04"
+  },
+  "sidebar.docs.link.2.6.5 Unpredictability": {
+    "message": "2.6.5 Unpredictability",
+    "description": "The label for link 2.6.5 Unpredictability in sidebar docs, linking to /chapters/02/06#05"
+  },
+  "sidebar.docs.link.2.9.1 The Production Web": {
+    "message": "2.9.1 The Production Web",
+    "description": "The label for link 2.9.1 The Production Web in sidebar docs, linking to /chapters/02/09#01"
+  },
+  "sidebar.docs.link.2.9.2 AI 2027": {
+    "message": "2.9.2 AI 2027",
+    "description": "The label for link 2.9.2 AI 2027 in sidebar docs, linking to /chapters/02/09#02"
+  },
+  "sidebar.docs.link.3.1.1 AI Safety": {
+    "message": "3.1.1 AI Safety",
+    "description": "The label for link 3.1.1 AI Safety in sidebar docs, linking to /chapters/03/01#01"
+  },
+  "sidebar.docs.link.3.1.2 AI Alignment": {
+    "message": "3.1.2 AI Alignment",
+    "description": "The label for link 3.1.2 AI Alignment in sidebar docs, linking to /chapters/03/01#02"
+  },
+  "sidebar.docs.link.3.1.3 AI Ethics": {
+    "message": "3.1.3 AI Ethics",
+    "description": "The label for link 3.1.3 AI Ethics in sidebar docs, linking to /chapters/03/01#03"
+  },
+  "sidebar.docs.link.3.1.4 AI Control": {
+    "message": "3.1.4 AI Control",
+    "description": "The label for link 3.1.4 AI Control in sidebar docs, linking to /chapters/03/01#04"
+  },
+  "sidebar.docs.link.3.2.1.1 External Controls": {
+    "message": "3.2.1.1 External Controls",
+    "description": "The label for link 3.2.1.1 External Controls in sidebar docs, linking to /chapters/03/02#01-01"
+  },
+  "sidebar.docs.link.3.2.1.2 Internal Controls": {
+    "message": "3.2.1.2 Internal Controls",
+    "description": "The label for link 3.2.1.2 Internal Controls in sidebar docs, linking to /chapters/03/02#01-02"
+  },
+  "sidebar.docs.link.3.2.1.3 Technical Safeguards": {
+    "message": "3.2.1.3 Technical Safeguards",
+    "description": "The label for link 3.2.1.3 Technical Safeguards in sidebar docs, linking to /chapters/03/02#01-03"
+  },
+  "sidebar.docs.link.3.2.2 Socio-technical Strategies": {
+    "message": "3.2.2 Socio-technical Strategies",
+    "description": "The label for link 3.2.2 Socio-technical Strategies in sidebar docs, linking to /chapters/03/02#02"
+  },
+  "sidebar.docs.link.3.3.1 Initial Ideas": {
+    "message": "3.3.1 Initial Ideas",
+    "description": "The label for link 3.3.1 Initial Ideas in sidebar docs, linking to /chapters/03/03#01"
+  },
+  "sidebar.docs.link.3.3.2.1 Requirements for AGI Alignment": {
+    "message": "3.3.2.1 Requirements for AGI Alignment",
+    "description": "The label for link 3.3.2.1 Requirements for AGI Alignment in sidebar docs, linking to /chapters/03/03#02-01"
+  },
+  "sidebar.docs.link.3.3.3 Fix Misalignment": {
+    "message": "3.3.3 Fix Misalignment",
+    "description": "The label for link 3.3.3 Fix Misalignment in sidebar docs, linking to /chapters/03/03#03"
+  },
+  "sidebar.docs.link.3.3.4 Maintain Control": {
+    "message": "3.3.4 Maintain Control",
+    "description": "The label for link 3.3.4 Maintain Control in sidebar docs, linking to /chapters/03/03#04"
+  },
+  "sidebar.docs.link.3.3.5 Facilitating control with Transparent Thoughts": {
+    "message": "3.3.5 Facilitating control with Transparent Thoughts",
+    "description": "The label for link 3.3.5 Facilitating control with Transparent Thoughts in sidebar docs, linking to /chapters/03/03#05"
+  },
+  "sidebar.docs.link.3.4.1 Automate Alignment Research": {
+    "message": "3.4.1 Automate Alignment Research",
+    "description": "The label for link 3.4.1 Automate Alignment Research in sidebar docs, linking to /chapters/03/04#01"
+  },
+  "sidebar.docs.link.3.4.2 Safety-by-Design": {
+    "message": "3.4.2 Safety-by-Design",
+    "description": "The label for link 3.4.2 Safety-by-Design in sidebar docs, linking to /chapters/03/04#02"
+  },
+  "sidebar.docs.link.3.4.3 World Coordination": {
+    "message": "3.4.3 World Coordination",
+    "description": "The label for link 3.4.3 World Coordination in sidebar docs, linking to /chapters/03/04#03"
+  },
+  "sidebar.docs.link.3.4.4 Deterrence": {
+    "message": "3.4.4 Deterrence",
+    "description": "The label for link 3.4.4 Deterrence in sidebar docs, linking to /chapters/03/04#04"
+  },
+  "sidebar.docs.link.3.5.1 Defensive Acceleration (d/acc)": {
+    "message": "3.5.1 Defensive Acceleration (d/acc)",
+    "description": "The label for link 3.5.1 Defensive Acceleration (d/acc) in sidebar docs, linking to /chapters/03/05#01"
+  },
+  "sidebar.docs.link.3.5.2 Defense-in-Depth": {
+    "message": "3.5.2 Defense-in-Depth",
+    "description": "The label for link 3.5.2 Defense-in-Depth in sidebar docs, linking to /chapters/03/05#02"
+  },
+  "sidebar.docs.link.3.5.3 AI Governance": {
+    "message": "3.5.3 AI Governance",
+    "description": "The label for link 3.5.3 AI Governance in sidebar docs, linking to /chapters/03/05#03"
+  },
+  "sidebar.docs.link.3.5.4 Risk Management": {
+    "message": "3.5.4 Risk Management",
+    "description": "The label for link 3.5.4 Risk Management in sidebar docs, linking to /chapters/03/05#04"
+  },
+  "sidebar.docs.link.3.5.5 Safety Culture": {
+    "message": "3.5.5 Safety Culture",
+    "description": "The label for link 3.5.5 Safety Culture in sidebar docs, linking to /chapters/03/05#05"
+  },
+  "sidebar.docs.link.3.7.1 The Nature of the Problem": {
+    "message": "3.7.1 The Nature of the Problem",
+    "description": "The label for link 3.7.1 The Nature of the Problem in sidebar docs, linking to /chapters/03/07#01"
+  },
+  "sidebar.docs.link.3.7.2 Uncertainty and Disagreement": {
+    "message": "3.7.2 Uncertainty and Disagreement",
+    "description": "The label for link 3.7.2 Uncertainty and Disagreement in sidebar docs, linking to /chapters/03/07#02"
+  },
+  "sidebar.docs.link.3.7.3 Safety Washing": {
+    "message": "3.7.3 Safety Washing",
+    "description": "The label for link 3.7.3 Safety Washing in sidebar docs, linking to /chapters/03/07#03"
+  },
+  "sidebar.docs.link.3.9.1 Prioritize Flourishing or Survival?": {
+    "message": "3.9.1 Prioritize Flourishing or Survival?",
+    "description": "The label for link 3.9.1 Prioritize Flourishing or Survival? in sidebar docs, linking to /chapters/03/09#01"
+  },
+  "sidebar.docs.link.3.9.2 Alignment to what?": {
+    "message": "3.9.2 Alignment to what?",
+    "description": "The label for link 3.9.2 Alignment to what? in sidebar docs, linking to /chapters/03/09#02"
+  },
+  "sidebar.docs.link.3.9.3 Alignment to whom?": {
+    "message": "3.9.3 Alignment to whom?",
+    "description": "The label for link 3.9.3 Alignment to whom? in sidebar docs, linking to /chapters/03/09#03"
+  },
+  "sidebar.docs.link.3.9.4 Questions for the Long Term": {
+    "message": "3.9.4 Questions for the Long Term",
+    "description": "The label for link 3.9.4 Questions for the Long Term in sidebar docs, linking to /chapters/03/09#04"
+  },
+  "sidebar.docs.link.4.1.1 Tracking": {
+    "message": "4.1.1 Tracking",
+    "description": "The label for link 4.1.1 Tracking in sidebar docs, linking to /chapters/04/01#01"
+  },
+  "sidebar.docs.link.4.1.2 Monitoring": {
+    "message": "4.1.2 Monitoring",
+    "description": "The label for link 4.1.2 Monitoring in sidebar docs, linking to /chapters/04/01#02"
+  },
+  "sidebar.docs.link.4.1.3 On-Chip Controls": {
+    "message": "4.1.3 On-Chip Controls",
+    "description": "The label for link 4.1.3 On-Chip Controls in sidebar docs, linking to /chapters/04/01#03"
+  },
+  "sidebar.docs.link.4.1.4 Limitations": {
+    "message": "4.1.4 Limitations",
+    "description": "The label for link 4.1.4 Limitations in sidebar docs, linking to /chapters/04/01#04"
+  },
+  "sidebar.docs.link.4.2.1 Race dynamics": {
+    "message": "4.2.1 Race dynamics",
+    "description": "The label for link 4.2.1 Race dynamics in sidebar docs, linking to /chapters/04/02#01"
+  },
+  "sidebar.docs.link.4.2.2 Proliferation": {
+    "message": "4.2.2 Proliferation",
+    "description": "The label for link 4.2.2 Proliferation in sidebar docs, linking to /chapters/04/02#02"
+  },
+  "sidebar.docs.link.4.2.3 Uncertainty": {
+    "message": "4.2.3 Uncertainty",
+    "description": "The label for link 4.2.3 Uncertainty in sidebar docs, linking to /chapters/04/02#03"
+  },
+  "sidebar.docs.link.4.2.4 Accountability": {
+    "message": "4.2.4 Accountability",
+    "description": "The label for link 4.2.4 Accountability in sidebar docs, linking to /chapters/04/02#04"
+  },
+  "sidebar.docs.link.4.2.5 Power and Wealth Distribution": {
+    "message": "4.2.5 Power and Wealth Distribution",
+    "description": "The label for link 4.2.5 Power and Wealth Distribution in sidebar docs, linking to /chapters/04/02#05"
+  },
+  "sidebar.docs.link.4.3.1.1 Frontier Safety Frameworks": {
+    "message": "4.3.1.1 Frontier Safety Frameworks",
+    "description": "The label for link 4.3.1.1 Frontier Safety Frameworks in sidebar docs, linking to /chapters/04/03#01-01"
+  },
+  "sidebar.docs.link.4.3.2 National Governance": {
+    "message": "4.3.2 National Governance",
+    "description": "The label for link 4.3.2 National Governance in sidebar docs, linking to /chapters/04/03#02"
+  },
+  "sidebar.docs.link.4.3.3 International Governance": {
+    "message": "4.3.3 International Governance",
+    "description": "The label for link 4.3.3 International Governance in sidebar docs, linking to /chapters/04/03#03"
+  },
+  "sidebar.docs.link.4.4.1 AI Safety Standards": {
+    "message": "4.4.1 AI Safety Standards",
+    "description": "The label for link 4.4.1 AI Safety Standards in sidebar docs, linking to /chapters/04/04#01"
+  },
+  "sidebar.docs.link.4.4.2 Regulatory Visibility": {
+    "message": "4.4.2 Regulatory Visibility",
+    "description": "The label for link 4.4.2 Regulatory Visibility in sidebar docs, linking to /chapters/04/04#02"
+  },
+  "sidebar.docs.link.4.4.3 Ensuring Compliance": {
+    "message": "4.4.3 Ensuring Compliance",
+    "description": "The label for link 4.4.3 Ensuring Compliance in sidebar docs, linking to /chapters/04/04#03"
+  },
+  "sidebar.docs.link.4.4.4 Limitations and Trade-Offs": {
+    "message": "4.4.4 Limitations and Trade-Offs",
+    "description": "The label for link 4.4.4 Limitations and Trade-Offs in sidebar docs, linking to /chapters/04/04#04"
+  },
+  "sidebar.docs.link.4.7.1 European Union": {
+    "message": "4.7.1 European Union",
+    "description": "The label for link 4.7.1 European Union in sidebar docs, linking to /chapters/04/07#01"
+  },
+  "sidebar.docs.link.4.7.2 United States": {
+    "message": "4.7.2 United States",
+    "description": "The label for link 4.7.2 United States in sidebar docs, linking to /chapters/04/07#02"
+  },
+  "sidebar.docs.link.4.7.3 China": {
+    "message": "4.7.3 China",
+    "description": "The label for link 4.7.3 China in sidebar docs, linking to /chapters/04/07#03"
+  },
+  "sidebar.docs.link.5.1.1 History and Evolution": {
+    "message": "5.1.1 History and Evolution",
+    "description": "The label for link 5.1.1 History and Evolution in sidebar docs, linking to /chapters/05/01#01"
+  },
+  "sidebar.docs.link.5.1.2 Benchmarking Limitations": {
+    "message": "5.1.2 Benchmarking Limitations",
+    "description": "The label for link 5.1.2 Benchmarking Limitations in sidebar docs, linking to /chapters/05/01#02"
+  },
+  "sidebar.docs.link.5.2.1 Capability": {
+    "message": "5.2.1 Capability",
+    "description": "The label for link 5.2.1 Capability in sidebar docs, linking to /chapters/05/02#01"
+  },
+  "sidebar.docs.link.5.2.2 Propensity": {
+    "message": "5.2.2 Propensity",
+    "description": "The label for link 5.2.2 Propensity in sidebar docs, linking to /chapters/05/02#02"
+  },
+  "sidebar.docs.link.5.2.3 Control": {
+    "message": "5.2.3 Control",
+    "description": "The label for link 5.2.3 Control in sidebar docs, linking to /chapters/05/02#03"
+  },
+  "sidebar.docs.link.5.3.1 Behavioral Techniques": {
+    "message": "5.3.1 Behavioral Techniques",
+    "description": "The label for link 5.3.1 Behavioral Techniques in sidebar docs, linking to /chapters/05/03#01"
+  },
+  "sidebar.docs.link.5.3.2 Internal Techniques": {
+    "message": "5.3.2 Internal Techniques",
+    "description": "The label for link 5.3.2 Internal Techniques in sidebar docs, linking to /chapters/05/03#02"
+  },
+  "sidebar.docs.link.5.4.1 Model Organisms Framework": {
+    "message": "5.4.1 Model Organisms Framework",
+    "description": "The label for link 5.4.1 Model Organisms Framework in sidebar docs, linking to /chapters/05/04#01"
+  },
+  "sidebar.docs.link.5.4.2.1 RSP Framework (Anthropic)": {
+    "message": "5.4.2.1 RSP Framework (Anthropic)",
+    "description": "The label for link 5.4.2.1 RSP Framework (Anthropic) in sidebar docs, linking to /chapters/05/04#02-01"
+  },
+  "sidebar.docs.link.5.4.2.2 Preparedness Framework (OpenAI)": {
+    "message": "5.4.2.2 Preparedness Framework (OpenAI)",
+    "description": "The label for link 5.4.2.2 Preparedness Framework (OpenAI) in sidebar docs, linking to /chapters/05/04#02-02"
+  },
+  "sidebar.docs.link.5.4.2.3 Frontier Safety Framework (Google DeepMind)": {
+    "message": "5.4.2.3 Frontier Safety Framework (Google DeepMind)",
+    "description": "The label for link 5.4.2.3 Frontier Safety Framework (Google DeepMind) in sidebar docs, linking to /chapters/05/04#02-03"
+  },
+  "sidebar.docs.link.5.5.1 Cybercrime": {
+    "message": "5.5.1 Cybercrime",
+    "description": "The label for link 5.5.1 Cybercrime in sidebar docs, linking to /chapters/05/05#01"
+  },
+  "sidebar.docs.link.5.5.2 Deception (Capability)": {
+    "message": "5.5.2 Deception (Capability)",
+    "description": "The label for link 5.5.2 Deception (Capability) in sidebar docs, linking to /chapters/05/05#02"
+  },
+  "sidebar.docs.link.5.5.3 Autonomous Replication": {
+    "message": "5.5.3 Autonomous Replication",
+    "description": "The label for link 5.5.3 Autonomous Replication in sidebar docs, linking to /chapters/05/05#03"
+  },
+  "sidebar.docs.link.5.5.4 Long Term Planning": {
+    "message": "5.5.4 Long Term Planning",
+    "description": "The label for link 5.5.4 Long Term Planning in sidebar docs, linking to /chapters/05/05#04"
+  },
+  "sidebar.docs.link.5.5.5 Situational Awareness": {
+    "message": "5.5.5 Situational Awareness",
+    "description": "The label for link 5.5.5 Situational Awareness in sidebar docs, linking to /chapters/05/05#05"
+  },
+  "sidebar.docs.link.5.6.1 Deception (Propensity)": {
+    "message": "5.6.1 Deception (Propensity)",
+    "description": "The label for link 5.6.1 Deception (Propensity) in sidebar docs, linking to /chapters/05/06#01"
+  },
+  "sidebar.docs.link.5.6.2 Scheming": {
+    "message": "5.6.2 Scheming",
+    "description": "The label for link 5.6.2 Scheming in sidebar docs, linking to /chapters/05/06#02"
+  },
+  "sidebar.docs.link.5.8.1 Affordances": {
+    "message": "5.8.1 Affordances",
+    "description": "The label for link 5.8.1 Affordances in sidebar docs, linking to /chapters/05/08#01"
+  },
+  "sidebar.docs.link.5.8.2 Scaling and Automation": {
+    "message": "5.8.2 Scaling and Automation",
+    "description": "The label for link 5.8.2 Scaling and Automation in sidebar docs, linking to /chapters/05/08#02"
+  },
+  "sidebar.docs.link.5.8.3 Integration and Audits": {
+    "message": "5.8.3 Integration and Audits",
+    "description": "The label for link 5.8.3 Integration and Audits in sidebar docs, linking to /chapters/05/08#03"
+  },
+  "sidebar.docs.link.5.9.1 Fundamental Challenges": {
+    "message": "5.9.1 Fundamental Challenges",
+    "description": "The label for link 5.9.1 Fundamental Challenges in sidebar docs, linking to /chapters/05/09#01"
+  },
+  "sidebar.docs.link.5.9.2 Technical Challenges": {
+    "message": "5.9.2 Technical Challenges",
+    "description": "The label for link 5.9.2 Technical Challenges in sidebar docs, linking to /chapters/05/09#02"
+  },
+  "sidebar.docs.link.5.9.3 Sandbagging": {
+    "message": "5.9.3 Sandbagging",
+    "description": "The label for link 5.9.3 Sandbagging in sidebar docs, linking to /chapters/05/09#03"
+  },
+  "sidebar.docs.link.5.9.4 Systemic Limitations": {
+    "message": "5.9.4 Systemic Limitations",
+    "description": "The label for link 5.9.4 Systemic Limitations in sidebar docs, linking to /chapters/05/09#04"
+  },
+  "sidebar.docs.link.5.9.5 Governance Limitations": {
+    "message": "5.9.5 Governance Limitations",
+    "description": "The label for link 5.9.5 Governance Limitations in sidebar docs, linking to /chapters/05/09#05"
+  },
+  "sidebar.docs.link.6.1.1 Primer": {
+    "message": "6.1.1 Primer",
+    "description": "The label for link 6.1.1 Primer in sidebar docs, linking to /chapters/06/01#01"
+  },
+  "sidebar.docs.link.6.1.2 Core Loop": {
+    "message": "6.1.2 Core Loop",
+    "description": "The label for link 6.1.2 Core Loop in sidebar docs, linking to /chapters/06/01#02"
+  },
+  "sidebar.docs.link.6.1.3 Policies": {
+    "message": "6.1.3 Policies",
+    "description": "The label for link 6.1.3 Policies in sidebar docs, linking to /chapters/06/01#03"
+  },
+  "sidebar.docs.link.6.1.4 Reward": {
+    "message": "6.1.4 Reward",
+    "description": "The label for link 6.1.4 Reward in sidebar docs, linking to /chapters/06/01#04"
+  },
+  "sidebar.docs.link.6.2.1 Goodhart's Law": {
+    "message": "6.2.1 Goodhart's Law",
+    "description": "The label for link 6.2.1 Goodhart's Law in sidebar docs, linking to /chapters/06/02#01"
+  },
+  "sidebar.docs.link.6.3.1 Reward Design": {
+    "message": "6.3.1 Reward Design",
+    "description": "The label for link 6.3.1 Reward Design in sidebar docs, linking to /chapters/06/03#01"
+  },
+  "sidebar.docs.link.6.3.2 Reward Shaping": {
+    "message": "6.3.2 Reward Shaping",
+    "description": "The label for link 6.3.2 Reward Shaping in sidebar docs, linking to /chapters/06/03#02"
+  },
+  "sidebar.docs.link.6.3.3 Reward Hacking": {
+    "message": "6.3.3 Reward Hacking",
+    "description": "The label for link 6.3.3 Reward Hacking in sidebar docs, linking to /chapters/06/03#03"
+  },
+  "sidebar.docs.link.6.3.4 Reward Tampering": {
+    "message": "6.3.4 Reward Tampering",
+    "description": "The label for link 6.3.4 Reward Tampering in sidebar docs, linking to /chapters/06/03#04"
+  },
+  "sidebar.docs.link.6.4.1 Imitation Learning (IL)": {
+    "message": "6.4.1 Imitation Learning (IL)",
+    "description": "The label for link 6.4.1 Imitation Learning (IL) in sidebar docs, linking to /chapters/06/04#01"
+  },
+  "sidebar.docs.link.6.4.2 Behavioral Cloning (BC)": {
+    "message": "6.4.2 Behavioral Cloning (BC)",
+    "description": "The label for link 6.4.2 Behavioral Cloning (BC) in sidebar docs, linking to /chapters/06/04#02"
+  },
+  "sidebar.docs.link.6.4.3 Procedural Cloning (PC)": {
+    "message": "6.4.3 Procedural Cloning (PC)",
+    "description": "The label for link 6.4.3 Procedural Cloning (PC) in sidebar docs, linking to /chapters/06/04#03"
+  },
+  "sidebar.docs.link.6.4.4 Inverse Reinforcement Learning (IRL)": {
+    "message": "6.4.4 Inverse Reinforcement Learning (IRL)",
+    "description": "The label for link 6.4.4 Inverse Reinforcement Learning (IRL) in sidebar docs, linking to /chapters/06/04#04"
+  },
+  "sidebar.docs.link.6.4.5 Cooperative Inverse Reinforcement Learning (CIRL)": {
+    "message": "6.4.5 Cooperative Inverse Reinforcement Learning (CIRL)",
+    "description": "The label for link 6.4.5 Cooperative Inverse Reinforcement Learning (CIRL) in sidebar docs, linking to /chapters/06/04#05"
+  },
+  "sidebar.docs.link.6.4.6 Goal Inference Problem": {
+    "message": "6.4.6 Goal Inference Problem",
+    "description": "The label for link 6.4.6 Goal Inference Problem in sidebar docs, linking to /chapters/06/04#06"
+  },
+  "sidebar.docs.link.6.5.1 Reward Modeling": {
+    "message": "6.5.1 Reward Modeling",
+    "description": "The label for link 6.5.1 Reward Modeling in sidebar docs, linking to /chapters/06/05#01"
+  },
+  "sidebar.docs.link.6.5.2 Reinforcement Learning from Human Feedback (RLHF)": {
+    "message": "6.5.2 Reinforcement Learning from Human Feedback (RLHF)",
+    "description": "The label for link 6.5.2 Reinforcement Learning from Human Feedback (RLHF) in sidebar docs, linking to /chapters/06/05#02"
+  },
+  "sidebar.docs.link.6.5.3 Pretraining with Human Feedback (PHF)": {
+    "message": "6.5.3 Pretraining with Human Feedback (PHF)",
+    "description": "The label for link 6.5.3 Pretraining with Human Feedback (PHF) in sidebar docs, linking to /chapters/06/05#03"
+  },
+  "sidebar.docs.link.6.5.4 Reinforcement Learning from AI Feedback (RLAIF)": {
+    "message": "6.5.4 Reinforcement Learning from AI Feedback (RLAIF)",
+    "description": "The label for link 6.5.4 Reinforcement Learning from AI Feedback (RLAIF) in sidebar docs, linking to /chapters/06/05#04"
+  },
+  "sidebar.docs.link.6.5.5 Limitations": {
+    "message": "6.5.5 Limitations",
+    "description": "The label for link 6.5.5 Limitations in sidebar docs, linking to /chapters/06/05#05"
+  },
+  "sidebar.docs.link.7.1.1 Goals ≠ Rewards": {
+    "message": "7.1.1 Goals ≠ Rewards",
+    "description": "The label for link 7.1.1 Goals ≠ Rewards in sidebar docs, linking to /chapters/07/01#01"
+  },
+  "sidebar.docs.link.7.1.2 Causal Correlations": {
+    "message": "7.1.2 Causal Correlations",
+    "description": "The label for link 7.1.2 Causal Correlations in sidebar docs, linking to /chapters/07/01#02"
+  },
+  "sidebar.docs.link.7.2.1 Loss Landscapes": {
+    "message": "7.2.1 Loss Landscapes",
+    "description": "The label for link 7.2.1 Loss Landscapes in sidebar docs, linking to /chapters/07/02#01"
+  },
+  "sidebar.docs.link.7.2.2 Path Dependence": {
+    "message": "7.2.2 Path Dependence",
+    "description": "The label for link 7.2.2 Path Dependence in sidebar docs, linking to /chapters/07/02#02"
+  },
+  "sidebar.docs.link.7.2.3 Inductive Bias": {
+    "message": "7.2.3 Inductive Bias",
+    "description": "The label for link 7.2.3 Inductive Bias in sidebar docs, linking to /chapters/07/02#03"
+  },
+  "sidebar.docs.link.7.3.1 Heuristics": {
+    "message": "7.3.1 Heuristics",
+    "description": "The label for link 7.3.1 Heuristics in sidebar docs, linking to /chapters/07/03#01"
+  },
+  "sidebar.docs.link.7.3.2 Simulators": {
+    "message": "7.3.2 Simulators",
+    "description": "The label for link 7.3.2 Simulators in sidebar docs, linking to /chapters/07/03#02"
+  },
+  "sidebar.docs.link.7.3.3 Learned Optimization": {
+    "message": "7.3.3 Learned Optimization",
+    "description": "The label for link 7.3.3 Learned Optimization in sidebar docs, linking to /chapters/07/03#03"
+  },
+  "sidebar.docs.link.7.3.4 Emergent Optimization": {
+    "message": "7.3.4 Emergent Optimization",
+    "description": "The label for link 7.3.4 Emergent Optimization in sidebar docs, linking to /chapters/07/03#04"
+  },
+  "sidebar.docs.link.7.4.1 Prerequisites": {
+    "message": "7.4.1 Prerequisites",
+    "description": "The label for link 7.4.1 Prerequisites in sidebar docs, linking to /chapters/07/04#01"
+  },
+  "sidebar.docs.link.7.4.2.1 Transparency": {
+    "message": "7.4.2.1 Transparency",
+    "description": "The label for link 7.4.2.1 Transparency in sidebar docs, linking to /chapters/07/04#02-01"
+  },
+  "sidebar.docs.link.7.4.2.2 Context": {
+    "message": "7.4.2.2 Context",
+    "description": "The label for link 7.4.2.2 Context in sidebar docs, linking to /chapters/07/04#02-02"
+  },
+  "sidebar.docs.link.7.4.2.3 Persistence": {
+    "message": "7.4.2.3 Persistence",
+    "description": "The label for link 7.4.2.3 Persistence in sidebar docs, linking to /chapters/07/04#02-03"
+  },
+  "sidebar.docs.link.7.4.3.1 Arguments for scheming": {
+    "message": "7.4.3.1 Arguments for scheming",
+    "description": "The label for link 7.4.3.1 Arguments for scheming in sidebar docs, linking to /chapters/07/04#03-01"
+  },
+  "sidebar.docs.link.7.4.3.2 Arguments against scheming": {
+    "message": "7.4.3.2 Arguments against scheming",
+    "description": "The label for link 7.4.3.2 Arguments against scheming in sidebar docs, linking to /chapters/07/04#03-02"
+  },
+  "sidebar.docs.link.7.5.1.1 Externalized Reasoning": {
+    "message": "7.5.1.1 Externalized Reasoning",
+    "description": "The label for link 7.5.1.1 Externalized Reasoning in sidebar docs, linking to /chapters/07/05#01-01"
+  },
+  "sidebar.docs.link.7.5.2.1 Linear Probes": {
+    "message": "7.5.2.1 Linear Probes",
+    "description": "The label for link 7.5.2.1 Linear Probes in sidebar docs, linking to /chapters/07/05#02-01"
+  },
+  "sidebar.docs.link.7.5.2.2 Sparse Autoencoders": {
+    "message": "7.5.2.2 Sparse Autoencoders",
+    "description": "The label for link 7.5.2.2 Sparse Autoencoders in sidebar docs, linking to /chapters/07/05#02-02"
+  },
+  "sidebar.docs.link.7.5.2.3 Activation Manipulation": {
+    "message": "7.5.2.3 Activation Manipulation",
+    "description": "The label for link 7.5.2.3 Activation Manipulation in sidebar docs, linking to /chapters/07/05#02-03"
+  },
+  "sidebar.docs.link.7.5.2.4 Activation Patching": {
+    "message": "7.5.2.4 Activation Patching",
+    "description": "The label for link 7.5.2.4 Activation Patching in sidebar docs, linking to /chapters/07/05#02-04"
+  },
+  "sidebar.docs.link.7.5.2.5 Reasoning Structure Analysis": {
+    "message": "7.5.2.5 Reasoning Structure Analysis",
+    "description": "The label for link 7.5.2.5 Reasoning Structure Analysis in sidebar docs, linking to /chapters/07/05#02-05"
+  },
+  "sidebar.docs.link.7.5.3 Combined Techniques": {
+    "message": "7.5.3 Combined Techniques",
+    "description": "The label for link 7.5.3 Combined Techniques in sidebar docs, linking to /chapters/07/05#03"
+  },
+  "sidebar.docs.link.8.1.1 Training Signals": {
+    "message": "8.1.1 Training Signals",
+    "description": "The label for link 8.1.1 Training Signals in sidebar docs, linking to /chapters/08/01#01"
+  },
+  "sidebar.docs.link.8.1.2 Verification vs. Generation": {
+    "message": "8.1.2 Verification vs. Generation",
+    "description": "The label for link 8.1.2 Verification vs. Generation in sidebar docs, linking to /chapters/08/01#02"
+  },
+  "sidebar.docs.link.8.2.1 Factored Cognition": {
+    "message": "8.2.1 Factored Cognition",
+    "description": "The label for link 8.2.1 Factored Cognition in sidebar docs, linking to /chapters/08/02#01"
+  },
+  "sidebar.docs.link.8.3.1 Externalized Reasoning Oversight (ERO)": {
+    "message": "8.3.1 Externalized Reasoning Oversight (ERO)",
+    "description": "The label for link 8.3.1 Externalized Reasoning Oversight (ERO) in sidebar docs, linking to /chapters/08/03#01"
+  },
+  "sidebar.docs.link.8.3.2 Procedural Cloning": {
+    "message": "8.3.2 Procedural Cloning",
+    "description": "The label for link 8.3.2 Procedural Cloning in sidebar docs, linking to /chapters/08/03#02"
+  },
+  "sidebar.docs.link.8.4.1 Amplification": {
+    "message": "8.4.1 Amplification",
+    "description": "The label for link 8.4.1 Amplification in sidebar docs, linking to /chapters/08/04#01"
+  },
+  "sidebar.docs.link.8.4.2 Distillation": {
+    "message": "8.4.2 Distillation",
+    "description": "The label for link 8.4.2 Distillation in sidebar docs, linking to /chapters/08/04#02"
+  },
+  "sidebar.docs.link.8.4.3 Iterated Distillation and Amplification (IDA)": {
+    "message": "8.4.3 Iterated Distillation and Amplification (IDA)",
+    "description": "The label for link 8.4.3 Iterated Distillation and Amplification (IDA) in sidebar docs, linking to /chapters/08/04#03"
+  },
+  "sidebar.docs.link.8.5.1 Assumptions": {
+    "message": "8.5.1 Assumptions",
+    "description": "The label for link 8.5.1 Assumptions in sidebar docs, linking to /chapters/08/05#01"
+  },
+  "sidebar.docs.link.8.5.2 Discriminator Critique Gap (DCG)": {
+    "message": "8.5.2 Discriminator Critique Gap (DCG)",
+    "description": "The label for link 8.5.2 Discriminator Critique Gap (DCG) in sidebar docs, linking to /chapters/08/05#02"
+  },
+  "sidebar.docs.link.8.5.3 Judges": {
+    "message": "8.5.3 Judges",
+    "description": "The label for link 8.5.3 Judges in sidebar docs, linking to /chapters/08/05#03"
+  },
+  "sidebar.docs.link.8.5.4 Truth": {
+    "message": "8.5.4 Truth",
+    "description": "The label for link 8.5.4 Truth in sidebar docs, linking to /chapters/08/05#04"
+  },
+  "sidebar.docs.link.8.6.1 Sandwiching Evaluations": {
+    "message": "8.6.1 Sandwiching Evaluations",
+    "description": "The label for link 8.6.1 Sandwiching Evaluations in sidebar docs, linking to /chapters/08/06#01"
+  },
+  "sidebar.docs.link.9.1.1 Mechanistic Interpretability": {
+    "message": "9.1.1 Mechanistic Interpretability",
+    "description": "The label for link 9.1.1 Mechanistic Interpretability in sidebar docs, linking to /chapters/09/01#01"
+  },
+  "sidebar.docs.link.9.2.1.1 Circuits": {
+    "message": "9.2.1.1 Circuits",
+    "description": "The label for link 9.2.1.1 Circuits in sidebar docs, linking to /chapters/09/02#01-01"
+  },
+  "sidebar.docs.link.9.2.1.2 Polysemantic Neurons": {
+    "message": "9.2.1.2 Polysemantic Neurons",
+    "description": "The label for link 9.2.1.2 Polysemantic Neurons in sidebar docs, linking to /chapters/09/02#01-02"
+  },
+  "sidebar.docs.link.9.2.2 Logit Lens": {
+    "message": "9.2.2 Logit Lens",
+    "description": "The label for link 9.2.2 Logit Lens in sidebar docs, linking to /chapters/09/02#02"
+  },
+  "sidebar.docs.link.9.2.3 Probing classifiers": {
+    "message": "9.2.3 Probing classifiers",
+    "description": "The label for link 9.2.3 Probing classifiers in sidebar docs, linking to /chapters/09/02#03"
+  },
+  "sidebar.docs.link.9.2.4 Superposition": {
+    "message": "9.2.4 Superposition",
+    "description": "The label for link 9.2.4 Superposition in sidebar docs, linking to /chapters/09/02#04"
+  },
+  "sidebar.docs.link.9.2.5 Sparse Autoencoders": {
+    "message": "9.2.5 Sparse Autoencoders",
+    "description": "The label for link 9.2.5 Sparse Autoencoders in sidebar docs, linking to /chapters/09/02#05"
+  },
+  "sidebar.docs.link.9.3.1 Activation Patching": {
+    "message": "9.3.1 Activation Patching",
+    "description": "The label for link 9.3.1 Activation Patching in sidebar docs, linking to /chapters/09/03#01"
+  },
+  "sidebar.docs.link.9.3.2 Activation Steering": {
+    "message": "9.3.2 Activation Steering",
+    "description": "The label for link 9.3.2 Activation Steering in sidebar docs, linking to /chapters/09/03#02"
+  },
+  "sidebar.docs.link.9.4.1 Automatic Circuit DisCovery (ACDC)": {
+    "message": "9.4.1 Automatic Circuit DisCovery (ACDC)",
+    "description": "The label for link 9.4.1 Automatic Circuit DisCovery (ACDC) in sidebar docs, linking to /chapters/09/04#01"
+  },
+  "sidebar.docs.doc.2.7 Conclusion": {
+    "message": "2.7 Conclusion",
+    "description": "The label for the doc item 2.7 Conclusion in sidebar docs, linking to the doc chapters/02/7"
+  },
+  "sidebar.docs.doc.2.8 Appendix: Quantifying Existential Risks": {
+    "message": "2.8 Appendix: Quantifying Existential Risks",
+    "description": "The label for the doc item 2.8 Appendix: Quantifying Existential Risks in sidebar docs, linking to the doc chapters/02/8"
+  },
+  "sidebar.docs.doc.3.6 Combining Strategies": {
+    "message": "3.6 Combining Strategies",
+    "description": "The label for the doc item 3.6 Combining Strategies in sidebar docs, linking to the doc chapters/03/6"
+  },
+  "sidebar.docs.doc.3.8 Conclusion": {
+    "message": "3.8 Conclusion",
+    "description": "The label for the doc item 3.8 Conclusion in sidebar docs, linking to the doc chapters/03/8"
+  },
+  "sidebar.docs.doc.3.10 Appendix: Requirements for ASI Alignment": {
+    "message": "3.10 Appendix: Requirements for ASI Alignment",
+    "description": "The label for the doc item 3.10 Appendix: Requirements for ASI Alignment in sidebar docs, linking to the doc chapters/03/10"
+  },
+  "sidebar.docs.doc.4.5 Conclusion": {
+    "message": "4.5 Conclusion",
+    "description": "The label for the doc item 4.5 Conclusion in sidebar docs, linking to the doc chapters/04/5"
+  },
+  "sidebar.docs.doc.4.6 Appendix: Data Governance": {
+    "message": "4.6 Appendix: Data Governance",
+    "description": "The label for the doc item 4.6 Appendix: Data Governance in sidebar docs, linking to the doc chapters/04/6"
+  },
+  "sidebar.docs.doc.5.7 Control Evaluations": {
+    "message": "5.7 Control Evaluations",
+    "description": "The label for the doc item 5.7 Control Evaluations in sidebar docs, linking to the doc chapters/05/7"
+  },
+  "sidebar.docs.doc.5.10 Conclusion": {
+    "message": "5.10 Conclusion",
+    "description": "The label for the doc item 5.10 Conclusion in sidebar docs, linking to the doc chapters/05/10"
+  },
+  "sidebar.docs.doc.9.5 Critiques": {
+    "message": "9.5 Critiques",
+    "description": "The label for the doc item 9.5 Critiques in sidebar docs, linking to the doc chapters/09/5"
+  }
+}

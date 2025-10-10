@@ -1,0 +1,22 @@
+{
+    "logo.alt": {
+        "message": "Atlas de la Sécurité de l'IA",
+        "description": "The alt text of navbar logo"
+    },
+    "item.label.Textbook": {
+        "message": "Manuel",
+        "description": "Navbar item with label Textbook"
+    },
+    "item.label.Impact": {
+        "message": "Impact",
+        "description": "Navbar item with label Impact"
+    },
+    "item.label.Courses": {
+        "message": "Cours",
+        "description": "Navbar item with label Courses"
+    },
+    "item.label.FAQ": {
+        "message": "FAQ",
+        "description": "Navbar item with label FAQ"
+    }
+}

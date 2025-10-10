@@ -1,0 +1,1063 @@
+{
+  "courses.title": {
+    "message": "AI Safety Courses - AI Safety Atlas",
+    "description": "Title for the courses page"
+  },
+  "course.desc": {
+    "message": "Discover academic courses, reading groups, and organized programs using AI Safety Atlas materials worldwide",
+    "description": "Description for the courses page"
+  },
+  "faq.layout.title": {
+    "message": "FAQ - AI Safety Atlas",
+    "description": "FAQ page title"
+  },
+  "faq.layout.description": {
+    "message": "Frequently asked questions about AI Safety Atlas, our approach, and how we compare to other educational resources",
+    "description": "FAQ page meta description"
+  },
+  "faq.hero.title": {
+    "message": "FAQ",
+    "description": "FAQ page main heading"
+  },
+  "faq.hero.logoAlt": {
+    "message": "AI Safety Atlas Logo",
+    "description": "Alt text for the FAQ page logo"
+  },
+  "faq.contact.title": {
+    "message": "Still have questions?",
+    "description": "Contact section heading"
+  },
+  "faq.contact.description": {
+    "message": "Feel free to reach out to us directly using the contact form below.",
+    "description": "Contact section description"
+  },
+  "faq.hero.lastUpdated": {
+    "message": "Last updated",
+    "description": "Last updated label"
+  },
+  "faq.hero.dataFormat": {
+    "message": "en-US",
+    "description": "Date format"
+  },
+  "faq.page.title": {
+    "message": "FAQ page title"
+  },
+  "faq.page.description": {
+    "message": "Frequently asked questions about AI Safety Atlas, our approach, and how we compare to other educational resources"
+  },
+  "courses.certif_data.desc": {
+    "message": "Official LinkedIn certificates available for participants who complete course requirements. The specific requirements vary by the course provider."
+  },
+  "courses.certif_info.req_1": {
+    "message": "Attend at least 80% of the sessions"
+  },
+  "courses.certif_info.req_2": {
+    "message": "Read the textbook, and participate actively in group discussions"
+  },
+  "courses.certif_info.req_3": {
+    "message": "Submit final projects or equivalent contribution"
+  },
+  "courses.certif_section.title": {
+    "message": "Official Certificates"
+  },
+  "courses.certif_section.req_title": {
+    "message": "Common Certificate Requirements"
+  },
+  "courses.hero.title": {
+    "message": "AI Safety Courses"
+  },
+  "courses.hero.desc": {
+    "message": "Discover academic courses, reading groups, and organized programs using the AI Safety Atlas materials. Join an existing course or start your own with our resources."
+  },
+  "courses.status.active": {
+    "message": "Active",
+    "description": "Status label for active courses"
+  },
+  "courses.status.upcoming": {
+    "message": "Upcoming",
+    "description": "Status label for upcoming courses"
+  },
+  "courses.status.completed": {
+    "message": "Completed",
+    "description": "Status label for completed courses"
+  },
+  "correctionForm.title": {
+    "message": "Suggest Correction",
+    "description": "Title for the correction form"
+  },
+  "correctionForm.organizationName.placeholder": {
+    "message": "Organization name",
+    "description": "Placeholder for organization name input"
+  },
+  "correctionForm.location.placeholder": {
+    "message": "Location",
+    "description": "Placeholder for location input"
+  },
+  "correctionForm.startDate.placeholder": {
+    "message": "Start date",
+    "description": "Placeholder for start date input"
+  },
+  "correctionForm.endDate.placeholder": {
+    "message": "End date",
+    "description": "Placeholder for end date input"
+  },
+  "correctionForm.participants.placeholder": {
+    "message": "Participants",
+    "description": "Placeholder for participants input"
+  },
+  "correctionForm.applicationLink.placeholder": {
+    "message": "Application link",
+    "description": "Placeholder for application link input"
+  },
+  "correctionForm.websiteLink.placeholder": {
+    "message": "Website link",
+    "description": "Placeholder for website link input"
+  },
+  "correctionForm.contactEmail.placeholder": {
+    "message": "Contact email",
+    "description": "Placeholder for contact email input"
+  },
+  "correctionForm.description.placeholder": {
+    "message": "Description",
+    "description": "Placeholder for description textarea"
+  },
+  "correctionForm.additionalInfo.placeholder": {
+    "message": "Additional information or corrections",
+    "description": "Placeholder for additional info textarea"
+  },
+  "correctionForm.requestRemoval.label": {
+    "message": "Request to remove this listing entirely",
+    "description": "Label for request removal checkbox"
+  },
+  "correctionForm.cancel": {
+    "message": "Cancel",
+    "description": "Label for cancel button"
+  },
+  "correctionForm.send": {
+    "message": "Send Correction",
+    "description": "Label for send correction button"
+  },
+  "courses.contact.student": {
+    "message": "Apply as Student",
+    "description": "Button label to apply as a student"
+  },
+  "courses.contact.facilitator": {
+    "message": "Apply as Facilitator",
+    "description": "Button label to apply as a facilitator"
+  },
+  "courses.contact.website": {
+    "message": "Apply as Facilitator",
+    "description": "Button label for website"
+  },
+  "courses.contact.contact": {
+    "message": "Contact",
+    "description": "Button label for contact"
+  },
+  "courses.contact.suggest": {
+    "message": "Suggest Correction",
+    "description": "Button label to suggest correction"
+  },
+  "courses.listing.title": {
+    "message": "No Courses Available"
+  },
+  "courses.listing.text": {
+    "message": "No courses are currently listed. Check back later or consider starting your own course."
+  },
+  "courses.current.title": {
+    "message": "Current Courses",
+    "description": "Section title for current courses"
+  },
+  "courses.current.description": {
+    "message": "Courses currently accepting students or in progress",
+    "description": "Section description for current courses"
+  },
+  "courses.upcoming.title": {
+    "message": "Upcoming Courses",
+    "description": "Section title for upcoming courses"
+  },
+  "courses.upcoming.description": {
+    "message": "Future courses with applications opening soon",
+    "description": "Section description for upcoming courses"
+  },
+  "courses.past.title": {
+    "message": "Past Courses",
+    "description": "Section title for past courses"
+  },
+  "courses.past.description": {
+    "message": "Successfully completed courses using Atlas materials",
+    "description": "Section description for past courses"
+  },
+  "courses.form.start": {
+    "message": "Start Your Own Course"
+  },
+  "courses.form.ready": {
+    "message": "Ready to bring AI safety education to your community? We're here to support you every step of the way."
+  },
+  "courses.form.materials": {
+    "message": "Open source textbook & materials"
+  },
+  "courses.form.resources": {
+    "message": "Public facilitation guides & instructor resources"
+  },
+  "courses.form.cesia": {
+    "message": "French Center for AI Safety (CeSIA) + Atlas co-branded certificates for your participants"
+  },
+  "courses.form.support": {
+    "message": "Support for custom curriculum design for your needs"
+  },
+  "courses.form.any_help": {
+    "message": "Any other help we can provide"
+  },
+  "courses.form.about_course": {
+    "message": "Tell Us About Your Course"
+  },
+  "courses.form.share": {
+    "message": "Share your plans and we'll help you get started"
+  },
+  "courses.form.name": {
+    "message": "Your name"
+  },
+  "courses.form.email": {
+    "message": "Your email"
+  },
+  "courses.form.univ": {
+    "message": "University/Organization (optional)"
+  },
+  "courses.form.location": {
+    "message": "Location (city, country)"
+  },
+  "courses.form.participants": {
+    "message": "Expected participants (optional)"
+  },
+  "courses.form.start_date": {
+    "message": "Start date (optional)"
+  },
+  "courses.form.end_date": {
+    "message": "End date (optional)"
+  },
+  "courses.form.about_audience": {
+    "message": "Tell us about your audience, format preferences, or any specific support you'd like (optional)"
+  },
+  "courses.form.error": {
+    "message": "Something went wrong. Please try again or email us directly."
+  },
+  "courses.form.send": {
+    "message": "Send"
+  },
+  "courses.form.sending": {
+    "message": "Sending"
+  },
+  "courses.form.thanks": {
+    "message": "Thank You!"
+  },
+  "courses.form.thanks_msg": {
+    "message": "We're excited to support your course and will be in touch soon with resources and next steps."
+  },
+  "feedback.optional": {
+    "message": "(optional)"
+  },
+  "feedback.isSubmitted.thankYou": {
+    "message": "Thank you for your feedback!"
+  },
+  "feedback.isSubmitted.chapter.yourInputHelps": {
+    "message": "Your input helps improve"
+  },
+  "feedback.isSubmitted.chapter": {
+    "message": "this chapter"
+  },
+  "feedback.isSubmitted.section": {
+    "message": "this section"
+  },
+  "feedback.chapterFeedback": {
+    "message": "Chapter Feedback"
+  },
+  "feedback.sectionFeedback": {
+    "message": "Section Feedback"
+  },
+  "feedback.liveProject": {
+    "message": "We consider this textbook a live project. Feedback helps us target our improvements."
+  },
+  "feedback.additional": {
+    "message": "Additional feedback"
+  },
+  "feedback.comments": {
+    "message": "Some questions to think about:\n\nWhat background knowledge was missing? Which concepts should connect better? Where did you get confused? Any technical corrections?\n\nShare any other thoughts or suggestions..."
+  },
+  "feedback.detailed": {
+    "message": "Detailed feedback"
+  },
+  "feedback.contactInfo": {
+    "message": "Contact information"
+  },
+  "feedback.anonymous": {
+    "message": "Feedback is 100% anonymous unless you want to help us follow up with you or understand the context better"
+  },
+  "feedback.form.name": {
+    "message": "Your name"
+  },
+  "feedback.form.organization": {
+    "message": "University/Study Group"
+  },
+  "feedback.form.email": {
+    "message": "Email address"
+  },
+  "feedback.form.submitting": {
+    "message": "Submitting..."
+  },
+  "feedback.form.submit": {
+    "message": "Submit feedback"
+  },
+  "impact.adoption.title": {
+    "message": "Educational Adoption"
+  },
+  "impact.hero.content.title": {
+    "message": "IMPACT",
+    "description": "Impact page title"
+  },
+  "impact.hero.content.subtitle": {
+    "message": "Measurable outcomes from systematic AI safety education and research contributions.",
+    "description": "Impact page subtitle"
+  },
+  "impact.hero.content.logo": {
+    "message": "AI Safety Atlas Logo",
+    "description": "Alt text for logo image"
+  },
+  "impact.publications.title": {
+    "message": "Our Publications"
+  },
+  "impact.summary.metrics.title": {
+    "message": "Our Impact at a Glance"
+  },
+  "impact.testimonials.title": {
+    "message": "What Students, Facilitators, and Researchers Are Saying"
+  },
+  "footer.contactForm.heading": {
+    "message": "Get in Touch"
+  },
+  "footer.contactForm.description": {
+    "message": "Have questions about AI safety or want to contribute? Send us a message. This is an open source project. We are always looking for contributors or course collaborations."
+  },
+  "footer.contactForm.namePlaceholder": {
+    "message": "Your name"
+  },
+  "footer.contactForm.emailPlaceholder": {
+    "message": "Your email"
+  },
+  "footer.contactForm.messagePlaceholder": {
+    "message": "Your message"
+  },
+  "footer.contactForm.sendButton": {
+    "message": "Send Message"
+  },
+  "footer.contactForm.sendingButton": {
+    "message": "Sending..."
+  },
+  "footer.contactForm.sentButton": {
+    "message": "Message Sent!"
+  },
+  "footer.footerLogoText": {
+    "message": "AI SAFETY ATLAS",
+    "description": "Footer Logo Text"
+  },
+  "footer.footerLogoDescription": {
+    "message": "A comprehensive guide to AI safety and alignment research.",
+    "description": "Footer Logo Description"
+  },
+  "footer.cesiaDescription": {
+    "message": "Leading research institute advancing AI safety and alignment in Europe.",
+    "description": "Footer CeSIA Description"
+  },
+  "footer.citation.citeAs": {
+    "message": "Cite this work as",
+    "description": "Footer Citation title"
+  },
+  "footer.funders.title": {
+    "message": "Funders",
+    "description": "Footer Funders title"
+  },
+  "footer.license": {
+    "message": "<strong>Copyright:</strong> {copyright_year} AI Safety Atlas • Text Content: <a href=\"https://creativecommons.org/licenses/by-sa/4.0/\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"{licenseLinkClass}\">CC BY-SA 4.0</a> • Code: <a href=\"https://opensource.org/licenses/MIT\" target=\"_blank\" class=\"{licenseLinkClass}\">MIT</a>",
+    "description": "Footer copyright and license information"
+  },
+  "footer.analytics": {
+    "message": "<strong>Analytics:</strong> We use privacy-focused <a href=\"https://plausible.io/\" target=\"_blank\" class=\"{licenseLinkClass}\">Plausible</a> instead of Google Analytics. No cookies, fully GDPR/CCPA compliant. :)",
+    "description": "Footer analytics information"
+  },
+  "theme.docItem.content.note.expand": {
+    "message": "Click to expand"
+  },
+  "theme.docItem.content.note.collapse": {
+    "message": "Click to collapse"
+  },
+  "theme.docItem.content.note.optional": {
+    "message": "Optional"
+  },
+  "theme.docItem.contentSectionHeader.metadata.readingTime.time": {
+    "message": "min read"
+  },
+  "theme.docItem.contentSectionHeader.metadata.readingTime.optional": {
+    "message": "min optional"
+  },
+  "landing.hero.content.title": {
+    "message": "AI SAFETY ATLAS",
+    "description": "Landing page title"
+  },
+  "landing.hero.content.subtitle": {
+    "message": "Distilling safety research into a complete learning ecosystem: textbook, courses, guides, videos, and more.",
+    "description": "Landing page subtitle"
+  },
+  "landing.hero.content.logo": {
+    "message": "AI Safety Atlas Logo",
+    "description": "Alt text for logo image"
+  },
+  "landing.info.acknowledgements.title": {
+    "message": "Acknowledgements",
+    "description": "Acknowledgements section title"
+  },
+  "landing.info.acknowledgements.text": {
+    "message": "We thank $ACK_1$, and $ACK_2$ for their valuable feedback and contributions to this project.",
+    "description": "Acknowledgements section text"
+  },
+  "landing.info.advisors.title": {
+    "message": "Advisors",
+    "description": "Title for the Advisors section on the landing page"
+  },
+  "landing.info.citation.copied": {
+    "message": "Copied!"
+  },
+  "landing.info.citation.clickToCopy": {
+    "message": "Click to copy citation"
+  },
+  "landing.info.citation.failedToCopy": {
+    "message": "Failed to copy citation:"
+  },
+  "landing.info.citation.copyFailed": {
+    "message": "Copy failed"
+  },
+  "landing.info.citation.citeAs": {
+    "message": "Cite this work as"
+  },
+  "landing.info.citation.copyCitation": {
+    "message": "Copy citation to clipboard"
+  },
+  "landing.chapterList.buttons.read": {
+    "message": "Read Online"
+  },
+  "landing.chapterList.buttons.video": {
+    "message": "Watch Video"
+  },
+  "landing.chapterList.buttons.pdf": {
+    "message": "Download PDF"
+  },
+  "landing.chapterList.buttons.audio": {
+    "message": "Listen to Audio"
+  },
+  "landing.chapterList.buttons.teach": {
+    "message": "Teaching Guide"
+  },
+  "landing.chapterList.buttons.show": {
+    "message": "Show"
+  },
+  "landing.chapterList.buttons.hide": {
+    "message": "Hide"
+  },
+  "landing.chapterList.buttons.comingSoon": {
+    "message": "Coming soon"
+  },
+  "landing.chapterlist.header.read": {
+    "message": "Read"
+  },
+  "landing.chapterlist.header.lecture": {
+    "message": "Lecture"
+  },
+  "landing.chapterlist.header.landing.chapterlist.header.pdf": {
+    "message": "PDF"
+  },
+  "landing.chapterlist.header.audio": {
+    "message": "Audio"
+  },
+  "landing.chapterlist.header.facilitate": {
+    "message": "Facilitate"
+  },
+  "landing.chapterlist.header.chapter": {
+    "message": "Chapter"
+  },
+  "landing.hero.description.primaryTitle": {
+    "message": "The field that will determine humanity's future, explained systematically.",
+    "description": "Main title on the landing story description"
+  },
+  "landing.hero.description.primaryDescription.paragraph1": {
+    "message": "Some of the <a href=\"https://scholar.google.com/citations?hl=en&view_op=search_authors&mauthors=label%3Aartificial_intelligence+OR+label%3AAI&btnG=\" target=\"_blank\" rel=\"noopener noreferrer\" className={styles.credibilityLink}>most cited AI researchers</a> are sounding urgent warnings about the path ahead. But the knowledge you need to understand AI safety is scattered across hundreds of research papers, blog posts, and technical discussions.",
+    "description": "First paragraph describing the problem"
+  },
+  "landing.hero.description.primaryDescription.paragraph2": {
+    "message": "<strong>That's why we created the AI Safety Atlas.</strong> We perform the essential <a href=\"https://distill.pub/2017/research-debt/\" target=\"_blank\" rel=\"noopener noreferrer\" className={styles.credibilityLink}>interpretive labor</a>—transforming scattered AI safety research into systematic, connected learning paths. Hundreds of students globally across multiple universities now use the Atlas to go from curious to well-informed in weeks, not years.",
+    "description": "Second paragraph describing the problem"
+  },
+  "landing.story.motivation.question": {
+    "message": "Stop piecing together AI safety from scattered sources.",
+    "description": "Motivation question"
+  },
+  "landing.story.motivation.answer": {
+    "message": "Whether you're in policy, engineering, business, or academia—the Atlas gives you the complete picture. We've structured the most important knowledge in the field so you can build genuine understanding instead of collecting random facts from scattered sources.",
+    "description": "Motivation answer"
+  },
+  "theme.ErrorPageContent.title": {
+    "message": "Cette page a planté.",
+    "description": "The title of the fallback page when the page crashed"
+  },
+  "theme.BackToTopButton.buttonAriaLabel": {
+    "message": "Retour au début de la page",
+    "description": "The ARIA label for the back to top button"
+  },
+  "theme.blog.archive.title": {
+    "message": "Archive",
+    "description": "The page & hero title of the blog archive page"
+  },
+  "theme.blog.archive.description": {
+    "message": "Archive",
+    "description": "The page & hero description of the blog archive page"
+  },
+  "theme.blog.paginator.navAriaLabel": {
+    "message": "Pagination de la liste des articles du blog",
+    "description": "The ARIA label for the blog pagination"
+  },
+  "theme.blog.paginator.newerEntries": {
+    "message": "Nouvelles entrées",
+    "description": "The label used to navigate to the newer blog posts page (previous page)"
+  },
+  "theme.blog.paginator.olderEntries": {
+    "message": "Anciennes entrées",
+    "description": "The label used to navigate to the older blog posts page (next page)"
+  },
+  "theme.blog.post.paginator.navAriaLabel": {
+    "message": "Pagination des articles du blog",
+    "description": "The ARIA label for the blog posts pagination"
+  },
+  "theme.blog.post.paginator.newerPost": {
+    "message": "Article plus récent",
+    "description": "The blog post button label to navigate to the newer/previous post"
+  },
+  "theme.blog.post.paginator.olderPost": {
+    "message": "Article plus ancien",
+    "description": "The blog post button label to navigate to the older/next post"
+  },
+  "theme.tags.tagsPageLink": {
+    "message": "Voir tous les tags",
+    "description": "The label of the link targeting the tag list page"
+  },
+  "theme.colorToggle.ariaLabel.mode.system": {
+    "message": "system mode",
+    "description": "The name for the system color mode"
+  },
+  "theme.colorToggle.ariaLabel.mode.light": {
+    "message": "mode clair",
+    "description": "The name for the light color mode"
+  },
+  "theme.colorToggle.ariaLabel.mode.dark": {
+    "message": "mode sombre",
+    "description": "The name for the dark color mode"
+  },
+  "theme.colorToggle.ariaLabel": {
+    "message": "Basculer entre le mode sombre et clair (actuellement {mode})",
+    "description": "The ARIA label for the color mode toggle"
+  },
+  "theme.docs.DocCard.categoryDescription.plurals": {
+    "message": "1 élément|{count} éléments",
+    "description": "The default description for a category card in the generated index about how many items this category includes"
+  },
+  "theme.docs.breadcrumbs.navAriaLabel": {
+    "message": "Fil d'Ariane",
+    "description": "The ARIA label for the breadcrumbs"
+  },
+  "theme.docs.paginator.navAriaLabel": {
+    "message": "Pages de documentation",
+    "description": "The ARIA label for the docs pagination"
+  },
+  "theme.docs.paginator.previous": {
+    "message": "Précédent",
+    "description": "The label used to navigate to the previous doc"
+  },
+  "theme.docs.paginator.next": {
+    "message": "Suivant",
+    "description": "The label used to navigate to the next doc"
+  },
+  "theme.docs.tagDocListPageTitle.nDocsTagged": {
+    "message": "Un document tagué|{count} documents tagués",
+    "description": "Pluralized label for \"{count} docs tagged\". Use as much plural forms (separated by \"|\") as your language support (see https://www.unicode.org/cldr/cldr-aux/charts/34/supplemental/language_plural_rules.html)"
+  },
+  "theme.docs.tagDocListPageTitle": {
+    "message": "{nDocsTagged} avec \"{tagName}\"",
+    "description": "The title of the page for a docs tag"
+  },
+  "theme.docs.versionBadge.label": {
+    "message": "Version: {versionLabel}"
+  },
+  "theme.docs.versions.unreleasedVersionLabel": {
+    "message": "Ceci est la documentation de la prochaine version {versionLabel} de {siteTitle}.",
+    "description": "The label used to tell the user that he's browsing an unreleased doc version"
+  },
+  "theme.docs.versions.unmaintainedVersionLabel": {
+    "message": "Ceci est la documentation de {siteTitle} {versionLabel}, qui n'est plus activement maintenue.",
+    "description": "The label used to tell the user that he's browsing an unmaintained doc version"
+  },
+  "theme.docs.versions.latestVersionSuggestionLabel": {
+    "message": "Pour une documentation à jour, consultez la {latestVersionLink} ({versionLabel}).",
+    "description": "The label used to tell the user to check the latest version"
+  },
+  "theme.docs.versions.latestVersionLinkLabel": {
+    "message": "dernière version",
+    "description": "The label used for the latest version suggestion link label"
+  },
+  "theme.common.editThisPage": {
+    "message": "Éditer cette page",
+    "description": "The link label to edit the current page"
+  },
+  "theme.common.headingLinkTitle": {
+    "message": "Lien direct vers {heading}",
+    "description": "Title for link to heading"
+  },
+  "theme.lastUpdated.atDate": {
+    "message": " le {date}",
+    "description": "The words used to describe on which date a page has been last updated"
+  },
+  "theme.lastUpdated.byUser": {
+    "message": " par {user}",
+    "description": "The words used to describe by who the page has been last updated"
+  },
+  "theme.lastUpdated.lastUpdatedAtBy": {
+    "message": "Dernière mise à jour{atDate}{byUser}",
+    "description": "The sentence used to display when a page has been last updated, and by who"
+  },
+  "theme.navbar.mobileVersionsDropdown.label": {
+    "message": "Versions",
+    "description": "The label for the navbar versions dropdown on mobile view"
+  },
+  "theme.NotFound.title": {
+    "message": "Page introuvable",
+    "description": "The title of the 404 page"
+  },
+  "theme.tags.tagsListLabel": {
+    "message": "Tags :",
+    "description": "The label alongside a tag list"
+  },
+  "theme.admonition.caution": {
+    "message": "attention",
+    "description": "The default label used for the Caution admonition (:::caution)"
+  },
+  "theme.admonition.danger": {
+    "message": "danger",
+    "description": "The default label used for the Danger admonition (:::danger)"
+  },
+  "theme.admonition.info": {
+    "message": "info",
+    "description": "The default label used for the Info admonition (:::info)"
+  },
+  "theme.admonition.note": {
+    "message": "remarque",
+    "description": "The default label used for the Note admonition (:::note)"
+  },
+  "theme.admonition.tip": {
+    "message": "astuce",
+    "description": "The default label used for the Tip admonition (:::tip)"
+  },
+  "theme.admonition.warning": {
+    "message": "attention",
+    "description": "The default label used for the Warning admonition (:::warning)"
+  },
+  "theme.AnnouncementBar.closeButtonAriaLabel": {
+    "message": "Fermer",
+    "description": "The ARIA label for close button of announcement bar"
+  },
+  "theme.blog.sidebar.navAriaLabel": {
+    "message": "Navigation article de blog récent",
+    "description": "The ARIA label for recent posts in the blog sidebar"
+  },
+  "theme.DocSidebarItem.expandCategoryAriaLabel": {
+    "message": "Développer la catégorie '{label}' de la barre latérale",
+    "description": "The ARIA label to expand the sidebar category"
+  },
+  "theme.DocSidebarItem.collapseCategoryAriaLabel": {
+    "message": "Réduire la catégorie '{label}' de la barre latérale",
+    "description": "The ARIA label to collapse the sidebar category"
+  },
+  "theme.IconExternalLink.ariaLabel": {
+    "message": "(opens in new tab)",
+    "description": "The ARIA label for the external link icon"
+  },
+  "theme.NavBar.navAriaLabel": {
+    "message": "Main",
+    "description": "The ARIA label for the main navigation"
+  },
+  "theme.NotFound.p1": {
+    "message": "Nous n'avons pas trouvé ce que vous recherchez.",
+    "description": "The first paragraph of the 404 page"
+  },
+  "theme.NotFound.p2": {
+    "message": "Veuillez contacter le propriétaire du site qui vous a lié à l'URL d'origine et leur faire savoir que leur lien est cassé.",
+    "description": "The 2nd paragraph of the 404 page"
+  },
+  "theme.navbar.mobileLanguageDropdown.label": {
+    "message": "Langues",
+    "description": "The label for the mobile language switcher dropdown"
+  },
+  "theme.TOCCollapsible.toggleButtonLabel": {
+    "message": "Sur cette page",
+    "description": "The label used by the button on the collapsible TOC component"
+  },
+  "theme.blog.post.readingTime.plurals": {
+    "message": "Une minute de lecture|{readingTime} minutes de lecture",
+    "description": "Pluralized label for \"{readingTime} min read\". Use as much plural forms (separated by \"|\") as your language support (see https://www.unicode.org/cldr/cldr-aux/charts/34/supplemental/language_plural_rules.html)"
+  },
+  "theme.blog.post.readMore": {
+    "message": "Lire plus",
+    "description": "The label used in blog post item excerpts to link to full blog posts"
+  },
+  "theme.blog.post.readMoreLabel": {
+    "message": "En savoir plus sur {title}",
+    "description": "The ARIA label for the link to full blog posts from excerpts"
+  },
+  "theme.CodeBlock.copy": {
+    "message": "Copier",
+    "description": "The copy button label on code blocks"
+  },
+  "theme.CodeBlock.copied": {
+    "message": "Copié",
+    "description": "The copied button label on code blocks"
+  },
+  "theme.CodeBlock.copyButtonAriaLabel": {
+    "message": "Copier le code",
+    "description": "The ARIA label for copy code blocks button"
+  },
+  "theme.CodeBlock.wordWrapToggle": {
+    "message": "Activer/désactiver le retour à la ligne",
+    "description": "The title attribute for toggle word wrapping button of code block lines"
+  },
+  "theme.docs.breadcrumbs.home": {
+    "message": "Page d'accueil",
+    "description": "The ARIA label for the home page in the breadcrumbs"
+  },
+  "theme.docs.sidebar.collapseButtonTitle": {
+    "message": "Réduire le menu latéral",
+    "description": "The title attribute for collapse button of doc sidebar"
+  },
+  "theme.docs.sidebar.collapseButtonAriaLabel": {
+    "message": "Réduire le menu latéral",
+    "description": "The title attribute for collapse button of doc sidebar"
+  },
+  "theme.docs.sidebar.navAriaLabel": {
+    "message": "Docs sidebar",
+    "description": "The ARIA label for the sidebar navigation"
+  },
+  "theme.docs.sidebar.closeSidebarButtonAriaLabel": {
+    "message": "Fermer la barre de navigation",
+    "description": "The ARIA label for close button of mobile sidebar"
+  },
+  "theme.docs.sidebar.toggleSidebarButtonAriaLabel": {
+    "message": "Ouvrir/fermer la barre de navigation",
+    "description": "The ARIA label for hamburger menu button of mobile navigation"
+  },
+  "theme.navbar.mobileSidebarSecondaryMenu.backButtonLabel": {
+    "message": "← Retour au menu principal",
+    "description": "The label of the back button to return to main menu, inside the mobile navbar sidebar secondary menu (notably used to display the docs sidebar)"
+  },
+  "theme.navbar.mobileDropdown.collapseButton.expandAriaLabel": {
+    "message": "Expand the dropdown",
+    "description": "The ARIA label of the button to expand the mobile dropdown navbar item"
+  },
+  "theme.navbar.mobileDropdown.collapseButton.collapseAriaLabel": {
+    "message": "Collapse the dropdown",
+    "description": "The ARIA label of the button to collapse the mobile dropdown navbar item"
+  },
+  "theme.docs.sidebar.expandButtonTitle": {
+    "message": "Déplier le menu latéral",
+    "description": "The ARIA label and title attribute for expand button of doc sidebar"
+  },
+  "theme.docs.sidebar.expandButtonAriaLabel": {
+    "message": "Déplier le menu latéral",
+    "description": "The ARIA label and title attribute for expand button of doc sidebar"
+  },
+  "theme.SearchBar.seeAll": {
+    "message": "Voir les {count} résultats"
+  },
+  "theme.SearchPage.documentsFound.plurals": {
+    "message": "Un document trouvé|{count} documents trouvés",
+    "description": "Pluralized label for \"{count} documents found\". Use as much plural forms (separated by \"|\") as your language support (see https://www.unicode.org/cldr/cldr-aux/charts/34/supplemental/language_plural_rules.html)"
+  },
+  "theme.SearchPage.existingResultsTitle": {
+    "message": "Résultats de recherche pour « {query} »",
+    "description": "The search page title for non-empty query"
+  },
+  "theme.SearchPage.emptyResultsTitle": {
+    "message": "Rechercher dans la documentation",
+    "description": "The search page title for empty query"
+  },
+  "theme.SearchPage.inputPlaceholder": {
+    "message": "Tapez votre recherche ici",
+    "description": "The placeholder for search page input"
+  },
+  "theme.SearchPage.inputLabel": {
+    "message": "Chercher",
+    "description": "The ARIA label for search page input"
+  },
+  "theme.SearchPage.algoliaLabel": {
+    "message": "Fourni par Algolia",
+    "description": "The description label for Algolia mention"
+  },
+  "theme.SearchPage.noResultsText": {
+    "message": "Aucun résultat trouvé",
+    "description": "The paragraph for empty search result"
+  },
+  "theme.SearchPage.fetchingNewResults": {
+    "message": "Chargement de nouveaux résultats...",
+    "description": "The paragraph for fetching new search results"
+  },
+  "theme.SearchBar.label": {
+    "message": "Chercher",
+    "description": "The ARIA label and placeholder for search button"
+  },
+  "theme.SearchModal.searchBox.resetButtonTitle": {
+    "message": "Effacer la requête",
+    "description": "The label and ARIA label for search box reset button"
+  },
+  "theme.SearchModal.searchBox.cancelButtonText": {
+    "message": "Annuler",
+    "description": "The label and ARIA label for search box cancel button"
+  },
+  "theme.SearchModal.searchBox.placeholderText": {
+    "message": "Rechercher des docs",
+    "description": "The placeholder text for the main search input field"
+  },
+  "theme.SearchModal.searchBox.placeholderTextAskAi": {
+    "message": "Poser une autre question...",
+    "description": "The placeholder text when in AI question mode"
+  },
+  "theme.SearchModal.searchBox.placeholderTextAskAiStreaming": {
+    "message": "En train de répondre...",
+    "description": "The placeholder text for search box when AI is streaming an answer"
+  },
+  "theme.SearchModal.searchBox.enterKeyHint": {
+    "message": "rechercher",
+    "description": "The hint for the search box enter key text"
+  },
+  "theme.SearchModal.searchBox.enterKeyHintAskAi": {
+    "message": "entrée",
+    "description": "The hint for the Ask AI search box enter key text"
+  },
+  "theme.SearchModal.searchBox.searchInputLabel": {
+    "message": "Rechercher",
+    "description": "The ARIA label for search input"
+  },
+  "theme.SearchModal.searchBox.backToKeywordSearchButtonText": {
+    "message": "Retour à la recherche par mots-clés",
+    "description": "The text for back to keyword search button"
+  },
+  "theme.SearchModal.searchBox.backToKeywordSearchButtonAriaLabel": {
+    "message": "Retour à la recherche par mots-clés",
+    "description": "The ARIA label for back to keyword search button"
+  },
+  "theme.SearchModal.startScreen.recentSearchesTitle": {
+    "message": "Récemment",
+    "description": "The title for recent searches"
+  },
+  "theme.SearchModal.startScreen.noRecentSearchesText": {
+    "message": "Aucune recherche récente",
+    "description": "The text when there are no recent searches"
+  },
+  "theme.SearchModal.startScreen.saveRecentSearchButtonTitle": {
+    "message": "Sauvegarder cette recherche",
+    "description": "The title for save recent search button"
+  },
+  "theme.SearchModal.startScreen.removeRecentSearchButtonTitle": {
+    "message": "Supprimer cette recherche de l'historique",
+    "description": "The title for remove recent search button"
+  },
+  "theme.SearchModal.startScreen.favoriteSearchesTitle": {
+    "message": "Favoris",
+    "description": "The title for favorite searches"
+  },
+  "theme.SearchModal.startScreen.removeFavoriteSearchButtonTitle": {
+    "message": "Supprimer cette recherche des favoris",
+    "description": "The title for remove favorite search button"
+  },
+  "theme.SearchModal.startScreen.recentConversationsTitle": {
+    "message": "Conversations récentes",
+    "description": "The title for recent conversations"
+  },
+  "theme.SearchModal.startScreen.removeRecentConversationButtonTitle": {
+    "message": "Supprimer cette conversation de l'historique",
+    "description": "The title for remove recent conversation button"
+  },
+  "theme.SearchModal.errorScreen.titleText": {
+    "message": "Impossible de récupérer les résultats",
+    "description": "The title for error screen"
+  },
+  "theme.SearchModal.errorScreen.helpText": {
+    "message": "Vous pouvez vérifier votre connexion réseau.",
+    "description": "The help text for error screen"
+  },
+  "theme.SearchModal.resultsScreen.askAiPlaceholder": {
+    "message": "Demander à l'IA : ",
+    "description": "The placeholder text for Ask AI input"
+  },
+  "theme.SearchModal.askAiScreen.disclaimerText": {
+    "message": "Les réponses sont générées par l'IA et peuvent contenir des erreurs. Veuillez vérifier les réponses.",
+    "description": "The disclaimer text for AI answers"
+  },
+  "theme.SearchModal.askAiScreen.relatedSourcesText": {
+    "message": "Sources connexes",
+    "description": "The text for related sources"
+  },
+  "theme.SearchModal.askAiScreen.thinkingText": {
+    "message": "Réflexion en cours...",
+    "description": "The text when AI is thinking"
+  },
+  "theme.SearchModal.askAiScreen.copyButtonText": {
+    "message": "Copier",
+    "description": "The text for copy button"
+  },
+  "theme.SearchModal.askAiScreen.copyButtonCopiedText": {
+    "message": "Copié !",
+    "description": "The text for copy button when copied"
+  },
+  "theme.SearchModal.askAiScreen.copyButtonTitle": {
+    "message": "Copier",
+    "description": "The title for copy button"
+  },
+  "theme.SearchModal.askAiScreen.likeButtonTitle": {
+    "message": "J'aime",
+    "description": "The title for like button"
+  },
+  "theme.SearchModal.askAiScreen.dislikeButtonTitle": {
+    "message": "Je n'aime pas",
+    "description": "The title for dislike button"
+  },
+  "theme.SearchModal.askAiScreen.thanksForFeedbackText": {
+    "message": "Merci pour votre retour !",
+    "description": "The text for thanks for feedback"
+  },
+  "theme.SearchModal.askAiScreen.preToolCallText": {
+    "message": "Recherche en cours...",
+    "description": "The text before tool call"
+  },
+  "theme.SearchModal.askAiScreen.duringToolCallText": {
+    "message": "Recherche de ",
+    "description": "The text during tool call"
+  },
+  "theme.SearchModal.askAiScreen.afterToolCallText": {
+    "message": "Recherche effectuée pour ",
+    "description": "The text after tool call"
+  },
+  "theme.SearchModal.footer.selectText": {
+    "message": "sélectionner",
+    "description": "The select text for footer"
+  },
+  "theme.SearchModal.footer.submitQuestionText": {
+    "message": "Soumettre la question",
+    "description": "The submit question text for footer"
+  },
+  "theme.SearchModal.footer.selectKeyAriaLabel": {
+    "message": "Touche Entrée",
+    "description": "The ARIA label for select key in footer"
+  },
+  "theme.SearchModal.footer.navigateText": {
+    "message": "naviguer",
+    "description": "The navigate text for footer"
+  },
+  "theme.SearchModal.footer.navigateUpKeyAriaLabel": {
+    "message": "Flèche vers le haut",
+    "description": "The ARIA label for navigate up key in footer"
+  },
+  "theme.SearchModal.footer.navigateDownKeyAriaLabel": {
+    "message": "Flèche vers le bas",
+    "description": "The ARIA label for navigate down key in footer"
+  },
+  "theme.SearchModal.footer.closeText": {
+    "message": "fermer",
+    "description": "The close text for footer"
+  },
+  "theme.SearchModal.footer.closeKeyAriaLabel": {
+    "message": "Touche Echap",
+    "description": "The ARIA label for close key in footer"
+  },
+  "theme.SearchModal.footer.searchByText": {
+    "message": "Recherche via",
+    "description": "The 'Powered by' text for footer"
+  },
+  "theme.SearchModal.footer.backToSearchText": {
+    "message": "Retour à la recherche",
+    "description": "The back to search text for footer"
+  },
+  "theme.SearchModal.noResultsScreen.noResultsText": {
+    "message": "Aucun résultat pour",
+    "description": "The text when there are no results"
+  },
+  "theme.SearchModal.noResultsScreen.suggestedQueryText": {
+    "message": "Essayez de chercher",
+    "description": "The text for suggested query"
+  },
+  "theme.SearchModal.noResultsScreen.reportMissingResultsText": {
+    "message": "Vous pensez que cette requête doit donner des résultats ?",
+    "description": "The text for reporting missing results"
+  },
+  "theme.SearchModal.noResultsScreen.reportMissingResultsLinkText": {
+    "message": "Faites-le nous savoir.",
+    "description": "The link text for reporting missing results"
+  },
+  "theme.SearchModal.placeholder": {
+    "message": "Rechercher des docs",
+    "description": "The placeholder of the input of the DocSearch pop-up modal"
+  },
+  "theme.blog.post.plurals": {
+    "message": "Un article|{count} articles",
+    "description": "Pluralized label for \"{count} posts\". Use as much plural forms (separated by \"|\") as your language support (see https://www.unicode.org/cldr/cldr-aux/charts/34/supplemental/language_plural_rules.html)"
+  },
+  "theme.blog.tagTitle": {
+    "message": "{nPosts} tagués avec « {tagName} »",
+    "description": "The title of the page for a blog tag"
+  },
+  "theme.blog.author.pageTitle": {
+    "message": "{authorName} - {nPosts}",
+    "description": "The title of the page for a blog author"
+  },
+  "theme.blog.authorsList.pageTitle": {
+    "message": "Authors",
+    "description": "The title of the authors page"
+  },
+  "theme.blog.authorsList.viewAll": {
+    "message": "View All Authors",
+    "description": "The label of the link targeting the blog authors page"
+  },
+  "theme.blog.author.noPosts": {
+    "message": "This author has not written any posts yet.",
+    "description": "The text for authors with 0 blog post"
+  },
+  "theme.contentVisibility.unlistedBanner.title": {
+    "message": "Page non répertoriée",
+    "description": "The unlisted content banner title"
+  },
+  "theme.contentVisibility.unlistedBanner.message": {
+    "message": "Cette page n'est pas répertoriée. Les moteurs de recherche ne l'indexeront pas, et seuls les utilisateurs ayant un lien direct peuvent y accéder.",
+    "description": "The unlisted content banner message"
+  },
+  "theme.contentVisibility.draftBanner.title": {
+    "message": "Draft page",
+    "description": "The draft content banner title"
+  },
+  "theme.contentVisibility.draftBanner.message": {
+    "message": "This page is a draft. It will only be visible in dev and be excluded from the production build.",
+    "description": "The draft content banner message"
+  },
+  "theme.ErrorPageContent.tryAgain": {
+    "message": "Réessayer",
+    "description": "The label of the button to try again rendering when the React error boundary captures an error"
+  },
+  "theme.common.skipToMainContent": {
+    "message": "Aller au contenu principal",
+    "description": "The skip to content label used for accessibility, allowing to rapidly navigate to main content with keyboard tab/enter navigation"
+  },
+  "theme.tags.tagsPageTitle": {
+    "message": "Tags",
+    "description": "The title of the tag list page"
+  }
+}

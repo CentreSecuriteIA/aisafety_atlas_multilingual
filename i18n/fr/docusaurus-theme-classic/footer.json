@@ -1,0 +1,50 @@
+{
+    "link.title.Content": {
+        "message": "Contenu",
+        "description": "The title of the footer links column with title=Content in the footer"
+    },
+    "link.title.Community": {
+        "message": "Communauté",
+        "description": "The title of the footer links column with title=Community in the footer"
+    },
+    "link.title.Social": {
+        "message": "Social",
+        "description": "The title of the footer links column with title=Social in the footer"
+    },
+    "link.item.label.Textbook": {
+        "message": "Manuel",
+        "description": "The label of footer link with label=Textbook linking to /"
+    },
+    "link.item.label.Safety Research": {
+        "message": "Recherche sur la Sécurité",
+        "description": "The label of footer link with label=Safety Research linking to /chapters/01/"
+    },
+    "link.item.label.Alignment Forum": {
+        "message": "Alignment Forum",
+        "description": "The label of footer link with label=Alignment Forum linking to https://alignmentforum.org"
+    },
+    "link.item.label.AI Safety Slack": {
+        "message": "AI Safety Slack",
+        "description": "The label of footer link with label=AI Safety Slack linking to https://aisafety.com/join-slack"
+    },
+    "link.item.label.Contribute to Atlas": {
+        "message": "Contribuer à Atlas",
+        "description": "The label of footer link with label=Contribute to Atlas linking to https://github.com/markov-root/atlas"
+    },
+    "link.item.label.GitHub": {
+        "message": "GitHub",
+        "description": "The label of footer link with label=GitHub linking to https://github.com/markov-root/atlas"
+    },
+    "link.item.label.YouTube": {
+        "message": "YouTube",
+        "description": "The label of footer link with label=YouTube linking to https://www.youtube.com/@securite-ia"
+    },
+    "copyright": {
+        "message": "Copyright © 2025 AI Safety Atlas.",
+        "description": "The footer copyright"
+    },
+    "logo.alt": {
+        "message": "Logo AI Safety Atlas",
+        "description": "The alt text of footer logo"
+    }
+}
