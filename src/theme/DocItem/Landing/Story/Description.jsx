@@ -2,7 +2,7 @@
 import React from 'react';
 import styles from './Description.module.css';
 
-import Translate from '@docusaurus/Translate';
+import Translate from '@site/src/components/Translate';
 
 export default function Description() {  
   return (

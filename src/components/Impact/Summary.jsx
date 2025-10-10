@@ -8,7 +8,7 @@ import {
 } from '../../utils/analyticsUtils';
 import styles from './Summary.module.css';
 
-import Translate from '@docusaurus/Translate';
+import Translate from '@site/src/components/Translate';
 import { getDataContent } from '../../utils/i18nUtils';
 
 export default function Summary() {

@@ -2,7 +2,7 @@
 import React from 'react';
 import styles from './CertificateSection.module.css';
 
-import Translate from '@docusaurus/Translate';
+import Translate from '@site/src/components/Translate';
 
 // Certificate data lives in the component
 const certificateData = {

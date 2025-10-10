@@ -2,7 +2,8 @@
 import React from 'react';
 import styles from './Acknowledgements.module.css';
 
-import Translate, {translate} from '@docusaurus/Translate';
+import Translate from '@site/src/components/Translate';
+import {translate} from '@docusaurus/Translate';
 import { getDataContent } from '../../../../utils/i18nUtils';
 
 export default function Acknowledgements() {

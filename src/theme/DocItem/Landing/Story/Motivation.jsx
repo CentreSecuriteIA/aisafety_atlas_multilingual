@@ -2,7 +2,7 @@
 import React from 'react';
 import styles from './Motivation.module.css';
 
-import Translate from '@docusaurus/Translate';
+import Translate from '@site/src/components/Translate';
 
 export default function Motivation() {
   return (

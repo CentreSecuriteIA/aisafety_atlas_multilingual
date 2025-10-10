@@ -8,7 +8,7 @@ import SocialBar from './SocialBar';
 import {ContactForm} from './ContactForm';
 import { getDataContent } from '../../utils/i18nUtils';
 
-import Translate from '@docusaurus/Translate';
+import Translate from '@site/src/components/Translate';
 
 function FooterLogo({src, alt, href}) {
   const logoSrc = useBaseUrl(src);

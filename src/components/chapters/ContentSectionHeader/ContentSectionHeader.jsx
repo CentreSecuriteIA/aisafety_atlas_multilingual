@@ -2,7 +2,7 @@
 import React, { useEffect, useState, useRef } from 'react';
 import styles from './ContentSectionHeader.module.css';
 
-import Translate from '@docusaurus/Translate';
+import Translate from '@site/src/components/Translate';
 
 /**
 * Custom section header component for CONTENT within markdown (not page headers)

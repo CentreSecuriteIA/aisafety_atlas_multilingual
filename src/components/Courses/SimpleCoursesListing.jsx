@@ -4,7 +4,8 @@ import { SmallTooltip } from '../UI/Tooltip';
 import { MapPin, Users, Calendar, Globe, Mail, FileText, Edit3 } from 'lucide-react';
 import styles from './SimpleCoursesListing.module.css';
 
-import Translate, {translate} from '@docusaurus/Translate';
+import Translate from '@site/src/components/Translate';
+import {translate} from '@docusaurus/Translate';
 
 function getStatusFromDates(startDate, endDate) {
   const now = new Date();

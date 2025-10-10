@@ -7,7 +7,7 @@ import CertificateSection from '../components/Courses/CertificateSection';
 import StartCourseSection from '../components/Courses/StartCourseSection';
 import styles from './courses.module.css';
 
-import Translate, {translate} from '@docusaurus/Translate';
+import {translate} from '@docusaurus/Translate';
 import { getDataContent } from '../utils/i18nUtils';
 
 export default function CoursesPage() {

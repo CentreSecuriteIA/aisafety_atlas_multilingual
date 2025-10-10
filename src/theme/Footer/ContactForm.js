@@ -3,7 +3,8 @@ import React, { useState } from 'react';
 import clsx from 'clsx';
 import styles from './ContactForm.module.css';
 
-import Translate, { translate } from '@docusaurus/Translate';
+import Translate from '@site/src/components/Translate';
+import { translate } from '@docusaurus/Translate';
 
 function ContactForm() {
   const [formData, setFormData] = useState({

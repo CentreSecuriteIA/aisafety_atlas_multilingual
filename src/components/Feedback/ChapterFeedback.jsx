@@ -4,7 +4,8 @@ import { ActionButtonTooltip } from '../UI/Tooltip';
 import styles from './ChapterFeedback.module.css';
 
 import { getDataContent } from '../../utils/i18nUtils';
-import Translate, { translate } from '@docusaurus/Translate';
+import Translate from '@site/src/components/Translate';
+import { translate } from '@docusaurus/Translate';
 
 export default function ChapterFeedback({ 
   chapterNumber, 

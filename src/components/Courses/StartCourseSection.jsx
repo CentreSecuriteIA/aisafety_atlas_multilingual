@@ -2,7 +2,8 @@
 import React, { useState } from 'react';
 import styles from './StartCourseSection.module.css';
 
-import Translate, {translate} from '@docusaurus/Translate';
+import Translate from '@site/src/components/Translate';
+import {translate} from '@docusaurus/Translate';
 
 export default function StartCourseSection() {
   const [formData, setFormData] = useState({
