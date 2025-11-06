@@ -1,4 +1,5 @@
-// src/components/Courses/SimpleCoursesListing.jsx - Minimal style matching your aesthetic
+// src/components/Courses/SimpleCoursesListing.jsx
+
 import React, { useState } from 'react';
 import { SmallTooltip } from '../UI/Tooltip';
 import { MapPin, Users, Calendar, Globe, Mail, FileText, Edit3 } from 'lucide-react';
@@ -19,17 +20,11 @@ function getStatusFromDates(startDate, endDate) {
   return 'active';
 }
 
-function StatusBadge({ status }) {
-  const i18n = [
-    translate({id: "courses.status.active", message: "Active", description: "Status label for active courses"}),
-    translate({id: "courses.status.upcoming", message: "Upcoming", description: "Status label for upcoming courses"}),
-    translate({id: "courses.status.completed", message: "Completed", description: "Status label for completed courses"})
-  ]
-
+function StatusBadge({ status, labels }) {
   const statusConfig = {
-    active: { label: i18n[0], color: 'green' },
-    upcoming: { label: i18n[1], color: 'blue' },
-    completed: { label: i18n[2], color: 'gray' }
+    active: { label: labels.statusBadges.active, color: 'green' },
+    upcoming: { label: labels.statusBadges.upcoming, color: 'blue' },
+    completed: { label: labels.statusBadges.completed, color: 'gray' }
   };
   
   const config = statusConfig[status] || statusConfig.completed;
@@ -41,18 +36,21 @@ function StatusBadge({ status }) {
   );
 }
 
-function CorrectionForm({ course, organization, onClose, onSubmit }) {
-  // Store original values for comparison
+function CorrectionForm({ course, organization, onClose, onSubmit, labels }) {
+  const formLabels = labels.correctionForm;
+  const placeholders = formLabels.placeholders;
+  
+  // Store original values for comparison (using new schema)
   const originalData = {
     organizationName: organization.name,
     description: course.description,
     location: course.location || '',
     startDate: course.startDate || '',
     endDate: course.endDate || '',
-    participants: course.participants || course.estimatedParticipants || '',
-    applicationLink: course.applicationLink || '',
+    enrolled: course['students-enrolled'] || '',
+    applicationLink: course.links?.studentApplication || '',
     websiteLink: organization.website || '',
-    contactEmail: organization.primaryContact || ''
+    contactEmail: course.links?.contact || organization.contact || ''
   };
 
   const [formData, setFormData] = useState({
@@ -80,8 +78,8 @@ function CorrectionForm({ course, organization, onClose, onSubmit }) {
     if (formData.endDate !== originalData.endDate) {
       changes.push(`End Date: "${originalData.endDate}" → "${formData.endDate}"`);
     }
-    if (formData.participants !== originalData.participants) {
-      changes.push(`Participants: "${originalData.participants}" → "${formData.participants}"`);
+    if (formData.enrolled !== originalData.enrolled) {
+      changes.push(`Enrolled: "${originalData.enrolled}" → "${formData.enrolled}"`);
     }
     if (formData.applicationLink !== originalData.applicationLink) {
       changes.push(`Application Link: "${originalData.applicationLink}" → "${formData.applicationLink}"`);
@@ -108,57 +106,32 @@ function CorrectionForm({ course, organization, onClose, onSubmit }) {
           'Content-Type': 'application/json'
         },
         body: JSON.stringify({
-          // Current data
-          organizationName: formData.organizationName,
-          description: formData.description,
-          location: formData.location,
-          startDate: formData.startDate,
-          endDate: formData.endDate,
-          participants: formData.participants,
-          applicationLink: formData.applicationLink,
-          websiteLink: formData.websiteLink,
-          contactEmail: formData.contactEmail,
-          additionalInfo: formData.additionalInfo,
-          requestRemoval: formData.requestRemoval,
-          
-          // Original data for reference
-          original_organizationName: originalData.organizationName,
-          original_description: originalData.description,
-          original_location: originalData.location,
-          original_startDate: originalData.startDate,
-          original_endDate: originalData.endDate,
-          original_participants: originalData.participants,
-          original_applicationLink: originalData.applicationLink,
-          original_websiteLink: originalData.websiteLink,
-          original_contactEmail: originalData.contactEmail,
-          
-          // Summary of changes for easy review
-          changes_summary: changes.length > 0 ? changes.join('\n') : 'No field changes, see additional info',
-          number_of_changes: changes.length,
-          
-          // Metadata
           courseId: course.id,
-          _subject: `Course Correction: ${originalData.organizationName} (${changes.length} changes)`,
-          form_type: 'course_correction'
+          courseName: course.name || organization.name,
+          organizationName: organization.name,
+          changes: changes,
+          formData: formData,
+          requestRemoval: formData.requestRemoval
         })
       });
 
       if (response.ok) {
         onSubmit();
       } else {
-        throw new Error('Failed to submit correction');
+        alert('Failed to submit correction. Please try again.');
       }
     } catch (error) {
       console.error('Error submitting correction:', error);
+      alert('Error submitting correction. Please try again.');
     }
   };
 
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
-    setFormData(prev => ({
-      ...prev,
+    setFormData({
+      ...formData,
       [name]: type === 'checkbox' ? checked : value
-    }));
+    });
   };
 
   // i18n: Tableau de traductions pour les labels et placeholders du formulaire de correction
@@ -180,9 +153,13 @@ function CorrectionForm({ course, organization, onClose, onSubmit }) {
   ];
 
   return (
-    <div className={styles.correctionForm}>
-      <h4>{i18n[0]}</h4>
-      <form onSubmit={handleSubmit}>
+    <div className={styles.correctionFormContainer}>
+      <form onSubmit={handleSubmit} className={styles.correctionForm}>
+        <div className={styles.correctionFormHeader}>
+          <h4>{formLabels.title}</h4>
+          <p>{formLabels.subtitle}</p>
+        </div>
+
         <div className={styles.correctionFormRow}>
           <div className={styles.correctionFormGroup}>
             <input
@@ -191,7 +168,7 @@ function CorrectionForm({ course, organization, onClose, onSubmit }) {
               value={formData.organizationName}
               onChange={handleChange}
               className={styles.correctionFormControl}
-              placeholder={i18n[1]}
+              placeholder={placeholders.organizationName}
             />
           </div>
           <div className={styles.correctionFormGroup}>
@@ -201,7 +178,7 @@ function CorrectionForm({ course, organization, onClose, onSubmit }) {
               value={formData.location}
               onChange={handleChange}
               className={styles.correctionFormControl}
-              placeholder={i18n[2]}
+              placeholder={placeholders.location}
             />
           </div>
         </div>
@@ -214,7 +191,6 @@ function CorrectionForm({ course, organization, onClose, onSubmit }) {
               value={formData.startDate}
               onChange={handleChange}
               className={styles.correctionFormControl}
-              placeholder={i18n[3]}
             />
           </div>
           <div className={styles.correctionFormGroup}>
@@ -224,7 +200,6 @@ function CorrectionForm({ course, organization, onClose, onSubmit }) {
               value={formData.endDate}
               onChange={handleChange}
               className={styles.correctionFormControl}
-              placeholder={i18n[4]}
             />
           </div>
         </div>
@@ -233,34 +208,11 @@ function CorrectionForm({ course, organization, onClose, onSubmit }) {
           <div className={styles.correctionFormGroup}>
             <input
               type="number"
-              name="participants"
-              value={formData.participants}
+              name="enrolled"
+              value={formData.enrolled}
               onChange={handleChange}
               className={styles.correctionFormControl}
-              placeholder={i18n[5]}
-            />
-          </div>
-          <div className={styles.correctionFormGroup}>
-            <input
-              type="url"
-              name="applicationLink"
-              value={formData.applicationLink}
-              onChange={handleChange}
-              className={styles.correctionFormControl}
-              placeholder={i18n[6]}
-            />
-          </div>
-        </div>
-
-        <div className={styles.correctionFormRow}>
-          <div className={styles.correctionFormGroup}>
-            <input
-              type="url"
-              name="websiteLink"
-              value={formData.websiteLink}
-              onChange={handleChange}
-              className={styles.correctionFormControl}
-              placeholder={i18n[7]}
+              placeholder={placeholders.enrolled}
             />
           </div>
           <div className={styles.correctionFormGroup}>
@@ -270,7 +222,30 @@ function CorrectionForm({ course, organization, onClose, onSubmit }) {
               value={formData.contactEmail}
               onChange={handleChange}
               className={styles.correctionFormControl}
-              placeholder={i18n[8]}
+              placeholder={placeholders.contactEmail}
+            />
+          </div>
+        </div>
+
+        <div className={styles.correctionFormRow}>
+          <div className={styles.correctionFormGroup}>
+            <input
+              type="url"
+              name="applicationLink"
+              value={formData.applicationLink}
+              onChange={handleChange}
+              className={styles.correctionFormControl}
+              placeholder={placeholders.applicationLink}
+            />
+          </div>
+          <div className={styles.correctionFormGroup}>
+            <input
+              type="url"
+              name="websiteLink"
+              value={formData.websiteLink}
+              onChange={handleChange}
+              className={styles.correctionFormControl}
+              placeholder={placeholders.website}
             />
           </div>
         </div>
@@ -282,7 +257,7 @@ function CorrectionForm({ course, organization, onClose, onSubmit }) {
               value={formData.description}
               onChange={handleChange}
               className={styles.correctionFormControl}
-              placeholder={i18n[9]}
+              placeholder={placeholders.description}
               rows="2"
             />
           </div>
@@ -292,7 +267,7 @@ function CorrectionForm({ course, organization, onClose, onSubmit }) {
               value={formData.additionalInfo}
               onChange={handleChange}
               className={styles.correctionFormControl}
-              placeholder={i18n[10]}
+              placeholder={placeholders.additionalInfo}
               rows="2"
             />
           </div>
@@ -307,7 +282,7 @@ function CorrectionForm({ course, organization, onClose, onSubmit }) {
                 checked={formData.requestRemoval}
                 onChange={handleChange}
               />
-              {i18n[11]}
+              {formLabels.requestRemoval}
             </label>
           </div>
         </div>
@@ -318,13 +293,13 @@ function CorrectionForm({ course, organization, onClose, onSubmit }) {
             onClick={onClose}
             className={styles.correctionCancelButton}
           >
-            {i18n[12]}
+            {labels.buttons.cancel}
           </button>
           <button
             type="submit"
             className={styles.correctionSubmitButton}
           >
-            {i18n[13]}
+            {labels.buttons.sendCorrection}
           </button>
         </div>
       </form>
@@ -332,7 +307,7 @@ function CorrectionForm({ course, organization, onClose, onSubmit }) {
   );
 }
 
-function CourseCard({ course, organization }) {
+function CourseCard({ course, organization, labels }) {
   const [showCorrectionForm, setShowCorrectionForm] = useState(false);
   const [correctionSubmitted, setCorrectionSubmitted] = useState(false);
 
@@ -348,10 +323,18 @@ function CourseCard({ course, organization }) {
 
   const status = getStatusFromDates(course.startDate, course.endDate);
   const logoSrc = organization.logo || '/img/courses/placeholder_courses.svg';
-  const enrolledCount = course.enrolled || course.estimatedParticipants; // fallback for existing data
   
-  // Determine if apply button should be active (not completed + has application link)
-  const canApplyStudent = status !== 'completed' && course.studentApplicationLink;
+  // Get student counts from new schema
+  const enrolled = course['students-enrolled'];
+  const expected = course['students-expected'];
+  const completed = course['students-completed'];
+  const applied = course['students-applied'];
+  
+  // Determine which count to show
+  const hasStudentData = enrolled || expected || applied;
+  
+  // Get count labels
+  const countLabels = labels.studentCounts;
 
   const handleCorrectionSubmit = () => {
     setCorrectionSubmitted(true);
@@ -370,7 +353,7 @@ function CourseCard({ course, organization }) {
           fontSize: '0.95rem',
           fontWeight: '500'
         }}>
-          ✓ Correction submitted. Thank you for helping us keep information accurate!
+          ✓ {labels.correctionForm.successMessage}
         </div>
       </div>
     );
@@ -402,7 +385,7 @@ function CourseCard({ course, organization }) {
           </div>
           <h3 className={styles.organizationName}>{organization.name}</h3>
         </div>
-        <StatusBadge status={status} />
+        <StatusBadge status={status} labels={labels} />
       </div>
 
       {/* Line 2: Description + Metadata */}
@@ -426,12 +409,16 @@ function CourseCard({ course, organization }) {
             </div>
           )}
           
-          {enrolledCount && (
+          {hasStudentData && (
             <div className={styles.metaItem}>
               <Users size={14} />
               <span>
-                {course.enrolled ? `${course.enrolled} enrolled` : `~${course.estimatedParticipants} expected`}
-                {course.completed && ` • ${course.completed} completed`}
+                {enrolled 
+                  ? `${enrolled} ${countLabels.enrolled}` 
+                  : expected 
+                    ? `~${expected} ${countLabels.expected}` 
+                    : `${applied} ${countLabels.applied}`}
+                {completed && ` • ${completed} ${countLabels.completed}`}
               </span>
             </div>
           )}
@@ -441,24 +428,24 @@ function CourseCard({ course, organization }) {
       {/* Line 3: Action Buttons */}
       <div className={styles.actionsLine}>
         {/* Student Application - only show if link exists and not completed */}
-        {course.studentApplicationLink && status !== 'completed' && (
+        {course.links?.studentApplication && status !== 'completed' && (
           <button
-            onClick={() => window.open(course.studentApplicationLink, '_blank')}
+            onClick={() => window.open(course.links.studentApplication, '_blank')}
             className={styles.actionButton}
           >
             <FileText size={16} />
-            <span>{i18n[0]}</span>
+            <span>{labels.buttons.applyStudent}</span>
           </button>
         )}
         
         {/* Facilitator Application - only show if link exists and not completed */}
-        {course.facilitatorApplicationLink && status !== 'completed' && (
+        {course.links?.facilitatorApplication && status !== 'completed' && (
           <button
-            onClick={() => window.open(course.facilitatorApplicationLink, '_blank')}
+            onClick={() => window.open(course.links.facilitatorApplication, '_blank')}
             className={styles.actionButton}
           >
             <Users size={16} />
-            <span>{i18n[1]}</span>
+            <span>{labels.buttons.applyFacilitator}</span>
           </button>
         )}
         
@@ -468,17 +455,17 @@ function CourseCard({ course, organization }) {
             className={styles.actionButton}
           >
             <Globe size={16} />
-            <span>{i18n[2]}</span>
+            <span>{labels.buttons.website}</span>
           </button>
         )}
         
-        {organization.primaryContact && (
+        {(course.links?.contact || organization.contact) && (
           <button
-            onClick={() => window.open(`mailto:${organization.primaryContact}`, '_blank')}
+            onClick={() => window.open(`mailto:${course.links?.contact || organization.contact}`, '_blank')}
             className={styles.actionButton}
           >
             <Mail size={16} />
-            <span>{i18n[3]}</span>
+            <span>{labels.buttons.contact}</span>
           </button>
         )}
 
@@ -487,7 +474,7 @@ function CourseCard({ course, organization }) {
           className={styles.suggestButton}
         >
           <Edit3 size={14} />
-          <span>{i18n[4]}</span>
+          <span>{labels.buttons.suggestCorrection}</span>
         </button>
       </div>
 
@@ -498,14 +485,24 @@ function CourseCard({ course, organization }) {
           organization={organization}
           onClose={() => setShowCorrectionForm(false)}
           onSubmit={handleCorrectionSubmit}
+          labels={labels}
         />
       )}
     </div>
   );
 }
 
-function CoursesSection({ title, courses, description, sectionType }) {
+function CoursesSection({ title, courses, description, sectionType, labels }) {
+  const [isExpanded, setIsExpanded] = useState(false);
+  const INITIAL_DISPLAY_COUNT = 5;
+  
   if (!courses || courses.length === 0) return null;
+
+  const isCompletedSection = sectionType === 'completed';
+  const hasMoreCourses = isCompletedSection && courses.length > INITIAL_DISPLAY_COUNT;
+  const displayedCourses = (isCompletedSection && !isExpanded) 
+    ? courses.slice(0, INITIAL_DISPLAY_COUNT) 
+    : courses;
 
   return (
     <div className={styles.coursesSection}>
@@ -516,39 +513,59 @@ function CoursesSection({ title, courses, description, sectionType }) {
         )}
       </div>
       
-      <div className={styles.coursesList}>
-        {courses.map(courseData => (
+      <div className={`${styles.coursesList} ${isCompletedSection && !isExpanded ? styles.coursesListFaded : ''}`}>
+        {displayedCourses.map(courseData => (
           <CourseCard 
             key={courseData.course.id} 
             course={courseData.course} 
             organization={courseData.organization}
+            labels={labels}
           />
         ))}
       </div>
+      
+      {hasMoreCourses && (
+        <div className={styles.expandButtonContainer}>
+          <button 
+            onClick={() => setIsExpanded(!isExpanded)}
+            className={styles.expandButton}
+          >
+            {isExpanded 
+              ? `Show Less` 
+              : `Show ${courses.length - INITIAL_DISPLAY_COUNT} More Completed Courses`
+            }
+            <svg 
+              width="16" 
+              height="16" 
+              viewBox="0 0 16 16" 
+              fill="none" 
+              stroke="currentColor" 
+              strokeWidth="2"
+              style={{ 
+                transform: isExpanded ? 'rotate(180deg)' : 'rotate(0deg)',
+                transition: 'transform 0.3s ease'
+              }}
+            >
+              <path d="M4 6l4 4 4-4" />
+            </svg>
+          </button>
+        </div>
+      )}
     </div>
   );
 }
 
 export default function SimpleCoursesListing({ coursesData }) {
-  // i18n: Tableau de traductions pour les titres et descriptions de section
-  const i18n = [
-    <Translate id="courses.listing.title">No Courses Available</Translate>,
-    <Translate id="courses.listing.text">No courses are currently listed. Check back later or consider starting your own course.</Translate>,
-    <Translate id="courses.current.title" description="Section title for current courses">Current Courses</Translate>,
-    <Translate id="courses.current.description" description="Section description for current courses">Courses currently accepting students or in progress</Translate>,
-    <Translate id="courses.upcoming.title" description="Section title for upcoming courses">Upcoming Courses</Translate>,
-    <Translate id="courses.upcoming.description" description="Section description for upcoming courses">Future courses with applications opening soon</Translate>,
-    <Translate id="courses.past.title" description="Section title for past courses">Past Courses</Translate>,
-    <Translate id="courses.past.description" description="Section description for past courses">Successfully completed courses using Atlas materials</Translate>
-  ];
-
+  const labels = coursesData.metadata?.labels || coursesData.labels;
+  const sections = coursesData.metadata?.sections || coursesData.sections;
+  
   if (!coursesData || !coursesData.organizations) {
     return (
       <div className={styles.emptyState}>
         <Calendar size={48} className={styles.emptyIcon} />
-        <h3 className={styles.emptyTitle}>{i18n[0]}</h3>
+        <h3 className={styles.emptyTitle}>{labels.emptyState.title}</h3>
         <p className={styles.emptyText}>
-          {i18n[1]}
+          {labels.emptyState.description}
         </p>
       </div>
     );
@@ -560,11 +577,16 @@ export default function SimpleCoursesListing({ coursesData }) {
     if (org.courses) {
       org.courses.forEach(course => {
         const status = getStatusFromDates(course.startDate, course.endDate);
+        // For completed courses, sort by end date. For others, sort by start date.
+        const sortDate = status === 'completed' 
+          ? new Date(course.endDate || course.startDate || '1970-01-01')
+          : new Date(course.startDate || course.endDate || '1970-01-01');
+        
         allCourses.push({
           course,
           organization: org,
           status,
-          sortDate: new Date(course.startDate || course.endDate || '1970-01-01')
+          sortDate
         });
       });
     }
@@ -595,24 +617,27 @@ export default function SimpleCoursesListing({ coursesData }) {
   return (
     <div className={styles.coursesContainer}>
       <CoursesSection 
-        title={i18n[2]} 
+        title={sections.active.title}
         courses={activeCourses}
-        description={i18n[3]}
+        description={sections.active.description}
         sectionType="active"
+        labels={labels}
       />
       
       <CoursesSection 
-        title={i18n[4]} 
+        title={sections.upcoming.title}
         courses={upcomingCourses}
-        description={i18n[5]}
+        description={sections.upcoming.description}
         sectionType="upcoming"
+        labels={labels}
       />
       
       <CoursesSection 
-        title={i18n[6]} 
+        title={sections.completed.title}
         courses={completedCourses}
-        description={i18n[7]}
+        description={sections.completed.description}
         sectionType="completed"
+        labels={labels}
       />
     </div>
   );

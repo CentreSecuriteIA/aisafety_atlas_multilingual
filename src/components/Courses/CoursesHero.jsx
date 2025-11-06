@@ -1,13 +1,31 @@
 // src/components/Courses/CoursesHero.jsx
+// Updated to use hero data from courses metadata
 import React from 'react';
 import styles from './CoursesHero.module.css';
 
-import Translate from '@site/src/components/Translate';
+import {translate} from '@site/src/components/Translate';
 
-export default function CoursesHero() {
+
+export default function CoursesHero({ heroData }) {
   const i18n = [
-    <Translate id="courses.hero.title">AI Safety Courses</Translate>,
-    <Translate id="courses.hero.desc">Discover academic courses, reading groups, and organized programs using the AI Safety Atlas materials. Join an existing course or start your own with our resources.</Translate>,
+    translate({
+      "id": "courses.hero.title",
+      "message": "AI Safety Courses"
+    }),
+    translate({
+      "id": "courses.hero.desc",
+      "message": "Discover academic courses, reading groups, and organized programs using the AI Safety Atlas materials."
+    })
+  ];
+  
+  // Fallback to defaults if no hero data provided
+  const title = heroData?.title || i18n[0];
+  const description = heroData?.description || i18n[1];
+  const images = heroData?.images || [
+    "/img/courses/ml4g/ml4g_eu_25.jpeg",
+    "/img/courses/ubc_vancouver/ubc_feb_25.jpeg",
+    "/img/courses/ens_paris/ens_paris_23.png",
+    "/img/courses/ml4g/ml4g_brasil.jpg"
   ];
 
   return (
@@ -15,58 +33,27 @@ export default function CoursesHero() {
       <div className={styles.heroContainer}>
         {/* Left side - Content */}
         <div className={styles.heroContent}>
-          <h1 className={styles.heroTitle}>{i18n[0]}</h1>
+          <h1 className={styles.heroTitle}>{title}</h1>
           <p className={styles.heroDescription}>
-            {i18n[1]}
+            {description}
           </p>
         </div>
         
         {/* Right side - Image grid */}
         <div className={styles.heroImagesGrid}>
-          <div className={styles.gridImageWrapper}>
-            <img 
-              src="/img/courses/ml4g/ml4g_eu_25.jpeg" 
-              alt="ML4Good course" 
-              className={styles.gridImage}
-              onError={(e) => {
-                e.target.onerror = null;
-                e.target.src = '/img/courses/placeholder_courses.svg';
-              }}
-            />
-          </div>
-          <div className={styles.gridImageWrapper}>
-            <img 
-              src="/img/courses/ubc_vancouver/ubc_feb_25.jpeg" 
-              alt="UBC Vancouver course" 
-              className={styles.gridImage}
-              onError={(e) => {
-                e.target.onerror = null;
-                e.target.src = '/img/courses/placeholder_courses.svg';
-              }}
-            />
-          </div>
-          <div className={styles.gridImageWrapper}>
-            <img 
-              src="/img/courses/ens_paris/ens_paris_23.png" 
-              alt="ENS Paris course" 
-              className={styles.gridImage}
-              onError={(e) => {
-                e.target.onerror = null;
-                e.target.src = '/img/courses/placeholder_courses.svg';
-              }}
-            />
-          </div>
-          <div className={styles.gridImageWrapper}>
-            <img 
-              src="/img/courses/ml4g/ml4g_brasil.jpg" 
-              alt="ML4Good Brasil course" 
-              className={styles.gridImage}
-              onError={(e) => {
-                e.target.onerror = null;
-                e.target.src = '/img/courses/placeholder_courses.svg';
-              }}
-            />
-          </div>
+          {images.map((imageSrc, index) => (
+            <div key={index} className={styles.gridImageWrapper}>
+              <img 
+                src={imageSrc} 
+                alt={`Course ${index + 1}`} 
+                className={styles.gridImage}
+                onError={(e) => {
+                  e.target.onerror = null;
+                  e.target.src = '/img/courses/placeholder_courses.svg';
+                }}
+              />
+            </div>
+          ))}
         </div>
       </div>
     </div>

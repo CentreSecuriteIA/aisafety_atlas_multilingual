@@ -17,8 +17,10 @@ export const docsConfig = {
         'fr': './i18n/fr/docusaurus-plugin-content-pages/data/glossary',
       },
       caseSensitive: false,
-      excludeNodes: ['code', 'inlineCode', 'link', 'heading']
+      excludeNodes: ['code', 'inlineCode', 'link', 'heading'],
+      silent: true // Suppress warnings for empty glossary files
     }]
   ],
   rehypePlugins: [rehypeKatex],
 };
+

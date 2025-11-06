@@ -11,7 +11,7 @@ export default function Motivation() {
         <div className={styles.questionSide}>
           <h3 className={styles.question}>
             <Translate id="landing.story.motivation.question" description="Motivation question">
-              Stop piecing together AI safety from scattered sources.
+              Textbook, courses, guides, videos, and more.
             </Translate>
           </h3>
         </div>
@@ -19,10 +19,7 @@ export default function Motivation() {
         <div className={styles.answerSide}>
           <p className={styles.answerText}>
             <Translate id="landing.story.motivation.answer" description="Motivation answer">
-              Whether you're in policy, engineering, business, or academia—the Atlas gives you 
-              the complete picture. We've structured the most important knowledge in the field 
-              so you can build genuine understanding instead of collecting random facts from 
-              scattered sources.
+              Whether you're in policy, engineering, business, or academia—the Atlas gives you the complete picture. We've gathered the most important knowledge in the field from hundreds of sources, and structured it so that you can build genuine understanding instead of collecting random facts from scattered sources.
             </Translate>
           </p>
         </div>
