@@ -2,7 +2,8 @@
 import React from 'react';
 import styles from './Hero.module.css';
 
-import Translate, {translate} from '@site/src/components/Translate';
+import {translate} from '@docusaurus/Translate';
+import Translate from '@site/src/components/Translate';
 
 export default function Hero() {
   const i18n = [

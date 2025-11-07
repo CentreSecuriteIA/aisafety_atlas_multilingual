@@ -3,7 +3,7 @@
 import React from 'react';
 import styles from './CoursesHero.module.css';
 
-import {translate} from '@site/src/components/Translate';
+import {translate} from '@docusaurus/Translate';
 
 
 export default function CoursesHero({ heroData }) {

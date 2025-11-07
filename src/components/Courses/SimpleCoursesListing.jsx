@@ -134,24 +134,6 @@ function CorrectionForm({ course, organization, onClose, onSubmit, labels }) {
     });
   };
 
-  // i18n: Tableau de traductions pour les labels et placeholders du formulaire de correction
-  const i18n = [
-    translate({ id: "correctionForm.title", message: "Suggest Correction", description: "Title for the correction form" }),
-    translate({ id: "correctionForm.organizationName.placeholder", message: "Organization name", description: "Placeholder for organization name input" }),
-    translate({ id: "correctionForm.location.placeholder", message: "Location", description: "Placeholder for location input" }),
-    translate({ id: "correctionForm.startDate.placeholder", message: "Start date", description: "Placeholder for start date input" }),
-    translate({ id: "correctionForm.endDate.placeholder", message: "End date", description: "Placeholder for end date input" }),
-    translate({ id: "correctionForm.participants.placeholder", message: "Participants", description: "Placeholder for participants input" }),
-    translate({ id: "correctionForm.applicationLink.placeholder", message: "Application link", description: "Placeholder for application link input" }),
-    translate({ id: "correctionForm.websiteLink.placeholder", message: "Website link", description: "Placeholder for website link input" }),
-    translate({ id: "correctionForm.contactEmail.placeholder", message: "Contact email", description: "Placeholder for contact email input" }),
-    translate({ id: "correctionForm.description.placeholder", message: "Description", description: "Placeholder for description textarea" }),
-    translate({ id: "correctionForm.additionalInfo.placeholder", message: "Additional information or corrections", description: "Placeholder for additional info textarea" }),
-    translate({ id: "correctionForm.requestRemoval.label", message: "Request to remove this listing entirely", description: "Label for request removal checkbox" }),
-    translate({ id: "correctionForm.cancel", message: "Cancel", description: "Label for cancel button" }),
-    translate({ id: "correctionForm.send", message: "Send Correction", description: "Label for send correction button" })
-  ];
-
   return (
     <div className={styles.correctionFormContainer}>
       <form onSubmit={handleSubmit} className={styles.correctionForm}>
@@ -358,14 +340,6 @@ function CourseCard({ course, organization, labels }) {
       </div>
     );
   }
-
-  const i18n = [
-    translate({id: "courses.contact.student", message: "Apply as Student", description: "Button label to apply as a student"}),
-    translate({id: "courses.contact.facilitator", message: "Apply as Facilitator", description: "Button label to apply as a facilitator"}),
-    translate({id: "courses.contact.website", message: "Apply as Facilitator", description: "Button label for website"}),
-    translate({id: "courses.contact.contact", message: "Contact", description: "Button label for contact"}),
-    translate({id: "courses.contact.suggest", message: "Suggest Correction", description: "Button label to suggest correction"}),
-  ]
 
   return (
     <div className={styles.courseCard}>

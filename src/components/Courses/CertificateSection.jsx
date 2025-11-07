@@ -3,7 +3,7 @@
 import React from 'react';
 import styles from './CertificateSection.module.css';
 
-import {translate} from '@site/src/components/Translate';
+import {translate} from '@docusaurus/Translate';
 
 export default function CertificateSection({ certificateInfo }) {
   // If no certificate info provided or not available, don't render
