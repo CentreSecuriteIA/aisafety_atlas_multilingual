@@ -121,6 +121,7 @@ export default function Buttons({
         const iconClass = isMobile ? styles.mobileResourceIcon : styles.resourceIcon;
         
         return (
+          <div className={styles.resourceCol}>
           <SmallTooltip 
             key={resource.key}
             content={
@@ -142,6 +143,7 @@ export default function Buttons({
               {isMobile && <span className={styles.mobileResourceLabel}>{resource.label}</span>}
             </button>
           </SmallTooltip>
+          </div>
         );
       })}
     </>
