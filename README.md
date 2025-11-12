@@ -198,6 +198,8 @@ Si le contenu doit varier dans le temps, nécessite des mises à jour fréquente
 
 Ces fichiers seront importés dans le composant React via la fonction `getDataContent()` (see above in "Further development" section).
 
+### Tips using Docusaurus test mode
+
 
 ### Translation pipeline
 
