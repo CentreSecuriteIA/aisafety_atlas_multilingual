@@ -11,7 +11,19 @@ I can see these being most useful for:
 
 ## Directory Structure
 
-To use these scripts, set up the following directory structure:
+To use these scripts :
+
+A) if you work from this repository directly, the directory structure is :
+
+```
+project-repo-dir/scripts/
+├── processed/          # Output directory (auto-generated)
+├── parser/             # scripts directory
+└── source_zips/        # Input: Google Docs exports (*.zip)
+```
+
+
+B) if you want to work in another context, set up the following directory structure:
 
 ```
 project-root/
@@ -24,7 +36,7 @@ project-root/
 
 1. Export your Google Docs using the **Docs to Markdown** plugin
 2. Place the exported `.zip` files in the `source_zips/` directory (I uploaded these already into the git repo, if you dont want to buy the plugin)
-3. Run the conversion scripts from the `scripts/` directory
+3. Run the conversion scripts from the scripts directory (A: `project-repo-dir/scripts/` or B: `project-root/scripts/`)
 ## Usage
 
 The main entry point is `convert.py`, which accepts various commands for different processing stages.
@@ -32,7 +44,7 @@ The main entry point is `convert.py`, which accepts various commands for differe
 ### Basic Syntax
 
 ```bash
-python convert.py <input> [options]
+python convert.py <input> [argments]
 ```
 
 ### Input Formats
@@ -40,14 +52,17 @@ python convert.py <input> [options]
 - **Zip file path**: `source_zips/ch5.zip` - Process a new export
 - **Directory name**: `ch5` - Process an existing preprocessed directory
 
-### Processing Options
+### Processing Options and arguments
 
-- `--preprocess` - Run preprocessing only (always run this first for new exports)
+- `--preprocess` - Run preprocessing only (**always run this first for new exports**)
 - `--docusaurus` - Generate Docusaurus MDX files
 - `--latex` - Generate LaTeX files
 - `--tts` - Generate TTS-ready text files
 - `--full` - Run all processing steps sequentially
 - `--debug` - Enable debug output for troubleshooting
+
+### Other arguments
+- `--output-dir <path>` - Specify custom output directory
 
 ### Examples
 
@@ -84,7 +99,7 @@ python convert.py ch5 --tts
 
 **Output location**: `processed/0X/chX/preprocessed/`
 
-**Note**: This should always be run first when processing a new export.
+**Note**: **This should always be run first when processing a new export**.
 
 ### 2. Docusaurus Parser
 
@@ -158,7 +173,7 @@ LaTeX processing can fail due to special characters or complex formatting. If co
 
 ### Path Issues
 
-The scripts expect to be run from the `scripts/` directory and will look for source files in `../source_zips/`. If you have a different setup, you can specify absolute paths:
+The scripts expect to be run from the scripts directory (A: `project-repo-dir/scripts/` or B: `project-root/scripts/`) and will look for source files in `../source_zips/`. If you have a different setup, you can specify **absolute path**:
 
 ```bash
 python convert.py /path/to/export.zip --preprocess
