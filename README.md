@@ -91,6 +91,7 @@ Les développements particuliers à ce projet ont nécessité des adaptations de
 ## Specific Folder structure
 Dans un projet Docusaurus classique, les éléments de traduction sont généralement placées dans le dossier `docs` ou `src/pages`. Pour gérer les traductions, Docusaurus propose de créer des dossiers spécifiques pour chaque langue dans un dossier `i18n`. Puis un sous-répertoire devant contenir les fichiers de traduction pour une langue donnée (ex: `fr` pour le français):
 
+```
 atlas
 ├── docs
 │   ├── chapters
@@ -122,6 +123,7 @@ atlas
     ├── pages
     ├── theme
     └── utils
+```
 
 ## Using `i18n` docusaurus plugin features
 
@@ -192,10 +194,10 @@ Nothing to do at this level
 
 ### For static content
 Pour du contenu statique (ex : titres, titre de bouton, ...), utiliser les fonctionnalités d'internationalisation fournies par Docusaurus, soit:
-- le composant `<Translate>` (natif ou avancé) s'il s'agit de contenu inclus dans la structure HTML obtenue;
+- le composant `<Translate>` (version native ou avancés) s'il s'agit de contenu inclus dans la structure HTML obtenue;
 - la fonction `translate()` s'il s'agit de contenu utilisé dans le code (ex: valeur d'une propriété, ...);
 
-Toutefois, sachant que chaque entrée de contenu introduit par l'utilisation de ces fonctionnalités sera agrégée dans le même fichier JSON `code.json` d'une langue données, la gestion de sa traduction et de sa mainteanance peut devenir complexe si le nombre d'entrées est important, et selon la procédure de traduction utilisée, par rapport au rythme d'évolution du site et du coût de traduction.
+Toutefois, sachant que chaque entrée de contenu introduit par l'utilisation de ces fonctionnalités sera agrégée dans le même fichier JSON `code.json` d'une langue données, la gestion de sa traduction et de sa maintenance peut devenir complexe si le nombre d'entrées est important, et selon la procédure de traduction utilisée, par rapport au rythme d'évolution du site et du coût de traduction.
 
 L'externalisation du contenu dans des fichiers JSON dédiés peut être une alternative intéressante dans ce cas, en particulier pour des contenus volumineux ou susceptibles d'évoluer fréquemment.
 
