@@ -4,31 +4,41 @@ export const metadata = {
   tagline: 'A guide to AI safety and alignment',
   favicon: 'img/favicon.ico',
   
-  // Change to your custom domain
-  /*
-  url: 'https://ai-safety-atlas.com',  // ← Changed from markov-root.github.io
-  baseUrl: '/',
-  */
-
-  // For GitHub Pages deployment context (CentreSecuriteIA GitHub organization)
-  url: 'https://centresecuriteia.github.io/',
+  // Official deployment context
+  /* //---
+  url: 'https://ai-safety-atlas.com',
   baseUrl: '/',
   
-  // GitHub deployment settings - keep the same
-  /*
   organizationName: 'markov-root',
   projectName: 'markov-root.github.io',
   deploymentBranch: 'gh-pages',
-  */
+  // --- */
+
+  // CentreSecuriteIA deployment context
+  // /* ---
+  url: 'https://centresecuriteia.github.io/',
+  baseUrl: '/',
+
   organizationName: 'centresecuriteia',
   projectName: 'aisafety_atlas_multilingual_website',
   deploymentBranch: 'main',
+  // --- */
 
   trailingSlash: false,
-  
+
+  // 'ignore' - Completely silent
+  // 'warn' - Shows warning + exhaustive list
+  // 'throw' - Fails the build 
   // Build configuration
   onBrokenLinks: 'warn',
-  onBrokenMarkdownLinks: 'warn',
+  onBrokenAnchors: 'ignore',
+  
+  // Markdown configuration - moved from onBrokenMarkdownLinks
+  markdown: {
+    hooks: {
+      onBrokenMarkdownLinks: 'warn',
+    },
+  },
   
   // Internationalization
   i18n: {
@@ -49,6 +59,5 @@ export const metadata = {
     },
   },
   
-  // Static directories
   staticDirectories: ['static'],
 };

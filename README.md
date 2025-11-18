@@ -1,9 +1,14 @@
 # AI Safety Atlas
 Hosted at - https://ai-safety-atlas.com/
 
+# TODO
+
 ## Feedback Component
  - [ ] feature: for low feedback rating prompt for detailed feedback
  - [ ] feature: feedback component can be more minimal (scroll like testimonials?)
+
+## UI
+- [ ] The sidebar and main content have different shades of gray/black on dark mode, sidebar uses - 
 
 ## UX
  - [ ] Rewrite cleaner documentation for github
@@ -18,7 +23,7 @@ Hosted at - https://ai-safety-atlas.com/
  - [ ] feature: about us page
  - [ ] feature: glossary page
  - [ ] feature: roadmap page
- - [ ] feature: bibliography page
+ - [ ] feature: sources/bibliography page
  - [ ] feature: central db of quoted person credentials
  - [ ] feature: donate button + link on topbar
 
@@ -33,40 +38,41 @@ Hosted at - https://ai-safety-atlas.com/
 ## Courses
  - [ ] mandate fields on course submission to prevent use as contact form
 
-## Internationalization 
-This section describes the modifications made (and to be done) to the original AI Safety Atlas codebase to enable multilingual support using Docusaurus i18n features, and the best practices for adding new content it.
-
-Multilingual version currently hosted for checking at https://centresecuriteia.github.io/
-See first the code in the `to_multilingual` branch in [multilingual repo](https://github.com/CentreSecuriteIA/aisafety_atlas_multilingual).
-
-### Localization TODO
+## Localization 
 - [ ] incorporate i18n -> Current work on Branch https://github.com/CentreSecuriteIA/aisafety_atlas_multilingual/tree/to_multilingual
 - [ ] move all data into json files out of react components
 
 **Mandatory:**
-- Technical:
+- _Technical_:
     - [ ] adapt the breadcrumb links in the header of translated textbook pages
     - [ ] translate labels in the reading setting panel
     - [ ] translate the tooltips of "scroll to top" and "scroll to bottom" buttons
     - [ ] translate the "Edit this page" link at the bottom of each page
     - [ ] the links in the list of chapters in the landing page
     - [ ] make Algolia search working for localized languages
-- Content:
+- _Content_:
     - [ ] checked the quality of the translations
     - [ ] add missing translations
     - [ ] complete glossary for specific term translations
 
 **Optional:**
+- _Technical_:
 - [ ] adjust the code so that it is compatible with `urlBase != "/"`"
 - [ ] improve the quality of adapted code
 
 
-### Internationalization description
+# INTERNATIONALIZATION
+This section describes the modifications made (and to be done) to the original AI Safety Atlas codebase to enable multilingual support using Docusaurus i18n features, and the best practices for adding new content it.
+
+Multilingual version currently hosted for checking at https://centresecuriteia.github.io/
+See first the code in the `to_multilingual` branch in [multilingual repo](https://github.com/CentreSecuriteIA/aisafety_atlas_multilingual).
+
+## Internationalization description
 The used internationalization features correspond to [Docusaurus 3.8.*](https://docusaurus.io/docs/3.8.1/i18n/introduction) features until now.
 
-#### Topology of elements to translate or adapt
+## Topology of elements to translate or adapt
 
-#### Localization
+### Localization
 Les élements destinés à être traduits sont:
 - Les contenus des fichiers markdown présents dans le dossier `docs/`; 
     - En fait la traduction de ces fichiers est obtenues à partir de la traduction des fichiers obtenus à la première étape du [processing pipeline](https://github.com/markov-root/atlas/tree/main/scripts/parser), dont sont issus les fichiers markdown (Processing pipleine "Docusaurus parsing" step);
@@ -76,13 +82,13 @@ Les élements destinés à être traduits sont:
     - aux composants présents dans les pages du site et liés au thème formattant les pages markdown, dont les composants complexes correspondant à page d'accueil du site et du textbook (ex: `src/theme/DocItem/index.js`, `src/components/chapters/Note.jsx`);
 - Les contenus des fichiers JSON appelés par les pages React (Ex: `src/data/courses/courses-metadata.json`), présents dans le dossier `src/data/`;
 
-#### Adaptations
+### Adaptations
 Les développements particuliers à ce projet ont nécessité des adaptations de certains éléments existant afin de prendre en compte la langue sélectionnée pour:
 - l'affichage de la bonne version linguistique de la page d'accueil du site et du textbook: modification des règles d'identification des pages selon les urls fournies (dans le fichier `src/theme/DocItem/index.js`);
 - l'appel des fichiers média (essentiellement les images): modification du traitement de l'url du média (dans le fichier ``src/components/chapters/Figure.jsx``);
 - l'inclusion des fichiers JSON contenant les définitions locales du glossaire: prise en compte de la locale correspondant au fichier en cours de traitement pour l'appel des fichiers à inclure (dans le fichier `src/utils/remark-glossary.js`).
 
-#### Specific Folder structure
+## Specific Folder structure
 Dans un projet Docusaurus classique, les éléments de traduction sont généralement placées dans le dossier `docs` ou `src/pages`. Pour gérer les traductions, Docusaurus propose de créer des dossiers spécifiques pour chaque langue dans un dossier `i18n`. Puis un sous-répertoire devant contenir les fichiers de traduction pour une langue donnée (ex: `fr` pour le français):
 
 atlas
@@ -117,9 +123,9 @@ atlas
     ├── theme
     └── utils
 
-#### Using `i18n` docusaurus plugin features
+## Using `i18n` docusaurus plugin features
 
-##### Provided by Docusaurus i18n support
+### Provided by Docusaurus i18n support
 - `translate({id:"...", description:"...", message:"..."})` function from `@docusaurus/Translate` package - See [tutorial](https://docusaurus.io/docs/i18n/tutorial#translate-your-react-code) and [API doc](https://docusaurus.io/docs/docusaurus-core#translate)
 This is a function allowing to include a entry to "code.json" file, generated with "docusaurus write-translations" command.
 
@@ -135,7 +141,7 @@ Generate JSON files and sub-directories for locale **fr** : `yarn write-translat
 
 **Warning**: JSON files in `srd/data`are not involved in this command.
 
-##### Further development for internationalization support
+### Further development for internationalization support
 - `<Translate id="..." description="...">string HTML structure content</Translate>` defined in `src/components/Translate.jsx`
 This is a improvement over the default docusaurus component, allowing to pass an HTML structure, not simply text, as children content.
 
@@ -181,10 +187,10 @@ This function allows to get the content of a data file (json, md, etc) according
 
 Nothing to do at this level
 
-### In React files (pages, custom components, theme item)
+### React files (pages, custom components, theme item)
 [tips](https://docusaurus.io/docs/i18n/tutorial#translate-your-react-code)
 
-#### For static content
+### For static content
 Pour du contenu statique (ex : titres, titre de bouton, ...), utiliser les fonctionnalités d'internationalisation fournies par Docusaurus, soit:
 - le composant `<Translate>` (natif ou avancé) s'il s'agit de contenu inclus dans la structure HTML obtenue;
 - la fonction `translate()` s'il s'agit de contenu utilisé dans le code (ex: valeur d'une propriété, ...);
@@ -193,33 +199,14 @@ Toutefois, sachant que chaque entrée de contenu introduit par l'utilisation de 
 
 L'externalisation du contenu dans des fichiers JSON dédiés peut être une alternative intéressante dans ce cas, en particulier pour des contenus volumineux ou susceptibles d'évoluer fréquemment.
 
-#### For external content (i.e from JSON files)
+### For external content (i.e from JSON files)
 Si le contenu doit varier dans le temps, nécessite des mises à jour fréquentes (tout en ne nécessitant pas de modification de la strucutre de page dans laquelle il sera visible), ou est volumineux, il est préférable de le stocker dans un ou plusieurs fichiers JSON à palcer dans le dossier `src/data/`, et de contruire le composant React de sorte qu'il exploite ce contenu, indépendamment de la langue correspondante.
 
 Ces fichiers seront importés dans le composant React via la fonction `getDataContent()` (see above in "Further development" section).
 
-### Tips using Docusaurus test mode
 
+## Tips using Docusaurus test mode
+TDB
 
-### Translation pipeline
-
-# To Add to Glossary
-- Sources for everything
- - Few-shot learning
- - Zero-shot Learning
- - goal misgeneralization
- - alignment faking
- - sleeper agent
- - scheming
- - self-correction
- - multi-shot learning
- - LRMs, reasoning models
- - theory of mind
- - meta cognition
- - connectionism
- - gofai
- - functionalism
- - epoch
- - natural language
- - foundation model
- - frontier model
+## Translation pipeline
+TBD

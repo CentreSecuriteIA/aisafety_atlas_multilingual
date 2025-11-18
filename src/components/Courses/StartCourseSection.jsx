@@ -1,11 +1,8 @@
-// src/components/Courses/StartCourseSection.jsx - Final version with improved messaging
+// src/components/Courses/StartCourseSection.jsx
 import React, { useState } from 'react';
 import styles from './StartCourseSection.module.css';
 
-import Translate from '@site/src/components/Translate';
-import {translate} from '@docusaurus/Translate';
-
-export default function StartCourseSection() {
+export default function StartCourseSection({ content }) {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -112,8 +109,8 @@ export default function StartCourseSection() {
                 <circle cx="12" cy="12" r="10" />
               </svg>
             </div>
-            <h3>{i18n[19]}</h3>
-            <p>{i18n[20]}</p>
+            <h3>{content.messages.success.title}</h3>
+            <p>{content.messages.success.description}</p>
           </div>
         </div>
       </div>
@@ -127,59 +124,29 @@ export default function StartCourseSection() {
           
           {/* Left Side - Information */}
           <div className={styles.leftSide}>
-            <h2 className={styles.startCourseTitle}>{i18n[0]}</h2>
+            <h2 className={styles.startCourseTitle}>{content.section.title}</h2>
             <p className={styles.startCourseDescription}>
-              {i18n[1]}
+              {content.section.description}
             </p>
             
             <div className={styles.resourcesList}>
-              <div className={styles.resource}>
-                <img 
-                  src="/img/icons/book.svg" 
-                  alt="" 
-                  className={styles.resourceIcon} 
-                />
-                <span>{i18n[2]}</span>
-              </div>
-              <div className={styles.resource}>
-                <img 
-                  src="/img/icons/teach.svg" 
-                  alt="" 
-                  className={styles.resourceIcon} 
-                />
-                <span>{i18n[3]}</span>
-              </div>
-              <div className={styles.resource}>
-                <img 
-                  src="/img/icons/acknowledgements.svg" 
-                  alt="" 
-                  className={styles.resourceIcon} 
-                />
-                <span>{i18n[4]}</span>
-              </div>
-              <div className={styles.resource}>
-                <img 
-                  src="/img/icons/settings.svg" 
-                  alt="" 
-                  className={styles.resourceIcon} 
-                />
-                <span>{i18n[5]}</span>
-              </div>
-              <div className={styles.resource}>
-                <img 
-                  src="/img/icons/support.svg" 
-                  alt="" 
-                  className={styles.resourceIcon} 
-                />
-                <span>{i18n[6]}</span>
-              </div>
+              {content.resources.map((resource, index) => (
+                <div key={index} className={styles.resource}>
+                  <img 
+                    src={resource.icon} 
+                    alt="" 
+                    className={styles.resourceIcon} 
+                  />
+                  <span>{resource.text}</span>
+                </div>
+              ))}
             </div>
           </div>
 
           {/* Right Side - Form */}
           <div className={styles.rightSide}>
-            <h3 className={styles.formTitle}>{i18n[7]}</h3>
-            <p className={styles.formSubtitle}>{i18n[8]}</p>
+            <h3 className={styles.formTitle}>{content.section.formTitle}</h3>
+            <p className={styles.formSubtitle}>{content.section.formSubtitle}</p>
 
             <form onSubmit={handleSubmit} className={styles.courseForm}>
               <div className={styles.formRow}>
@@ -190,7 +157,7 @@ export default function StartCourseSection() {
                     value={formData.name}
                     onChange={handleChange}
                     className={styles.formControl}
-                    placeholder={i18n[9]}
+                    placeholder={content.form.placeholders.name}
                   />
                 </div>
 
@@ -201,7 +168,7 @@ export default function StartCourseSection() {
                     value={formData.email}
                     onChange={handleChange}
                     className={styles.formControl}
-                    placeholder={i18n[10]}
+                    placeholder={content.form.placeholders.email}
                   />
                 </div>
               </div>
@@ -214,7 +181,7 @@ export default function StartCourseSection() {
                     value={formData.organization}
                     onChange={handleChange}
                     className={styles.formControl}
-                    placeholder={i18n[11]}
+                    placeholder={content.form.placeholders.organization}
                   />
                 </div>
 
@@ -225,7 +192,7 @@ export default function StartCourseSection() {
                     value={formData.location}
                     onChange={handleChange}
                     className={styles.formControl}
-                    placeholder={i18n[12]}
+                    placeholder={content.form.placeholders.location}
                   />
                 </div>
               </div>
@@ -238,7 +205,7 @@ export default function StartCourseSection() {
                     value={formData.expectedParticipants}
                     onChange={handleChange}
                     className={styles.formControl}
-                    placeholder={i18n[13]}
+                    placeholder={content.form.placeholders.expectedParticipants}
                     min="1"
                     max="1000"
                   />
@@ -257,9 +224,9 @@ export default function StartCourseSection() {
                     value={formData.startDate}
                     onChange={handleChange}
                     className={styles.formControl}
-                    title={i18n[14]}
+                    title={content.form.placeholders.startDateLabel}
                   />
-                  <label className={styles.dateLabel}>{i18n[14]}</label>
+                  <label className={styles.dateLabel}>{content.form.placeholders.startDateLabel}</label>
                 </div>
 
                 <div className={styles.formGroup}>
@@ -269,9 +236,9 @@ export default function StartCourseSection() {
                     value={formData.endDate}
                     onChange={handleChange}
                     className={styles.formControl}
-                    title={i18n[15]}
+                    title={content.form.placeholders.endDateLabel}
                   />
-                  <label className={styles.dateLabel}>{i18n[15]}</label>
+                  <label className={styles.dateLabel}>{content.form.placeholders.endDateLabel}</label>
                 </div>
               </div>
 
@@ -282,22 +249,27 @@ export default function StartCourseSection() {
                   onChange={handleChange}
                   rows="3"
                   className={styles.formControl}
-                  placeholder={i18n[16]}
+                  placeholder={content.form.placeholders.message}
                 />
               </div>
 
               {status === 'error' && (
                 <div className={styles.errorMessage}>
-                  {i18n[17]}
+                  {content.messages.error}
                 </div>
               )}
+
+              {/* Student Warning - subtle text before submit button */}
+              <p className={styles.studentWarning}>
+                {content.section.studentWarning}
+              </p>
 
               <button 
                 type="submit" 
                 className={`${styles.submitButton} ${status === 'sending' ? styles.sending : ''}`}
                 disabled={status === 'sending'}
               >
-                {status === 'sending' ? i18n[19] + '...' : i18n[18]}
+                {status === 'sending' ? content.form.buttons.submitting : content.form.buttons.submit}
               </button>
             </form>
           </div>

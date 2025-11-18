@@ -21,6 +21,10 @@ export const docsConfig = {
       silent: true // Suppress warnings for empty glossary files
     }]
   ],
-  rehypePlugins: [rehypeKatex],
+  rehypePlugins: [
+    [rehypeKatex, {
+      strict: false  // Suppress LaTeX strict mode warnings
+    }]
+  ],
 };
 
