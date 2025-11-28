@@ -3,6 +3,21 @@ import React, { useState, useEffect } from 'react';
 import { ChevronDown, ChevronRight, Link } from 'lucide-react';
 import styles from './FAQItem.module.css';
 
+import { translate } from '@docusaurus/Translate';
+
+  const i18n = {
+    "faq.item.copyLink": translate({
+      "message": "Copy link to this question",
+      "id": "faq.item.copyLink",
+      "description": "Tooltip for the button to copy link to FAQ question"
+    }),
+    "faq.item.copied": translate({
+      "message": "Copied!",
+      "id": "faq.item.copied",
+      "description": "Feedback message shown when FAQ link is copied"
+    })
+  }
+
 export default function FAQItem({ id, question, shortAnswer, detailedAnswer, isExpanded: initialExpanded = false }) {
   const [isExpanded, setIsExpanded] = useState(initialExpanded);
   const [showCopyFeedback, setShowCopyFeedback] = useState(false);
@@ -78,12 +93,12 @@ export default function FAQItem({ id, question, shortAnswer, detailedAnswer, isE
             <button
               className={styles.copyLinkButton}
               onClick={copyLinkToClipboard}
-              title="Copy link to this question"
-              aria-label="Copy link to this question"
+              title={i18n["faq.item.copyLink"]}
+              aria-label={i18n["faq.item.copyLink"]}
             >
               <Link size={16} />
               {showCopyFeedback && (
-                <span className={styles.copyFeedback}>Copied!</span>
+                <span className={styles.copyFeedback}>{i18n["faq.item.copied"]}</span>
               )}
             </button>
             
