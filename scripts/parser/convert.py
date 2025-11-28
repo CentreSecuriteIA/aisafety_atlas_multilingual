@@ -146,6 +146,14 @@ def main():
     # Set up logger
     logger = setup_logger("converter", debug=args.debug)
     
+    ##NG debug
+    if args.debug:
+        from common import Fore
+        log_banner(logger, "ARGS", forecolor=Fore.RED)
+        for field, value in vars(args).items():
+            print(f"{field:^30}: {value}")
+        print()
+
     # Print banner
     log_banner(logger, "Document Converter")
     

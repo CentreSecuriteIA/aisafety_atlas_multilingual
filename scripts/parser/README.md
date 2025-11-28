@@ -36,7 +36,7 @@ project-root/
 
 1. Export your Google Docs using the **Docs to Markdown** plugin
 2. Place the exported `.zip` files in the `source_zips/` directory (I uploaded these already into the git repo, if you dont want to buy the plugin)
-3. Run the conversion scripts from the scripts directory (A: `project-repo-dir/scripts/` or B: `project-root/scripts/`)
+3. Run the conversion scripts from the scripts directory (A: `project-repo-dir/scripts/parser` or B: `project-root/scripts/`)
 ## Usage
 
 The main entry point is `convert.py`, which accepts various commands for different processing stages.
@@ -49,7 +49,7 @@ python convert.py <input> [argments]
 
 ### Input Formats
 
-- **Zip file path**: `source_zips/ch5.zip` - Process a new export
+- **Zip file path**: `../source_zips/ch5.zip` - Process a new export
 - **Directory name**: `ch5` - Process an existing preprocessed directory
 
 ### Processing Options and arguments

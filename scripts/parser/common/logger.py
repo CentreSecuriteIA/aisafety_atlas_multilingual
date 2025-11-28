@@ -85,11 +85,11 @@ def setup_logger(name, debug=False, log_file=None):
     
     return logger
 
-def log_banner(logger, title):
+def log_banner(logger, title, forecolor=Fore.CYAN):
     """Log a banner with the given title."""
-    logger.info(f"{Fore.CYAN}{'='*80}{Style.RESET_ALL}")
-    logger.info(f"{Fore.CYAN}{title:^80}{Style.RESET_ALL}")
-    logger.info(f"{Fore.CYAN}{'='*80}{Style.RESET_ALL}")
+    logger.info(f"{forecolor}{'='*80}{Style.RESET_ALL}")
+    logger.info(f"{forecolor}{title:^80}{Style.RESET_ALL}")
+    logger.info(f"{forecolor}{'='*80}{Style.RESET_ALL}")
 
 def log_section(logger, title):
     """Log a section header with the given title."""
