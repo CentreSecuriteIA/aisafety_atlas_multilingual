@@ -1,4 +1,25 @@
 // config/plugins.mjs - Updated to handle audio, images, AND PDF files
+
+import { aggregateOrganizations } from '../plugins/OrganizationCoursesAgregator.js';
+
+export function createOrganizationCoursesAgregatorPlugin() {
+  /**
+   * Will be executed at the beginning of the Docusaurus build process to aggregate  courses data of organizations.
+   */
+  return function organizationCoursesAgregatorPlugin(context, options) {
+    return {
+      name: 'organization-courses-agregator-plugin',
+
+      async loadContent() {
+        console.log(context)
+        // Aggregate organizations data before build
+        aggregateOrganizations(context.siteDir);
+        return null;
+      },
+    };
+  };
+}
+
 export function createChapterImagesPlugin() {
   return function chapterImagesPlugin(context, options) {
     return {
@@ -147,5 +168,6 @@ export function createChapterImagesPlugin() {
 }
 
 export const pluginsConfig = [
+  createOrganizationCoursesAgregatorPlugin(),
   createChapterImagesPlugin(),
 ];
