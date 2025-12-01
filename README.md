@@ -41,14 +41,15 @@ Hosted at - https://ai-safety-atlas.com/
 ## Localization 
 - [ ] incorporate i18n -> Current work on Branch https://github.com/CentreSecuriteIA/aisafety_atlas_multilingual/tree/to_multilingual
 - [ ] move all data into json files out of react components
+- [ ] take into account the new features introduced in version 3.9 of Docusaurus regarding internationalisation.
 
 **Mandatory:**
 - _Technical_:
-    - [ ] adapt the breadcrumb links in the header of translated textbook pages
+    - [x] adapt the breadcrumb links in the header of translated textbook pages
     - [ ] translate labels in the reading setting panel
     - [ ] translate the tooltips of "scroll to top" and "scroll to bottom" buttons
     - [ ] translate the "Edit this page" link at the bottom of each page
-    - [ ] the links in the list of chapters in the landing page
+    - [x] the links in the list of chapters in the landing page
     - [ ] make Algolia search working for localized languages
 - _Content_:
     - [ ] checked the quality of the translations
@@ -67,30 +68,8 @@ This section describes the modifications made (and to be done) to the original A
 Multilingual version currently hosted for checking at https://centresecuriteia.github.io/
 See first the code in the `to_multilingual` branch in [multilingual repo](https://github.com/CentreSecuriteIA/aisafety_atlas_multilingual).
 
-## Internationalization description
-The used internationalization features correspond to [Docusaurus 3.8.*](https://docusaurus.io/docs/3.8.1/i18n/introduction) features until now.
-
-## Topology of elements to translate or adapt
-
-### Localization
-Les élements destinés à être traduits sont:
-- Les contenus des fichiers markdown présents dans le dossier `docs/`; 
-    - En fait la traduction de ces fichiers est obtenues à partir de la traduction des fichiers obtenus à la première étape du [processing pipeline](https://github.com/markov-root/atlas/tree/main/scripts/parser), dont sont issus les fichiers markdown (Processing pipleine "Docusaurus parsing" step);
-- Les contenus statiques inclus dans les fichiers React (fichiers `.js` ou `.jsx`), correspondant: 
-    - aux pages particulirès (ex: page ["Courses"](https://ai-safety-atlas.com/courses), fichier `/src/pages/courses.jsx`), définie dans le dossier `/src/pages/`;
-    - aux composants utilisés dans ces pages (ex: `src/components/Courses/CoursesHero.jsx`);
-    - aux composants présents dans les pages du site et liés au thème formattant les pages markdown, dont les composants complexes correspondant à page d'accueil du site et du textbook (ex: `src/theme/DocItem/index.js`, `src/components/chapters/Note.jsx`);
-- Les contenus des fichiers JSON appelés par les pages React (Ex: `src/data/courses/courses-metadata.json`), présents dans le dossier `src/data/`;
-
-### Adaptations
-Les développements particuliers à ce projet ont nécessité des adaptations de certains éléments existant afin de prendre en compte la langue sélectionnée pour:
-- l'affichage de la bonne version linguistique de la page d'accueil du site et du textbook: modification des règles d'identification des pages selon les urls fournies (dans le fichier `src/theme/DocItem/index.js`);
-- l'appel des fichiers média (essentiellement les images): modification du traitement de l'url du média (dans le fichier ``src/components/chapters/Figure.jsx``);
-- l'inclusion des fichiers JSON contenant les définitions locales du glossaire: prise en compte de la locale correspondant au fichier en cours de traitement pour l'appel des fichiers à inclure (dans le fichier `src/utils/remark-glossary.js`).
-
 ## Specific Folder structure
-Dans un projet Docusaurus classique, les éléments de traduction sont généralement placées dans le dossier `docs` ou `src/pages`. Pour gérer les traductions, Docusaurus propose de créer des dossiers spécifiques pour chaque langue dans un dossier `i18n`. Puis un sous-répertoire devant contenir les fichiers de traduction pour une langue donnée (ex: `fr` pour le français):
-
+In a classic Docusaurus project, content elements are mainly placed in the `docs` or `src/pages` folder. To manage translations, Docusaurus suggests creating specific directories for each language in the `i18n` directory. This results in the following file structure (e.g. including French translations in the `fr` subdirectory):
 ```
 atlas
 ├── docs
@@ -124,6 +103,30 @@ atlas
     ├── theme
     └── utils
 ```
+
+## Internationalization description
+The used internationalization features correspond to [Docusaurus 3.8.*](https://docusaurus.io/docs/3.8.1/i18n/introduction) features until now.
+
+## Topology of elements to translate or adapt
+
+### Localization
+Les élements destinés à être traduits sont:
+- Les fichiers de "preprocessing" générés à la première étape du [parsing pipeline](https://github.com/markov-root/atlas/tree/main/scripts/parser) (Processing pipeline "Docusaurus parsing" first step), accessibles par défaut dans le dossier `scripts/parser/preprocessed`, et placés dans `docs/chapters` pour la construction du site Docusaurus;
+    - les fichiers traduits correspondants à ceux présents dans `docs/chapters`, et placés dans `i18n/docusaurus-plugin-content-docs/LOCALE/current/chapters`, seront obtenus en appliquant la deuxième étape du parsing pipeline (Processing pipeline "Docusaurus" second step) sur les traductins des fichiers de "preprocessing";
+- Les contenus statiques inclus dans les fichiers React (fichiers `.js` ou `.jsx`), correspondant: 
+    - aux pages particulières (ex: page ["Courses"](https://ai-safety-atlas.com/courses), fichier `/src/pages/courses.jsx`), définie dans le dossier `/src/pages/`;
+    - aux composants utilisés dans certaines pages construites en React (ex: `src/components/Courses/CoursesHero.jsx`);
+    - aux composants présents dans les pages et liés au thème formattant les pages markdown, dont les composants complexes correspondant à page d'accueil du site et du textbook (ex: `src/theme/DocItem/index.js`, `src/components/chapters/Note.jsx`);
+- Les contenus des fichiers JSON appelés par les pages et composants React (Ex: `src/data/courses/courses-metadata.json`), présents dans le dossier `src/data/`;
+
+### Adaptations
+Les développements particuliers à ce projet ont nécessité des adaptations de certains éléments existant afin de prendre en compte la langue sélectionnée pour :
+- l'affichage de la bonne version linguistique de la page d'accueil du site et du textbook: modification des règles d'identification des pages selon les urls fournies (dans le fichier `src/theme/DocItem/index.js`);
+- les références des fichiers média, notamment : 
+    - modification du traitement de l'url du média (dans le fichier ``src/components/chapters/Figure.jsx``);
+    - la contruction de l'url des fichiers audio (dans le fichier `src/utils/audioUtils.js`);
+    - la construction de l'url des fichiers pdf (dans le fichier `src/utils/pdfUtils.js`);
+- l'inclusion des fichiers JSON contenant les définitions locales du glossaire: prise en compte de la locale correspondant au fichier en cours de traitement pour l'appel des fichiers à inclure (dans le fichier `src/utils/remark-glossary.js`).
 
 ## Using `i18n` docusaurus plugin features
 
@@ -181,7 +184,6 @@ This function allows to get the content of a data file (json, md, etc) according
 1. in config file `/config/metadata.mjs`, respecting [docusaurus i18n configuration](https://docusaurus.io/docs/api/docusaurus-config#i18n):
     - add the locale ID code to the `i18n.locales` section;
     - add the locale config to the `i18n.localeConfigs` section;
-
  
 ## Best pratices for adding new content to pages
 
@@ -206,9 +208,16 @@ Si le contenu doit varier dans le temps, nécessite des mises à jour fréquente
 
 Ces fichiers seront importés dans le composant React via la fonction `getDataContent()` (see above in "Further development" section).
 
+## Tips and warning using Docusaurus test mode
+Afin d'afficher les contenus traduits lors du développement et des tests en local, il est nécessaire de lancer le site en mode "locale" avec la commande:
+```bash
+  yarn start . --locale fr
+```
 
-## Tips using Docusaurus test mode
-TDB
+Cependant, pour la version actuelle de ce projet et de Docusaurus, les médias internes (images, audia, pdf , vidéos, ...) inclus dans le projet ne sont pas accessibles. Il faut donc vérifier le projet en le construisant avec la commande :
+```bash
+  yarn build
+```
 
 ## Translation pipeline
 TBD
