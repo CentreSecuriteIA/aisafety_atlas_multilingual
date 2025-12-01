@@ -1,4 +1,5 @@
 // src/utils/pdfUtils.js - Utility functions for handling PDF files (local only)
+import { getLocalizedUrl } from "./i18nUtils";
 
 /**
  * Common PDF filename patterns to try
@@ -138,8 +139,8 @@ export async function buildPdfFile(frontMatter, chapterNumber) {
  * @param {Object} pdfData - The PDF data object
  * @returns {string|null} The URL or null
  */
-export function getPdfUrl(pdfData) {
-  return pdfData ? pdfData.url : null;
+export function getPdfUrl(pdfData, locales = null) {
+  return getLocalizedUrl(pdfData ? pdfData.url : null, locales);
 }
 
 /**

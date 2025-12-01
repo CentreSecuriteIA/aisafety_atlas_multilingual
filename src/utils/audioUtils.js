@@ -1,5 +1,7 @@
 // src/utils/audioUtils.js - Utility functions for handling audio files
 
+import { getLocalizedUrl } from "./i18nUtils";
+
 /**
  * Build audio files object from frontmatter and provide smart fallbacks
  * @param {Object} frontMatter - The frontmatter object from a chapter/section
@@ -52,13 +54,18 @@ export function buildAudioFiles(frontMatter, chapterNumber) {
  * Generate audio file URL for the new folder structure
  * @param {string|number} chapterNumber - The chapter number
  * @param {string} filename - The audio filename
+ * @param {string|null} defaultLocale - The default locale (if applicable)
+ * @param {string|null} currentLocale - The current locale (if applicable)
  * @returns {string} The full URL path to the audio file
  */
-export function getAudioUrl(chapterNumber, filename) {
+export function getAudioUrl(chapterNumber, filename, locales = null) {
   if (!filename) return null;
   // Updated path structure: /chapters/XX/audio/filename.mp3
   // Keep zero-padding for the folder path to match your folder structure (01, 02, etc.)
-  return `/chapters/${chapterNumber.toString().padStart(2, '0')}/audio/${filename}`;
+  return getLocalizedUrl(
+    `/chapters/${chapterNumber.toString().padStart(2, '0')}/audio/${filename}`,
+    locales)
+    ;
 }
 
 /**
