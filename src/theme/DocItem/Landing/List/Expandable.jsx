@@ -3,6 +3,7 @@ import React from 'react';
 import AudioPlayer from './AudioPlayer';
 import { getAudioUrl } from '@site/src/utils/audioUtils';
 import styles from './Expandable.module.css';
+import { getLocaleData } from '@site/src/utils/i18nUtils';
 
 // Helper function to extract YouTube video ID
 const getYouTubeVideoId = (url) => {
@@ -20,6 +21,8 @@ export default function Expandable({
   onToggleAudio,
   onToggleVideo
 }) {
+  const locales = getLocaleData();
+  
   const videoId = getYouTubeVideoId(chapter.resources.video);
 
   return (
@@ -54,7 +57,7 @@ export default function Expandable({
           </div>
           <div className={styles.mediaContent}>
             {Object.entries(verifiedAudioFiles).map(([trackType, filename]) => {
-              const audioUrl = getAudioUrl(chapter.number, filename);
+              const audioUrl = getAudioUrl(chapter.number, filename, locales);
               const trackDisplayName = trackType === 'podcast' ? 'Podcast' : 
                                        trackType === 'transcript' ? 'Reading' : 
                                        trackType === 'discussion' ? 'Discussion' : 'Audio';

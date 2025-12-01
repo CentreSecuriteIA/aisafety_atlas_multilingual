@@ -4,9 +4,9 @@ import DocItem from '@theme-original/DocItem';
 import { useLocation } from '@docusaurus/router';
 import ChapterLanding from './Landing';
 import ChapterHeaderRenderer from './Headers/ChapterHeaderRenderer';
-import ChapterFeedback from '../../components/Feedback/ChapterFeedback';
+import ChapterFeedback from '@site/src/components/Feedback/ChapterFeedback';
 
-import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
+import { getLocaleData } from '@site/src/utils/i18nUtils';
 
 export default function DocItemWrapper(props) {
   const location = useLocation();
@@ -18,7 +18,7 @@ export default function DocItemWrapper(props) {
   }, []);
 
   // Detect locale selected
-  const {i18n: {currentLocale}} = useDocusaurusContext();
+  const {currentLocale} = getLocaleData();
 
   const pageType = useMemo(() => {
     const pathname = location.pathname;

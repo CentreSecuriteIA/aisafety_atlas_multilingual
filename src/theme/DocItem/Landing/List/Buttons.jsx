@@ -4,7 +4,8 @@ import { SmallTooltip } from '@site/src/components/UI/Tooltip';
 import { getPdfUrl } from '@site/src/utils/pdfUtils';
 import styles from './Buttons.module.css';
 
-import {translate} from '@docusaurus/Translate';
+import { translate } from '@docusaurus/Translate';
+import { getLocaleData } from '@site/src/utils/i18nUtils';
 
 const i18n = [
   //0
@@ -64,6 +65,8 @@ export default function Buttons({
   isMobile
 }) {
 
+  const locales = getLocaleData()
+
   const handleResourceClick = (e, url, resourceType) => {
     e.preventDefault();
     e.stopPropagation();
@@ -81,7 +84,7 @@ export default function Buttons({
     
     // Handle PDF with verified URL
     if (resourceType === 'pdf' && hasVerifiedPdf) {
-      const pdfUrl = getPdfUrl(verifiedPdfData);
+      const pdfUrl = getPdfUrl(verifiedPdfData, locales);
       if (pdfUrl) {
         window.open(pdfUrl, '_blank');
       }

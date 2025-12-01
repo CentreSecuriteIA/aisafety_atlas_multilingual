@@ -3,7 +3,11 @@ import { useState, useEffect } from 'react';
 import { buildAudioFiles, getAudioUrl } from '@site/src/utils/audioUtils';
 import { buildPdfFile } from '@site/src/utils/pdfUtils';
 
+import { getLocaleData } from '@site/src/utils/i18nUtils';
+
 export function useFileVerification(chapters) {
+  const locales = getLocaleData();
+
   const [verifiedAudioFiles, setVerifiedAudioFiles] = useState(new Map());
   const [verifiedPdfFiles, setVerifiedPdfFiles] = useState(new Map());
 
@@ -71,7 +75,7 @@ export function useFileVerification(chapters) {
           const verifiedFiles = {};
           
           for (const [trackType, filename] of Object.entries(audioFiles)) {
-            const audioUrl = getAudioUrl(chapter.number, filename);
+            const audioUrl = getAudioUrl(chapter.number, filename, locales);
             const exists = await checkAudioExists(audioUrl);
             if (exists) {
               verifiedFiles[trackType] = filename;

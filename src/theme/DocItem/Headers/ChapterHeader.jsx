@@ -16,6 +16,7 @@ import {
   debugPdfFiles 
 } from '@site/src/utils/pdfUtils';
 
+import {getLocalizedUrl} from '@site/src/utils/i18nUtils';
 import {translate} from '@docusaurus/Translate';
 
 // Action Button Component - Updated with centralized Tippy
@@ -272,7 +273,13 @@ export default function ChapterHeader({ frontMatter, title, chapterNumber, bound
     translate({id: 'theme.docItem.chapterHeader.buttons.teach', message: 'Teach'}),
     translate({id: 'theme.docItem.chapterHeader.buttons.teachDesc', message: 'Access Facilitation Resources'})  
   ];
-  
+
+  const breadcrumn_urls = {
+    "home": getLocalizedUrl("/"),
+    "all_chapters": getLocalizedUrl("/chapters/"),
+    "current_chapter": getLocalizedUrl(`/chapters/${String(frontMatter.chapter_number || chapterNumber).padStart(2, '0')}/`)
+  };
+
   return (
     <header className={`${styles.chapterContainer} ${isVisible ? styles.visible : ''}`}>
       {/* Texture background with subtle overlay */}
@@ -329,7 +336,7 @@ export default function ChapterHeader({ frontMatter, title, chapterNumber, bound
               {/* Breadcrumbs at top of right side */}
               <nav className={styles.chapterNavigation}>
                 <ActionButtonTooltip content={i18n[0]}>
-                  <a href="/" className={styles.breadcrumbLink}>
+                  <a href={breadcrumn_urls["home"]} className={styles.breadcrumbLink}>
                     <svg className={styles.breadcrumbIcon} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                       <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
                       <polyline points="9,22 9,12 15,12 15,22"></polyline>
@@ -338,7 +345,7 @@ export default function ChapterHeader({ frontMatter, title, chapterNumber, bound
                 </ActionButtonTooltip>
                 <span className={styles.breadcrumbSeparator}>›</span>
                 <ActionButtonTooltip content={i18n[1]}>
-                  <a href="/chapters/" className={styles.breadcrumbLink}>
+                  <a href={breadcrumn_urls["all_chapters"]} className={styles.breadcrumbLink}>
                     <svg className={styles.breadcrumbIcon} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                       <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
                       <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
@@ -346,7 +353,7 @@ export default function ChapterHeader({ frontMatter, title, chapterNumber, bound
                   </a>
                 </ActionButtonTooltip>
                 <span className={styles.breadcrumbSeparator}>›</span>
-                <a href={`/chapters/${String(frontMatter.chapter_number || chapterNumber).padStart(2, '0')}/`} className={styles.breadcrumbLink}>
+                <a href={breadcrumn_urls["current_chapter"]} className={styles.breadcrumbLink}>
                   {i18n[2]} {frontMatter.chapter_number || chapterNumber}
                 </a>
                 <span className={styles.breadcrumbSeparator}>›</span>

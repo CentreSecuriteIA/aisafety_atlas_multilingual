@@ -9,7 +9,7 @@ import Story from './Story'; // Moved up from bottom
 import Info from './Info';
 
 import styles from './index.module.css';
-import { getDataContent } from '../../../utils/i18nUtils';
+import { getDataContent, getLocalizedUrl } from '@site/src/utils/i18nUtils';
 
 function LoadingSkeleton() {
   return (
@@ -60,6 +60,14 @@ export default function ChapterLanding() {
   const [isReady, setIsReady] = useState(false);
 
   const chaptersData = getDataContent("chapters.json");
+
+  // Data localization (chapter urls)
+  chaptersData.streams.forEach((stream) => {
+    stream.chapters.forEach((chapter) => {
+      // Ensure chapter resource URLs are localized
+      chapter.resources.chapter = getLocalizedUrl(chapter.resources.chapter);
+    });
+  });
 
   // Measure bounds - same technique as your headers
   useEffect(() => {
