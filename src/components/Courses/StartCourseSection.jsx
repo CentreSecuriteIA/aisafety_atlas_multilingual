@@ -15,38 +15,6 @@ export default function StartCourseSection({ content }) {
   });
   const [status, setStatus] = useState('');
 
-  const i18n = [
-    /* Left side - Information */
-    //0
-    <Translate id="courses.form.start" description="">Start Your Own Course</Translate>,
-    <Translate id="courses.form.ready" description="">Ready to bring AI safety education to your community? We're here to support you every step of the way.</Translate>,
-    <Translate id="courses.form.materials" description="">Open source textbook & materials</Translate>,
-    <Translate id="courses.form.resources" description="">Public facilitation guides & instructor resources</Translate>,
-    <Translate id="courses.form.cesia" description="">French Center for AI Safety (CeSIA) + Atlas co-branded certificates for your participants</Translate>,
-    //5
-    <Translate id="courses.form.support" description="">Support for custom curriculum design for your needs</Translate>,
-    <Translate id="courses.form.any_help" description="">Any other help we can provide</Translate>,
-    /* Right Form - labels and placeholders*/
-    <Translate id="courses.form.about_course" description="">Tell Us About Your Course</Translate>,
-    <Translate id="courses.form.share" description="">Share your plans and we'll help you get started</Translate>,
-    translate({id:"courses.form.name", description:"", message: "Your name"}),
-    //10
-    translate({id:"courses.form.email", description:"", message: "Your email"}),
-    translate({id:"courses.form.univ", description:"", message: "University/Organization (optional)"}),
-    translate({id:"courses.form.location", description:"", message: "Location (city, country)"}),
-    translate({id:"courses.form.participants", description:"", message: "Expected participants (optional)"}),
-    translate({id:"courses.form.start_date", description:"", message: "Start date (optional)"}),
-    //15
-    translate({id:"courses.form.end_date", description:"", message: "End date (optional)"}),
-    translate({id:"courses.form.about_audience", description:"", message: "Tell us about your audience, format preferences, or any specific support you'd like (optional)"}),
-    translate({id:"courses.form.error", description:"", message: "Something went wrong. Please try again or email us directly."}),
-    translate({id:"courses.form.send", description:"", message: "Send"}),
-    translate({id:"courses.form.sending", description:"", message: "Sending"}),
-    //20
-    <Translate id="courses.form.thanks" description="">Thank You!</Translate>,
-    <Translate id="courses.form.thanks_msg" description="">We're excited to support your course and will be in touch soon with resources and next steps.</Translate>
-  ];
-
   const handleSubmit = async (e) => {
     e.preventDefault();
     setStatus('sending');

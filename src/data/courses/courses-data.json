@@ -1,0 +1,574 @@
+{
+  "metadata": {},
+  "organizations": [
+    {
+      "name": "AI Safety Global Society",
+      "logo": "/img/courses/ais_global_society/ais_global_society_logo.svg",
+      "website": "https://www.aisafety.group/",
+      "contact": "info@aisglobalsociety.org",
+      "description": "Global AI safety organization",
+      "courses": [
+        {
+          "id": "ai-safety-global-society-1",
+          "name": "AI Safety Global Society Spring 2025",
+          "description": "8-week program with optional 4-week project phase. A global AIS community. Course run as part of AI Safety Collab.",
+          "location": "Global",
+          "startDate": "2025-03-31",
+          "endDate": "2025-06-23",
+          "applicationDeadline": null,
+          "students-expected": null,
+          "students-applied": null,
+          "students-enrolled": null,
+          "students-completed": null,
+          "links": {}
+        }
+      ]
+    },
+    {
+      "name": "AI Safety Gothenburg",
+      "logo": "/img/courses/ais_gothenburg/ais_gothenburg_logo.svg",
+      "website": "https://www.aisafetygothenburg.org/",
+      "contact": "contact@aisafetygothenburg.org",
+      "description": "Local AI safety group promoting awareness and education in Gothenburg community",
+      "courses": [
+        {
+          "id": "ai-safety-gothenburg-2",
+          "name": "AI Safety Fundamentals Spring 2024",
+          "description": "8-week program that helped trial Atlas materials before we even called it the Atlas.",
+          "location": "Gothenburg, Sweden",
+          "startDate": "2024-02-26",
+          "endDate": "2024-04-22",
+          "applicationDeadline": null,
+          "students-expected": null,
+          "students-applied": null,
+          "students-enrolled": 12,
+          "students-completed": null,
+          "links": {
+            "studentApplication": "https://www.aisafetygothenburg.org/"
+          }
+        },
+        {
+          "id": "ai-safety-gothenburg-1",
+          "name": "AI Safety Fundamentals Fall 2023",
+          "description": "12-week program using early Atlas materials.",
+          "location": "Gothenburg, Sweden",
+          "startDate": "2023-09-18",
+          "endDate": "2023-12-11",
+          "applicationDeadline": null,
+          "students-expected": null,
+          "students-applied": null,
+          "students-enrolled": 15,
+          "students-completed": null,
+          "links": {
+            "studentApplication": "https://www.aisafetygothenburg.org/"
+          }
+        }
+      ]
+    },
+    {
+      "name": "AI Safety Hungary",
+      "logo": "/img/courses/ais_hungary/ais_hungary_logo.svg",
+      "website": "https://www.aishungary.com/activities/intro-seminars",
+      "contact": "info@aishungary.com",
+      "description": "Supporting students and professionals in contributing to safe AI development. Part of AIS Collab.",
+      "courses": [
+        {
+          "id": "ai-safety-hungary-2",
+          "name": "AI Safety Hungary Summer 2025",
+          "description": "8-week program with optional 4-week project phase. Part of AI Safety Collab.",
+          "location": "Hungary (Online + In-person)",
+          "startDate": "2025-08-04",
+          "endDate": "2025-10-27",
+          "applicationDeadline": "2025-07-20",
+          "students-expected": 15,
+          "students-applied": null,
+          "students-enrolled": null,
+          "students-completed": null,
+          "links": {
+            "studentApplication": "https://airtable.com/appZR9Ries3akemlk/pagVA2W08JQ6W77bi/form"
+          }
+        },
+        {
+          "id": "ai-safety-hungary-1",
+          "name": "AI Safety Hungary Spring 2025",
+          "description": "8-week program with optional 4-week project phase. Part of AI Safety Collab.",
+          "location": "Hungary",
+          "startDate": "2025-03-31",
+          "endDate": "2025-06-23",
+          "applicationDeadline": null,
+          "students-expected": null,
+          "students-applied": null,
+          "students-enrolled": 10,
+          "students-completed": null,
+          "links": {
+            "studentApplication": "https://airtable.com/appZR9Ries3akemlk/pagVA2W08JQ6W77bi/form"
+          }
+        }
+      ]
+    },
+    {
+      "name": "AI Safety Latam (Boske)",
+      "logo": "/img/courses/placeholder_courses.svg",
+      "website": "https://www.boske.org/",
+      "contact": "boskedao@gmail.com",
+      "description": "Free and open AI safety education for Latin America",
+      "courses": [
+        {
+          "id": "boske-1",
+          "name": "Safe AI Buenos Aires Course Spring 2025",
+          "description": "8-week program with optional 4-week project phase.",
+          "location": "Buenos Aires, Argentina + Online",
+          "startDate": "2025-03-31",
+          "endDate": "2025-06-23",
+          "applicationDeadline": null,
+          "students-expected": null,
+          "students-applied": null,
+          "students-enrolled": 14,
+          "students-completed": null,
+          "links": {
+            "studentApplication": "https://aeroproduct.notion.site/Safe-AI-Buenos-Aires-Course-Spring-2025-1b7883d9015a8023a693df72c5889e1c"
+          }
+        }
+      ]
+    },
+    {
+      "name": "EA Norway",
+      "logo": "/img/courses/ea_norway/ea_norway_logo.svg",
+      "website": "https://www.effektivaltruisme.no/",
+      "contact": null,
+      "description": "Course run in partnership by AIS Collab.",
+      "courses": [
+        {
+          "id": "ea-norway-1",
+          "name": "EA Norway Spring 2025",
+          "description": "8-week program with optional 4-week project phase. Part of AIS Collab.",
+          "location": "Norway + Online",
+          "startDate": "2025-03-31",
+          "endDate": "2025-06-23",
+          "applicationDeadline": null,
+          "students-expected": null,
+          "students-applied": null,
+          "students-enrolled": null,
+          "students-completed": null,
+          "links": {}
+        }
+      ]
+    },
+    {
+      "name": "ENAIS / AI Safety Collab",
+      "logo": "/img/courses/enais/enais.svg",
+      "website": "https://www.enais.co/collab",
+      "contact": "contact@enais.co",
+      "description": "International initiative promoting AI safety field building efforts.",
+      "courses": [
+        {
+          "id": "ai-safety-collab-4",
+          "name": "AI Safety Collab Summer 2025",
+          "description": "8-week course + 4-week optional project phase",
+          "location": "Global (Online + Local Groups)",
+          "startDate": "2025-08-04",
+          "endDate": "2025-10-27",
+          "applicationDeadline": "2025-07-20",
+          "students-expected": 300,
+          "students-applied": null,
+          "students-enrolled": null,
+          "students-completed": null,
+          "links": {
+            "studentApplication": "https://airtable.com/appZR9Ries3akemlk/pagVA2W08JQ6W77bi/form",
+            "facilitatorApplication": "https://airtable.com/appZR9Ries3akemlk/pagfE6ZyAFsu4hAjg/form"
+          }
+        },
+        {
+          "id": "ai-safety-collab-3",
+          "name": "AI Safety Collab Spring 2025",
+          "description": "8-week program with optional 4-week project phase. Record-breaking cohort with 236 participants across 30+ countries",
+          "location": "Global (Online + Local Groups)",
+          "startDate": "2025-03-31",
+          "endDate": "2025-06-23",
+          "applicationDeadline": null,
+          "students-expected": null,
+          "students-applied": null,
+          "students-enrolled": 236,
+          "students-completed": null,
+          "links": {
+            "studentApplication": "https://airtable.com/appZR9Ries3akemlk/pagVA2W08JQ6W77bi/form"
+          }
+        },
+        {
+          "id": "ai-safety-collab-2",
+          "name": "AI Safety Collab Summer 2024",
+          "description": "Summer 2024 cohort",
+          "location": "Global (Online)",
+          "startDate": "2024-06-01",
+          "endDate": "2024-08-31",
+          "applicationDeadline": null,
+          "students-expected": null,
+          "students-applied": null,
+          "students-enrolled": 60,
+          "students-completed": null,
+          "links": {
+            "studentApplication": "https://airtable.com/appZR9Ries3akemlk/pagVA2W08JQ6W77bi/form"
+          }
+        },
+        {
+          "id": "ai-safety-collab-1",
+          "name": "AI Safety Collab Winter 2023",
+          "description": "Pilot cohort that launched the international AI Safety Collab program.",
+          "location": "Global (Online)",
+          "startDate": "2023-10-01",
+          "endDate": "2024-01-31",
+          "applicationDeadline": null,
+          "students-expected": null,
+          "students-applied": null,
+          "students-enrolled": 63,
+          "students-completed": null,
+          "links": {
+            "studentApplication": "https://airtable.com/appZR9Ries3akemlk/pagVA2W08JQ6W77bi/form"
+          }
+        }
+      ]
+    },
+    {
+      "name": "ENS Ulm & ENS Paris-Saclay",
+      "logo": "/img/courses/ens_paris/ens_paris_logo.svg",
+      "website": "https://www.master-mva.com/cours/seminaire-turing/",
+      "contact": "charbel@securite-ia.fr",
+      "description": "Graduate-level AI safety education at top French universities",
+      "courses": [
+        {
+          "id": "ens-turing-seminar-2025",
+          "name": "Turing Seminar – An introduction to AGI Safety 2025",
+          "description": "University course built using Atlas materials, as part of MVA Masters program - 7x2 hour sessions + project",
+          "location": "Paris, France",
+          "startDate": "2025-01-01",
+          "endDate": "2025-05-31",
+          "applicationDeadline": null,
+          "students-expected": null,
+          "students-applied": null,
+          "students-enrolled": 25,
+          "students-completed": null,
+          "links": {
+            "studentApplication": "https://www.master-mva.com/candidater/"
+          }
+        },
+        {
+          "id": "ens-turing-seminar-2024",
+          "name": "Turing Seminar – An introduction to AGI Safety 2024",
+          "description": "University course as part of MVA Master program using Atlas materials",
+          "location": "Paris, France",
+          "startDate": "2024-01-01",
+          "endDate": "2024-05-31",
+          "applicationDeadline": null,
+          "students-expected": null,
+          "students-applied": null,
+          "students-enrolled": 22,
+          "students-completed": null,
+          "links": {
+            "studentApplication": "https://www.master-mva.com/candidater/"
+          }
+        }
+      ]
+    },
+    {
+      "name": "ML4Good",
+      "logo": "/img/courses/ml4g/ml4g_logo.svg",
+      "website": "https://www.ml4good.org/",
+      "contact": "info@ml4good.org",
+      "description": "Intensive in-person bootcamps to upskill in AI safety using Atlas materials",
+      "courses": [
+        {
+          "id": "ml4good-singapore-sept25",
+          "name": "ML4Good Singapore",
+          "description": "First ML4Good bootcamp in Asia",
+          "location": "Singapore",
+          "startDate": "2025-09-01",
+          "endDate": "2025-09-10",
+          "applicationDeadline": null,
+          "students-expected": 18,
+          "students-applied": null,
+          "students-enrolled": null,
+          "students-completed": null,
+          "links": {
+            "studentApplication": "https://www.ml4good.org/courses/singapore-sept25"
+          }
+        },
+        {
+          "id": "ml4good-governance-sept25",
+          "name": "ML4Good Governance",
+          "description": "First governance-focused ML4Good bootcamp using Atlas materials",
+          "location": "TBD",
+          "startDate": "2025-09-01",
+          "endDate": "2025-09-10",
+          "applicationDeadline": null,
+          "students-expected": 20,
+          "students-applied": null,
+          "students-enrolled": null,
+          "students-completed": null,
+          "links": {
+            "studentApplication": "https://www.ml4good.org/courses/governance-sept25"
+          }
+        },
+        {
+          "id": "ml4good-12",
+          "name": "ML4Good West & Central Europe",
+          "description": "10-day intensive bootcamp using Atlas materials",
+          "location": "West & Central Europe",
+          "startDate": "2025-05-24",
+          "endDate": "2025-06-01",
+          "applicationDeadline": null,
+          "students-expected": 20,
+          "students-applied": null,
+          "students-enrolled": null,
+          "students-completed": null,
+          "links": {
+            "studentApplication": "https://www.ml4good.org/courses/west-europe-may25"
+          }
+        },
+        {
+          "id": "ml4good-11",
+          "name": "ML4Good Colombia",
+          "description": "First ML4Good bootcamp in Latin America",
+          "location": "Colombia",
+          "startDate": "2025-04-11",
+          "endDate": "2025-04-21",
+          "applicationDeadline": null,
+          "students-expected": 18,
+          "students-applied": null,
+          "students-enrolled": null,
+          "students-completed": null,
+          "links": {
+            "studentApplication": "https://www.ml4good.org/courses/colombia-april25"
+          }
+        },
+        {
+          "id": "ml4good-10",
+          "name": "ML4Good Europe",
+          "description": "European bootcamp using Atlas materials",
+          "location": "Europe",
+          "startDate": "2025-03-07",
+          "endDate": "2025-03-17",
+          "applicationDeadline": null,
+          "students-expected": null,
+          "students-applied": null,
+          "students-enrolled": 22,
+          "students-completed": null,
+          "links": {}
+        },
+        {
+          "id": "ml4good-9",
+          "name": "ML4Good Germany",
+          "description": "German bootcamp with Atlas materials",
+          "location": "Germany",
+          "startDate": "2024-09-23",
+          "endDate": "2024-10-03",
+          "applicationDeadline": null,
+          "students-expected": null,
+          "students-applied": null,
+          "students-enrolled": 20,
+          "students-completed": null,
+          "links": {}
+        },
+        {
+          "id": "ml4good-8",
+          "name": "ML4Good UK",
+          "description": "UK bootcamp using Atlas materials",
+          "location": "United Kingdom",
+          "startDate": "2024-09-01",
+          "endDate": "2024-09-11",
+          "applicationDeadline": null,
+          "students-expected": null,
+          "students-applied": null,
+          "students-enrolled": 18,
+          "students-completed": null,
+          "links": {}
+        },
+        {
+          "id": "ml4good-7",
+          "name": "ML4Good Brasil",
+          "description": "First ML4Good in South America",
+          "location": "Brasil",
+          "startDate": "2024-07-08",
+          "endDate": "2024-07-18",
+          "applicationDeadline": null,
+          "students-expected": null,
+          "students-applied": null,
+          "students-enrolled": 16,
+          "students-completed": null,
+          "links": {}
+        },
+        {
+          "id": "ml4good-6",
+          "name": "ML4Good France (Erasmus+)",
+          "description": "First Erasmus+ funded bootcamp with international participants",
+          "location": "France",
+          "startDate": "2024-06-18",
+          "endDate": "2024-06-28",
+          "applicationDeadline": null,
+          "students-expected": null,
+          "students-applied": null,
+          "students-enrolled": 24,
+          "students-completed": null,
+          "links": {}
+        },
+        {
+          "id": "ml4good-5",
+          "name": "ML4Good UK",
+          "description": "First ML4Good bootcamp in the UK",
+          "location": "United Kingdom",
+          "startDate": "2024-03-28",
+          "endDate": "2024-04-07",
+          "applicationDeadline": null,
+          "students-expected": null,
+          "students-applied": null,
+          "students-enrolled": 19,
+          "students-completed": null,
+          "links": {}
+        },
+        {
+          "id": "ml4good-4",
+          "name": "ML4Good Germany",
+          "description": "Bootcamp in Germany with participants from 6 countries",
+          "location": "Germany",
+          "startDate": "2023-08-24",
+          "endDate": "2023-09-03",
+          "applicationDeadline": null,
+          "students-expected": null,
+          "students-applied": null,
+          "students-enrolled": 22,
+          "students-completed": null,
+          "links": {}
+        },
+        {
+          "id": "ml4good-3",
+          "name": "ML4Good France",
+          "description": "Bootcamp in France with international participants",
+          "location": "France",
+          "startDate": "2023-07-31",
+          "endDate": "2023-08-09",
+          "applicationDeadline": null,
+          "students-expected": null,
+          "students-applied": null,
+          "students-enrolled": 18,
+          "students-completed": null,
+          "links": {}
+        },
+        {
+          "id": "ml4good-2",
+          "name": "Swiss AI Safety Summer Camp",
+          "description": "Swiss AI Safety Summer Camp using Atlas materials",
+          "location": "Switzerland",
+          "startDate": "2023-09-04",
+          "endDate": "2023-09-16",
+          "applicationDeadline": null,
+          "students-expected": null,
+          "students-applied": null,
+          "students-enrolled": 25,
+          "students-completed": null,
+          "links": {}
+        },
+        {
+          "id": "ml4good-1",
+          "name": "ML4Good France (Original)",
+          "description": "The very first ML4Good bootcamp that started it all",
+          "location": "France",
+          "startDate": "2022-07-31",
+          "endDate": "2022-08-09",
+          "applicationDeadline": null,
+          "students-expected": null,
+          "students-applied": null,
+          "students-enrolled": 15,
+          "students-completed": null,
+          "links": {}
+        }
+      ]
+    },
+    {
+      "name": "Paperclip Minimizers",
+      "logo": "/img/courses/placeholder_courses.svg",
+      "website": null,
+      "contact": "slava.meriton@gmail.com",
+      "description": "Russian-speaking AI safety group. 8-week program with optional 4-week project phase. Part of AI Safety Collab.",
+      "courses": [
+        {
+          "id": "paperclip-minimizers-1",
+          "name": "Paperclip Minimizers Spring 2025",
+          "description": "Russian-speaking AI safety group. 8-week program with optional 4-week project phase. Part of AI Safety Collab.",
+          "location": "Moscow, Russia + Online",
+          "startDate": "2025-03-31",
+          "endDate": "2025-06-23",
+          "applicationDeadline": null,
+          "students-expected": null,
+          "students-applied": null,
+          "students-enrolled": 21,
+          "students-completed": null,
+          "links": {
+            "studentApplication": "https://airtable.com/appZR9Ries3akemlk/pagVA2W08JQ6W77bi/form"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Safe AI London (SAIL)",
+      "logo": "/img/courses/sail/sail.svg",
+      "website": "https://www.safeailondon.org/course",
+      "contact": "joe@arcadiaimpact.org",
+      "description": "London-based AI safety education, project of Arcadia Impact. Part of AI Safety Collab.",
+      "courses": [
+        {
+          "id": "sail-1",
+          "name": "AI Safety Course Spring 2025",
+          "description": "8-week program with optional 4-week project phase. London-based project of Arcadia Impact. Part of AI Safety Collab.",
+          "location": "London, UK",
+          "startDate": "2025-03-31",
+          "endDate": "2025-06-23",
+          "applicationDeadline": null,
+          "students-expected": null,
+          "students-applied": null,
+          "students-enrolled": 36,
+          "students-completed": null,
+          "links": {
+            "studentApplication": "https://www.safeailondon.org/course"
+          }
+        }
+      ]
+    },
+    {
+      "name": "UBC Vancouver AI Safety",
+      "logo": "/img/courses/ubc_vancouver/ubc_vancouver_logo.svg",
+      "website": "https://www.ubcaisafety.org/",
+      "contact": "ubcaisafety@gmail.com",
+      "description": "Student-led AI safety education at University of British Columbia",
+      "courses": [
+        {
+          "id": "ubc-intro-alignment-2",
+          "name": "Intro to AI Alignment Winter 2025",
+          "description": "7-week reading group using AI Safety Atlas materials",
+          "location": "Vancouver, BC, Canada",
+          "startDate": "2025-01-27",
+          "endDate": "2025-04-10",
+          "applicationDeadline": null,
+          "students-expected": null,
+          "students-applied": null,
+          "students-enrolled": 8,
+          "students-completed": null
+        },
+        {
+          "id": "ubc-intro-alignment-1",
+          "name": "Intro to AI Alignment Fall 2024",
+          "description": "First UBC course using AI Safety Atlas materials",
+          "location": "Vancouver, BC, Canada",
+          "startDate": "2024-09-01",
+          "endDate": "2024-11-15",
+          "applicationDeadline": null,
+          "students-expected": null,
+          "students-applied": null,
+          "students-enrolled": null,
+          "students-completed": null,
+          "links": {
+            "studentApplication": "https://ubcaisafety.com/get-involved"
+          }
+        }
+      ]
+    }
+  ]
+}

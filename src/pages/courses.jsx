@@ -5,11 +5,12 @@ import { CoursesHero } from '../components/Courses';
 import SimpleCoursesListing from '../components/Courses/SimpleCoursesListing';
 import CertificateSection from '../components/Courses/CertificateSection';
 import StartCourseSection from '../components/Courses/StartCourseSection';
-import coursesData from '../utils/coursesLoader';
-import courseStartData from '../data/courses/course-start.json';
 import styles from './courses.module.css';
+import { getDataContent } from '@site/src/utils/i18nUtils';
 
 export default function CoursesPage() {
+  const courseStartData = getDataContent('courses/course-start.json');
+  const coursesData = getDataContent('courses/courses-data.json');
   const pageData = coursesData.metadata?.page || coursesData.page;
   
   return (
