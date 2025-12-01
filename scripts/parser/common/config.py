@@ -11,7 +11,7 @@ except ImportError:
     parse_json = json.load
 
 # Get the base directory (repo root)
-BASE_DIR = Path(__file__).parent.parent.parent
+BASE_DIR = Path(__file__).parent.parent
 
 # Configuration cache
 _config = None
@@ -22,8 +22,9 @@ def load_config():
     
     if _config is not None:
         return _config
-        
-    config_path = BASE_DIR / "scripts" / "config.json5"
+    
+
+    config_path = BASE_DIR / "config.json5"
     
     # Default configuration
     default_config = {
@@ -70,7 +71,7 @@ def get_path(path_name, *subdirs):
     
     # Make absolute if relative
     if not base_path.is_absolute():
-        base_path = BASE_DIR / base_path
+        base_path = BASE_DIR.parent / base_path
     
     # Join subdirectories if provided
     if subdirs:
